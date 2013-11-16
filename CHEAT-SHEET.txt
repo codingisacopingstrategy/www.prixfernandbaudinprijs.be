@@ -1,0 +1,36 @@
+Fernand Baudin or how to make a Django project
+==============================================
+
+Virtual environment
+-------------------
+
+One of the more tedious things when setting up a django project is that you need to declare a virtual environment. I keep all my virtual environments in a seperate folder on the computer, so that they are not synchronised by Dropbox. After you have installed virtualenv (different for each system), create and activate the virtual environment from the command line:
+
+    # Creating:
+    
+    mkdir -p ~/venvs/
+    cd ~/venvs/
+    virtualenv fernand
+    
+    # Activating
+    
+    source fernand/bin/activate
+    
+Creating the project
+--------------------
+
+    cd path/to/containing/folder
+    django-admin.py startproject fernand
+
+This will create the following arborescence:
+
+    fernand
+    ├── fernand
+    │   ├── __init__.py
+    │   ├── settings.py         # settings for the Fernand application
+    │   ├── urls.py             # url mappings for the Fernand application
+    │   ├── wsgi.py             # server for the Fernand application
+    └── manage.py
+
+There is a main project called `fernand`, and inside of the project an application that is called `fernand` as well. There can be multiple applications, and they can all contain settings and url-mappings. At the project level, in `manage.py`, it is defined that the url-mappings and the settings of the `fernand application` will be the ‘root’, the settings and urls to define the whole project.
+
