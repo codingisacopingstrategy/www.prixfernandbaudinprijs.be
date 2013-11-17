@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n utils %}
+
+{% block class %}Page{% endblock %}
+
+{% block body %}
+<h1>{% get_trans flatpage title LANGUAGE_CODE %}</h1>
+<div class="styled_text BODY">{% get_trans flatpage content LANGUAGE_CODE %}</div>
+{% endblock %}
