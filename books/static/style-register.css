@@ -18,7 +18,52 @@ a, a:visited, a:hover, a:active, a:link {
 }
 
 body {
-    color: black;    
+    color: black;
+    font-family: sans-serif; 
+    letter-spacing: 1px; 
+    font-size: 16px; 
+    padding-bottom: 200px; 
+    line-height: 20px;
+}
+
+h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: -28px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-left: -28px;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+ol {
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+ul {
+    margin-bottom: 20px;
 }
 
 label {
@@ -60,7 +105,9 @@ button {
     padding: 1px;
 }
 
-
+.form {
+    margin-left: 30px;
+}
 
 .pageblanchetitre {
 //    font-family: sans-serif;
@@ -77,22 +124,18 @@ button {
     position: relative; 
     width:150px; 
     left: 50%; 
-    margin:10px 20px 50px -85px;
+    margin:10px 20px 30px -85px;
 }
 
 .pageblanche {
     position: relative; 
     width: 800px; 
-    height: 1700px; 
     background-color: white; 
     margin-left: auto; 
     margin-right: auto; 
     margin-bottom: 30px; 
     border: 3px solid black;
     top: 60px; 
-    font-family: sans-serif; 
-    letter-spacing: 1px; 
-    font-size: 14px; 
     padding: 25px 30px;
 }
 

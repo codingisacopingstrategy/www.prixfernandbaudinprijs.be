@@ -45,6 +45,17 @@
 
 <h4>{% trans "The prize is open to all book categories and any graphic designer, publisher, printer, artist/conceptor or illustrator working or living in Brussels or Wallonia can compete with a book published in 2013 to which he/she has contributed." %}</h4>
 <p>{% trans "The registration of books published during the year 2013 will be opened from the 16th of December to the 31st of January." %}</p>
+
+
+<h2 id="register-a-book">{% trans "REGISTER A BOOK" %}</h2> 
+<p>{% trans "Please enter below your email address so that we may verify if your contact is already registered in our database." %}</p>
+
+<form action="{% url 'login' %}" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+
 <h2>{% trans "Application steps" %}</h2>
 <ol>
     <li>{% trans "How to apply" %}</li>
@@ -87,12 +98,10 @@ The person who submits a book for participation, becomes the contactperson, and 
     <li>{% trans "print out this form and send it out with one new copy of the book." %}</li>
 </ol>
 
-<h2>{% trans "The applicant" %}</h2> 
-<p>{% trans "Please enter below your email address so that we may verify if your contact is already registered in our database. If it's the first time that you are submitting a book, kindly communicate to us your complete contact information." %}</p>
 
 
 
-<h2>{% trans "The book" %}</h2>  
+<a href="#register-a-book"><h2>{% trans "REGISTER A BOOK" %}</h2></a>
 
 
 <!-- <h2>{% trans "" %}</h2> -->
@@ -100,19 +109,7 @@ The person who submits a book for participation, becomes the contactperson, and 
 
 <!--  <p>{% trans "" %}</p>  -->
 
-<form action="/contact/" method="post">{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="Submit" />
-</form>
 
-
-<h2>{% trans "The publisher" %}</h2>
-
-<h2>{% trans "Application summary" %}</h2> 
-<p>{% trans "You can now check the summary of your booksubmission." %}</p>
-
-<p>{% trans "You can rectify incorrect data by returning to the previous steps." %}</p>
-<p>{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}</p>
 </div> <!-- END DIV FORM -->
 
             </div><!-- FIN PAGE BLANCHE -->
