@@ -2,7 +2,9 @@
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render_to_response
-from django.template import RequestContext 
+from django.template import RequestContext
+from django.contrib.auth import authenticate
+
 
 from flatpages.models import FlatPage
 from django import forms
@@ -38,6 +40,7 @@ def register_login(request):
         if form.is_valid(): # All validation rules pass
             try:
                 user = FernandUser.objects.get(email=form.cleaned_data['email'])
+                login(request, user)
                 return HttpResponseRedirect(reverse('register'))
             except FernandUser.DoesNotExist:
                 return HttpResponseRedirect(reverse('signup')) # Redirect after POST

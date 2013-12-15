@@ -134,6 +134,8 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
         """
         Returns the first_name plus the last_name, with a space in between.
         """
+        if not self.first_name and not self.last_name:
+            return self.email
         full_name = '%s %s' % (self.first_name, self.last_name)
         return full_name.strip()
 
@@ -179,6 +181,9 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
             except (ImportError, ImproperlyConfigured):
                 raise SiteProfileNotAvailable
         return self._profile_cache
+    
+    def __unicode__(self):  # Python 3: def __str__(self):
+        return self.get_full_name()
 
 
 class PasswordReset(models.Model):
