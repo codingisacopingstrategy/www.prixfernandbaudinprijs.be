@@ -140,7 +140,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'fernand',
     'flatpages',
-    
+    'books',    
 )
 
 # A sample logging configuration. The only tangible logging
