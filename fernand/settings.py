@@ -140,8 +140,11 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'fernand',
     'flatpages',
-    'books',    
+    'books',
+    'people',
 )
+
+AUTH_USER_MODEL = "people.FernandUser"
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
