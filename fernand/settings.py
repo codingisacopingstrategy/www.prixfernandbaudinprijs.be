@@ -101,7 +101,7 @@ TEMPLATE_LOADERS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
-    'fernand.context_processors.nav_items',
+    # 'fernand.context_processors.nav_items',
 )
 
 MIDDLEWARE_CLASSES = (

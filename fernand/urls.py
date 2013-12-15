@@ -20,6 +20,8 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += i18n_patterns('',
-    url(r'^$', 'flatpages.views.flatpage', name='home'),
+    # towards nothing (^$): home
+    # foldername.filename.functionname
+    url(r'^$', 'books.views.register', name='home'),
     url(r'^(?P<slug>[\w-]+)$', 'flatpages.views.flatpage', name='flatpage-detail'),
 )
