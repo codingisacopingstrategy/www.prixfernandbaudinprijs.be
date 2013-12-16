@@ -1,0 +1,50 @@
+<!DOCTYPE html>{% load i18n utils %}
+<html>
+    
+    <head>
+        <title>PRIX FERNAND BAUDIN</title>
+        <link rel="shortcut icon" href="images/logo_pfb2008.png" type="image/x-icon" />
+        <link rel="icon" href="images/logo_pfb2008.png" type="image/x-icon" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <link rel="stylesheet" href="{{ STATIC_URL }}style-register.css" />
+        <meta property="og:url" content="http://www.prixfernandbaudinprijs.be/" />
+        <meta property="og:title" content="Prix Fernand Baudin Prijs" />
+        <meta property="og:image" content="http://www.prixfernandbaudinprijs.be/Files/media/imports/logo-FB-trans.png" />
+        <meta property="og:site_name" content="http://www.prixfernandbaudinprijs.be/" />
+        <meta property="og:description" content="New website coming soon!" />
+    </head>
+    
+    <body>
+        <!-- IMAGE OLD SITE -->
+        <img style="position: absolute; top: 10; left: 7;" src="{{ STATIC_URL }}old.png">
+        <!-- FOND ROUGE -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 1950px; background-color: white; filter: alpha(opacity=75); opacity: 0.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=75)"">
+        </div>
+        
+        <div><!-- DIV -->
+            <!-- PAGE BLANCHE -->
+            <div class="pageblanche">
+                <div id="languages">
+                    <form action="/i18n/setlang/" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.session.no_lang_path }}" />
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        <ul id="lan">
+                        {% for language in languages %}
+                            <li class="{% if LANGUAGE_CODE == language.code %}selected{% endif %}"><button name="language" value="{{ language.code }}">{{ language.code }}</button></li>
+                        {% endfor %}
+                        </ul>
+                    </form>
+                </div>
+
+                <p><a href="http://www.prixfernandbaudinprijs.be/Public/index.php">Retour au site</a></p>
+                <img src="{{ STATIC_URL }}prix_fernand_baudin.jpg" class="pageblanchelogo">
+
+<div class="form">
+{% block content %}
+</div> <!-- END DIV FORM -->
+
+            </div><!-- FIN PAGE BLANCHE -->
+        </div><!-- FIN DIV -->
+    </body>
+</html>
