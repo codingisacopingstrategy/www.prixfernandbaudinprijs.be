@@ -40,6 +40,9 @@ class FernandUserManager(BaseUserManager):
         return u
 
 
+    def __unicode__(self):  # Python 3: def __str__(self):
+        return self.title
+
 class FernandUser(AbstractBaseUser, PermissionsMixin):
     """
     An abstract base class implementing a fully featured User model with
@@ -48,9 +51,34 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     Username, password and email are required. Other fields are optional.
     """
 
-    first_name = models.CharField(_('first name'), max_length=30, blank=True)
-    last_name = models.CharField(_('last name'), max_length=30, blank=True)
+    first_name = models.CharField(_('first name'), max_length=30)
+    last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'), unique=True)
+    alternate_email = models.EmailField(_('email address - alternate'), unique=True)
+    structure_name = models.CharField(_('professional context'), max_length=100, blank=True)
+    job_title = models.CharField(_('job title'), max_length=100, blank=True)
+    email_invalid = models.BooleanField(_('email invalid'), default=True)
+    address = models.CharField(_('address'), max_length=250, blank=True)
+    postal_code = models.CharField(_('postal code'), max_length=30, blank=True)
+    city = models.CharField(_('city'), max_length=30, blank=True)
+    state_or_province = models.CharField(_('state or province'), max_length=30, blank=True)
+    country_id = models.CharField(_('country code'), max_length=30, blank=True)
+    phone = models.CharField(_('phone number'), max_length=30, blank=True)
+    phone_mobile = models.CharField(_('phone number - mobile'), max_length=30, blank=True)
+    phone_alternate = models.CharField(_('phone number - alternate'), max_length=30, blank=True)
+    fax = models.CharField(_('fax number'), max_length=30, blank=True)
+    language_id = models.CharField(_('language EN / FR / NL'), max_length=2)
+    gender = models.CharField(_('gender'), max_length=30, blank=True)
+    birthday = models.CharField(_('birthday'), max_length=30, blank=True)
+    place_of_birth = models.CharField(_('place of birth'), max_length=30, blank=True)
+    website = models.CharField(_('website'), max_length=50, blank=True)
+    national_number = models.CharField(_('national number'), max_length=30, blank=True)
+    id_card_number = models.CharField(_('id card number'), max_length=30, blank=True)
+    sis_number = models.CharField(_('sis number'), max_length=30, blank=True)
+    vat = models.CharField(_('vat number'), max_length=30, blank=True)
+    rc = models.CharField(_('company registration number'), max_length=30, blank=True)
+    bank_iban = models.CharField(_('iban number'), max_length=50, blank=True)
+    
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin '
                                                'site.'))
