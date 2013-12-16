@@ -16,10 +16,7 @@
     
     <body>
         <!-- IMAGE OLD SITE -->
-        <img style="position: absolute; top: 10; left: 7;" src="{{ STATIC_URL }}old.png">
-        <!-- FOND ROUGE -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 1950px; background-color: white; filter: alpha(opacity=75); opacity: 0.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=75)"">
-        </div>
+        <a href="http://www.prixfernandbaudinprijs.be/Public/index.php"><img class="img-old-website" style="position: absolute; top: 10; left: 7;" src="{{ STATIC_URL }}old.png"></a>
         
         <div><!-- DIV -->
             <!-- PAGE BLANCHE -->
@@ -37,7 +34,7 @@
                     </form>
                 </div>
 
-                <p><a href="http://www.prixfernandbaudinprijs.be/Public/index.php">Retour au site</a>{% if user.is_authenticated %} <a href="{% url 'logout' %}?next={% url 'login' %}">{% trans "Logout" %}</a>{% endif %}</p>
+                <p>{% if user.is_authenticated %}<a style="" href="{% url 'logout' %}?next={% url 'login' %}">{% trans "Logout" %}</a>{% endif %}</p>
                 <img src="{{ STATIC_URL }}prix_fernand_baudin.jpg" class="pageblanchelogo">
 
 <div class="form">

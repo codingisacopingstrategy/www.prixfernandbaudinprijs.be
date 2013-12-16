@@ -95,6 +95,10 @@ select {
     padding-left: 3px;
 }
 
+.logout {
+    text-align: center;
+}
+
 button {
     cursor: pointer;
     border: 0px;
@@ -104,6 +108,11 @@ button {
     letter-spacing: 1px; 
     font-size: 12px; 
     padding: 1px;
+}
+
+.selected button {
+    color: black;
+    font-weight: bold;
 }
 
 .form {
@@ -171,4 +180,15 @@ button {
 }
 .cell2 {
     font-family: Courier, sans-serif;
+}
+
+.img-old-website {
+    margin: 12px 10px;
+    opacity:0.4;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.img-old-website:hover {
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
 }

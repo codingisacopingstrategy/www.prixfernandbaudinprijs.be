@@ -62,7 +62,7 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     postal_code = models.CharField(_('postal code'), max_length=30, blank=True)
     city = models.CharField(_('city'), max_length=30, blank=True)
     state_or_province = models.CharField(_('state or province'), max_length=30, blank=True)
-    country_id = models.CharField(_('country code'), max_length=30, blank=True)
+    country_id = models.CharField(_('country code (ex: BE)'), max_length=30, blank=True)
     phone = models.CharField(_('phone number'), max_length=30, blank=True)
     phone_mobile = models.CharField(_('phone number - mobile'), max_length=30, blank=True)
     phone_alternate = models.CharField(_('phone number - alternate'), max_length=30, blank=True)
