@@ -1,94 +1,12 @@
-<!DOCTYPE html>{% load i18n utils %}
-<html>
-    
-    <head>
-        <title>PRIX FERNAND BAUDIN</title>
-        <link rel="shortcut icon" href="images/logo_pfb2008.png" type="image/x-icon" />
-        <link rel="icon" href="images/logo_pfb2008.png" type="image/x-icon" />
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <link rel="stylesheet" href="{{ STATIC_URL }}style-register.css" />
-        <meta property="og:url" content="http://www.prixfernandbaudinprijs.be/" />
-        <meta property="og:title" content="Prix Fernand Baudin Prijs" />
-        <meta property="og:image" content="http://www.prixfernandbaudinprijs.be/Files/media/imports/logo-FB-trans.png" />
-        <meta property="og:site_name" content="http://www.prixfernandbaudinprijs.be/" />
-        <meta property="og:description" content="New website coming soon!" />
-    </head>
-    
-    <body>
-        <!-- IMAGE OLD SITE -->
-        <img style="position: absolute; top: 10; left: 7;" src="{{ STATIC_URL }}old.png">
-        <!-- FOND ROUGE -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 1950px; background-color: white; filter: alpha(opacity=75); opacity: 0.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=75)"">
-        </div>
-        
-        <div><!-- DIV -->
-            <!-- PAGE BLANCHE -->
-            <div class="pageblanche">
-                <div id="languages">
-                    <form action="/i18n/setlang/" method="post">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ request.session.no_lang_path }}" />
-                        {% get_language_info_list for LANGUAGES as languages %}
-                        <ul id="lan">
-                        {% for language in languages %}
-                            <li class="{% if LANGUAGE_CODE == language.code %}selected{% endif %}"><button name="language" value="{{ language.code }}">{{ language.code }}</button></li>
-                        {% endfor %}
-                        </ul>
-                    </form>
-                </div>
+{% extends "register_base.html" %}
+{% load i18n utils %}
 
-                <p><a href="http://www.prixfernandbaudinprijs.be/Public/index.php">Retour au site</a></p>
-                <img src="{{ STATIC_URL }}prix_fernand_baudin.jpg" class="pageblanchelogo">
+{% block content %}
 
-<div class="form">
-<h1>{% trans "Applications" %}</h1>
 
-<h4>{% trans "The prize is open to all book categories and any graphic designer, publisher, printer, artist/conceptor or illustrator working or living in Brussels or Wallonia can compete with a book published in 2013 to which he/she has contributed." %}</h4>
-<p>{% trans "The registration of books published during the year 2013 will be opened from the 16th of December to the 31st of January." %}</p>
-<h2>{% trans "Application steps" %}</h2>
-<ol>
-    <li>{% trans "How to apply" %}</li>
-    <li>{% trans "The applicant" %}</li>
-    <li>{% trans "The book" %}</li>
-    <li>{% trans "The publisher" %}</li>
-    <li>{% trans "The graphic designer/the Artist designer" %}</li>
-    <li>{% trans "The printer" %}</li>
-    <li>{% trans "The bookbinder" %}</li>
-    <li>{% trans "Other contributors" %}</li>
-    <li>{% trans "Comments" %}</li>
-    <li>{% trans "Application summary" %}</li>
-    <li>{% trans "Application confirmation" %}</li>
-    <li>{% trans "Submitting an application" %}</li>
-</ol>
+<h1>{% trans "Welcome" %} {{ user.get_full_name }}</h1>
 
-<h2>{% trans "How to apply" %}</h2>
-<h3>{% trans "Conditions for admission" %}</h3>
-<p>{% trans "An eligible book is one which has been published during the previous year, as well as:" %}</p>
-<ul>
-    <li>{% trans "a book created by a graphic designer/Artist designer working or living in Brussels for at least one year or a book to which an illustrator working or living in Brussels for at least one year has contributed;" %}</li>
-    <li>{% trans "a book, the publisher of which has his main office in Brussels ;" %}</li>
-    <li>{% trans "a book, the printer of which has his main work-place in Brussels." %}</li>
-</ul>
-<p>{% trans "At least one of the three above-mentioned parties must be situated in the Brussels-Capital region or in Wallonia." %}</p>
-<p>{% trans "Competing in the Fernand Baudin Prize is entirely free of charge." %}</p>
-<p>{% trans "Finally, for your submissioin of a book to be accepted by the Fernand Baudin Prize, you must print out the registration form and send it with one new copy of the book before 31th January 2014 to the following address" %}</p>
-
-<p>{% trans "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles" %}</p>
-
-The person who submits a book for participation, becomes the contactperson, and agrees to supply to the organizers, free of charge, three extra copies if this specific book is awarded a prize.
-<a href="http://www.prixfernandbaudinprijs.be/Public/Rules.php?ID=3527"><p>{% trans "Click here to see the official rules of the competition." %}</p></a>
-<p>{% trans "Procedure for registration:" %}</p>
-<ol>
-    <li>{% trans "fill in online the registration form step by step and as precisely as possible;" %}</li>
-    <li>{% trans "you may find that some contributors are already registered in our database, if not, please provide the necessary information;" %}</li>
-    <li>{% trans "with every step of the registration, there is the possibility to leave comments, notes and complementary information in the field “comments”;" %}</li>
-    <li>{% trans "up untill the final validation of your registration, you can always go back to previous step(s) to change or complete the provided information;" %}</li>
-    <li>{% trans "once your registration is complete, download the registration form in PDF-format;" %}</li>
-    <li>{% trans "print out this form and send it out with one new copy of the book." %}</li>
-</ol>
-
-<h2>{% trans "The applicant" %}</h2> 
-<p>{% trans "Please enter below your email address so that we may verify if your contact is already registered in our database. If it's the first time that you are submitting a book, kindly communicate to us your complete contact information." %}</p>
+<p>{% trans "Please, fill in the registration form step by step and as precisely as possible." %}</p>
 
 
 
@@ -106,22 +24,12 @@ The person who submits a book for participation, becomes the contactperson, and 
 </form>
 
 
-<h2>{% trans "The publisher" %}</h2>
+<h2>{% trans "The collaborators" %}</h2>
 
 <h2>{% trans "Application summary" %}</h2> 
-<p>{% trans "You can now check the summary of your booksubmission." %}</p>
+<p>{% trans "You can now check the summary of your book submission." %}</p>
 
 <p>{% trans "You can rectify incorrect data by returning to the previous steps." %}</p>
 <p>{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}</p>
-</div> <!-- END DIV FORM -->
 
-            </div><!-- FIN PAGE BLANCHE -->
-        </div><!-- FIN DIV -->
-
-
-
-
-
-
-    </body>
-</html>
+{% endblock %}
