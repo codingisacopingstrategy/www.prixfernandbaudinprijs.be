@@ -1,0 +1,537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-16 10:49+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: books/models.py:13 books/models.py:92 flatpages/models.py:5
+#: people/models.py:43 people/models.py:48
+msgid "Title (EN)"
+msgstr ""
+
+#: books/models.py:14 books/models.py:93 flatpages/models.py:6
+#: people/models.py:44 people/models.py:49
+msgid "Title (NL)"
+msgstr ""
+
+#: books/models.py:15 books/models.py:94 flatpages/models.py:7
+#: people/models.py:45 people/models.py:50
+msgid "Title (FR)"
+msgstr ""
+
+#: books/models.py:16 books/models.py:32 books/models.py:86 books/models.py:95
+#: flatpages/models.py:8
+msgid "Slug"
+msgstr ""
+
+#: books/models.py:16 books/models.py:32 books/models.py:86 books/models.py:95
+#: flatpages/models.py:8
+msgid ""
+"Unique identifier to be used in a web address: uses only unaccented letters, "
+"- and _"
+msgstr ""
+
+#: books/models.py:23 books/templates/register.html:34
+msgid "Title"
+msgstr ""
+
+#: books/models.py:24
+msgid "Subtitle (if any)"
+msgstr ""
+
+#: books/models.py:25 books/templates/register.html:36
+msgid "Publication year"
+msgstr ""
+
+#: books/models.py:26
+msgid "Legal Depot"
+msgstr ""
+
+#: books/models.py:27 books/templates/register.html:38
+msgid "ISBN"
+msgstr ""
+
+#: books/models.py:29 books/templates/register.html:40
+msgid "Editorial concept"
+msgstr ""
+
+#: books/models.py:30 books/templates/register.html:41
+msgid "Comments"
+msgstr ""
+
+#: books/models.py:31
+msgid ""
+"<br />You need to register at least one editor, one graphic designer, one "
+"printer, one binder, even if they are the same persons."
+msgstr ""
+
+#: books/models.py:73
+msgid "Print run"
+msgstr ""
+
+#: books/models.py:74
+msgid "Dimensions of the book when it is closed"
+msgstr ""
+
+#: books/models.py:75
+msgid "Weight of the book"
+msgstr ""
+
+#: books/models.py:76
+msgid "Pages number"
+msgstr ""
+
+#: books/models.py:77
+msgid "Number of sections"
+msgstr ""
+
+#: books/models.py:78
+msgid "Paper(s)"
+msgstr ""
+
+#: books/models.py:79
+msgid "Type of binding"
+msgstr ""
+
+#: books/models.py:80
+msgid "Type of printing"
+msgstr ""
+
+#: books/models.py:81
+msgid "Fonts"
+msgstr ""
+
+#: books/models.py:82
+msgid "Cover’s number of pages"
+msgstr ""
+
+#: books/models.py:83
+msgid "Cover’s paper"
+msgstr ""
+
+#: books/models.py:84
+msgid "Cover’s type of printing"
+msgstr ""
+
+#: books/models.py:85
+msgid "Cover’s finish"
+msgstr ""
+
+#: books/templates/register.html:7
+msgid "Welcome"
+msgstr ""
+
+#: books/templates/register.html:9
+msgid ""
+"Please, fill in the registration form step by step and as precisely as "
+"possible."
+msgstr ""
+
+#: books/templates/register.html:13 books/templates/register.html.py:32
+msgid "The book"
+msgstr ""
+
+#: books/templates/register.html:26 books/templates/register.html.py:43
+msgid "The collaborators"
+msgstr ""
+
+#: books/templates/register.html:29
+msgid "Application summary"
+msgstr ""
+
+#: books/templates/register.html:30
+msgid "You can now check the summary of your book submission."
+msgstr ""
+
+#: books/templates/register.html:35
+msgid "Subtitle"
+msgstr ""
+
+#: books/templates/register.html:37
+msgid "Legal depot"
+msgstr ""
+
+#: books/templates/register.html:39
+msgid "Category"
+msgstr ""
+
+#: books/templates/register.html:47
+msgid ""
+"Once you have confirmed these data, you shall receive confirmation of your "
+"submission by email."
+msgstr ""
+
+#: books/templates/register_base.html:40
+msgid "Logout"
+msgstr ""
+
+#: books/templates/register_login.html:6
+msgid "Applications"
+msgstr ""
+
+#: books/templates/register_login.html:8
+msgid ""
+"The prize is open to all book categories and any graphic designer, "
+"publisher, printer, artist/conceptor or illustrator working or living in "
+"Brussels or Wallonia can compete with a book published in 2013 to which he/"
+"she has contributed."
+msgstr ""
+
+#: books/templates/register_login.html:9
+msgid ""
+"The registration of books published during the year 2013 will be opened from "
+"the 16th of December to the 31st of January."
+msgstr ""
+
+#: books/templates/register_login.html:12
+#: books/templates/register_login.html:50
+msgid "REGISTER A BOOK"
+msgstr ""
+
+#: books/templates/register_login.html:13
+msgid ""
+"Please enter below your email address so that we may verify if your contact "
+"is already registered in our database."
+msgstr ""
+
+#: books/templates/register_login.html:21
+msgid "How to apply"
+msgstr ""
+
+#: books/templates/register_login.html:22
+msgid "Conditions for admission"
+msgstr ""
+
+#: books/templates/register_login.html:23
+msgid ""
+"An eligible book is one which has been published during the previous year, "
+"as well as:"
+msgstr ""
+
+#: books/templates/register_login.html:25
+msgid ""
+"a book created by a graphic designer/Artist designer working or living in "
+"Brussels for at least one year or a book to which an illustrator working or "
+"living in Brussels for at least one year has contributed;"
+msgstr ""
+
+#: books/templates/register_login.html:26
+msgid "a book, the publisher of which has his main office in Brussels;"
+msgstr ""
+
+#: books/templates/register_login.html:27
+msgid "a book, the printer of which has his main work-place in Brussels."
+msgstr ""
+
+#: books/templates/register_login.html:29
+msgid ""
+"At least one of the three above-mentioned parties must be situated in the "
+"Brussels-Capital region or in Wallonia."
+msgstr ""
+
+#: books/templates/register_login.html:30
+msgid "Competing in the Fernand Baudin Prize is entirely free of charge."
+msgstr ""
+
+#: books/templates/register_login.html:31
+msgid ""
+"Finally, for your submissioin of a book to be accepted by the Fernand Baudin "
+"Prize, you must print out the registration form and send it with one new "
+"copy of the book before 31th January 2014 to the following address:"
+msgstr ""
+
+#: books/templates/register_login.html:33
+msgid ""
+"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
+"Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
+msgstr ""
+
+#: books/templates/register_login.html:35
+msgid ""
+"The person who submits a book for participation, becomes the contactperson, "
+"and agrees to supply to the organizers, free of charge, three extra copies "
+"if this specific book is awarded a prize."
+msgstr ""
+
+#: books/templates/register_login.html:36
+msgid "Click here to see the official rules of the competition."
+msgstr ""
+
+#: books/templates/register_login.html:37
+msgid "Procedure for registration:"
+msgstr ""
+
+#: books/templates/register_login.html:39
+msgid ""
+"fill in online the registration form step by step and as precisely as "
+"possible;"
+msgstr ""
+
+#: books/templates/register_login.html:40
+msgid ""
+"you may find that some contributors are already registered in our database, "
+"if not, please provide the necessary information;"
+msgstr ""
+
+#: books/templates/register_login.html:41
+msgid ""
+"with every step of the registration, there is the possibility to leave "
+"comments, notes and complementary information in the field “comments”;"
+msgstr ""
+
+#: books/templates/register_login.html:42
+msgid ""
+"up until the final validation of your registration, you can always go back "
+"to previous step(s) to change or complete the provided information;"
+msgstr ""
+
+#: books/templates/register_login.html:43
+msgid ""
+"once your registration is complete, download the registration form in PDF-"
+"format;"
+msgstr ""
+
+#: books/templates/register_login.html:44
+msgid "print out this form and send it out with one new copy of the book."
+msgstr ""
+
+#: books/templates/register_signup.html:6
+msgid "Sign up"
+msgstr ""
+
+#: books/templates/register_signup.html:8
+msgid ""
+"If it is the first time that you are submitting a book, kindly communicate "
+"to us your complete contact information."
+msgstr ""
+
+#: fernand/settings.py:40
+msgid "Dutch"
+msgstr ""
+
+#: fernand/settings.py:41
+msgid "English"
+msgstr ""
+
+#: fernand/settings.py:42
+msgid "French"
+msgstr ""
+
+#: flatpages/models.py:9
+msgid "Content (EN)"
+msgstr ""
+
+#: flatpages/models.py:10
+msgid "Content (NL)"
+msgstr ""
+
+#: flatpages/models.py:11
+msgid "Content (FR)"
+msgstr ""
+
+#: people/admin.py:29
+msgid "Personal info"
+msgstr ""
+
+#: people/admin.py:30
+msgid "Permissions"
+msgstr ""
+
+#: people/admin.py:32
+msgid "Important dates"
+msgstr ""
+
+#: people/admin.py:115
+msgid "Password changed successfully."
+msgstr ""
+
+#: people/admin.py:125
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: people/forms.py:14
+msgid "A user with that  email already exists."
+msgstr ""
+
+#: people/forms.py:15
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: people/forms.py:17 people/forms.py:46 people/forms.py:69
+msgid "Email"
+msgstr ""
+
+#: people/forms.py:19 people/forms.py:48 people/forms.py:79
+msgid "Password"
+msgstr ""
+
+#: people/forms.py:21 people/forms.py:81
+msgid "Password confirmation"
+msgstr ""
+
+#: people/forms.py:23
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: people/forms.py:49
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+
+#: people/forms.py:74
+msgid "No user with that email exists"
+msgstr ""
+
+#: people/forms.py:89
+msgid "The two passwords did not match"
+msgstr ""
+
+#: people/models.py:63
+msgid "first name"
+msgstr ""
+
+#: people/models.py:64
+msgid "last name"
+msgstr ""
+
+#: people/models.py:65
+msgid "email address"
+msgstr ""
+
+#: people/models.py:67
+msgid "email address - alternate"
+msgstr ""
+
+#: people/models.py:68
+msgid "professional context"
+msgstr ""
+
+#: people/models.py:69
+msgid "job title"
+msgstr ""
+
+#: people/models.py:70
+msgid "email invalid"
+msgstr ""
+
+#: people/models.py:71
+msgid "address"
+msgstr ""
+
+#: people/models.py:72
+msgid "postal code"
+msgstr ""
+
+#: people/models.py:73
+msgid "city"
+msgstr ""
+
+#: people/models.py:74
+msgid "state or province"
+msgstr ""
+
+#: people/models.py:75
+msgid "country id"
+msgstr ""
+
+#: people/models.py:76
+msgid "phone number"
+msgstr ""
+
+#: people/models.py:77
+msgid "phone number - mobile"
+msgstr ""
+
+#: people/models.py:78
+msgid "phone number - alternate"
+msgstr ""
+
+#: people/models.py:79
+msgid "fax number"
+msgstr ""
+
+#: people/models.py:81
+msgid "gender"
+msgstr ""
+
+#: people/models.py:82
+msgid "birthday"
+msgstr ""
+
+#: people/models.py:83
+msgid "place of birth"
+msgstr ""
+
+#: people/models.py:84
+msgid "website"
+msgstr ""
+
+#: people/models.py:85
+msgid "national number"
+msgstr ""
+
+#: people/models.py:86
+msgid "id card number"
+msgstr ""
+
+#: people/models.py:87
+msgid "sis number"
+msgstr ""
+
+#: people/models.py:88
+msgid "vat number"
+msgstr ""
+
+#: people/models.py:89
+msgid "company registration number"
+msgstr ""
+
+#: people/models.py:90
+msgid "iban number"
+msgstr ""
+
+#: people/models.py:92
+msgid "staff status"
+msgstr ""
+
+#: people/models.py:93
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: people/models.py:95
+msgid "active"
+msgstr ""
+
+#: people/models.py:96
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: people/models.py:98
+msgid "date joined"
+msgstr ""
+
+#: people/models.py:164
+msgid "user"
+msgstr ""
+
+#: people/models.py:165
+msgid "users"
+msgstr ""
