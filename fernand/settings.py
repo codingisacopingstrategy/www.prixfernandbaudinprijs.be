@@ -145,6 +145,7 @@ INSTALLED_APPS = (
 )
 
 AUTH_USER_MODEL = "people.FernandUser"
+AUTHENTICATION_BACKENDS = ( 'people.backends.PassUserBackend', )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

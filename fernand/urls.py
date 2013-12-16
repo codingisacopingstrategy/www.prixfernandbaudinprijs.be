@@ -25,5 +25,6 @@ urlpatterns += i18n_patterns('',
     url(r'^register$', 'books.views.register', name='register'),
     url(r'^$', 'books.views.register_login', name='login'),
     url(r'^signup$', 'books.views.register_signup', name='signup'),
+    url(r'^logout$', 'django.contrib.auth.views.logout', name='logout'),
     url(r'^(?P<slug>[\w-]+)$', 'flatpages.views.flatpage', name='flatpage-detail'),
 )

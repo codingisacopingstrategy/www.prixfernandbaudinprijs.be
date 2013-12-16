@@ -40,8 +40,7 @@ def register_login(request):
         if form.is_valid(): # All validation rules pass
             try:
                 user = FernandUser.objects.get(email=form.cleaned_data['email'])
-                user.set_password('Baudin')
-                authenticated_user = authenticate(username=user.email, password='Baudin')
+                authenticated_user = authenticate(user=user)
                 login(request, authenticated_user)
                 return HttpResponseRedirect(reverse('register'))
             except FernandUser.DoesNotExist:
