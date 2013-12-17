@@ -28,7 +28,7 @@ class Book(models.Model):
     category = models.ForeignKey(Category)
     concept = models.TextField(_("Editorial concept"))
     comments = models.TextField(_("Comments"), blank=True)
-    people = models.ManyToManyField(FernandUser, through='Collaboration', help_text=_("<br />You need to register at least one editor, one graphic designer, one printer, one binder, even if they are the same persons."))
+    people = models.ManyToManyField(FernandUser, through='Collaboration')
     slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
     
     def save(self, *args, **kwargs):
