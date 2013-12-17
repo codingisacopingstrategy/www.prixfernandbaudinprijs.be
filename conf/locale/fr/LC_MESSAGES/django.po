@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-17 10:40+0100\n"
-"PO-Revision-Date: 2013-12-17 10:56+0100\n"
+"POT-Creation-Date: 2013-12-17 16:26+0100\n"
+"PO-Revision-Date: 2013-12-17 16:22+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -41,7 +41,7 @@ msgid ""
 "- and _"
 msgstr ""
 
-#: books/models.py:23 books/templates/register.html:35
+#: books/models.py:23 books/templates/register_submit.html:11
 msgid "Title"
 msgstr "Titre"
 
@@ -49,7 +49,7 @@ msgstr "Titre"
 msgid "Subtitle (if any)"
 msgstr "Sous-titre (si existant)"
 
-#: books/models.py:25 books/templates/register.html:37
+#: books/models.py:25 books/templates/register_submit.html:13
 msgid "Publication year"
 msgstr "Année de publication"
 
@@ -57,25 +57,17 @@ msgstr "Année de publication"
 msgid "Legal Depot"
 msgstr "Dépot légal"
 
-#: books/models.py:27 books/templates/register.html:39
+#: books/models.py:27 books/templates/register_submit.html:15
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/models.py:29 books/templates/register.html:41
+#: books/models.py:29 books/templates/register_submit.html:17
 msgid "Editorial concept"
 msgstr "Concept éditorial"
 
-#: books/models.py:30 books/templates/register.html:42
+#: books/models.py:30 books/templates/register_submit.html:18
 msgid "Comments"
 msgstr "Remarques"
-
-#: books/models.py:31
-msgid ""
-"<br />You need to register at least one editor, one graphic designer, one "
-"printer, one binder, even if they are the same persons."
-msgstr ""
-"<br />Vous devez au moins enregistrer un éditeur, un graphiste, un imprimeur "
-"et un relieur, même si ce sont les mêmes personnes."
 
 #: books/models.py:73
 msgid "Print run"
@@ -129,15 +121,17 @@ msgstr "Type d’impression de la couverture"
 msgid "Cover’s finish"
 msgstr "Finition de la couverture"
 
-#: books/templates/register.html:15 books/templates/register_signup.html:6
+#: books/templates/register.html:5
+#: books/templates/register_book_collaborators.html:5
+#: books/templates/register_signup.html:6
 msgid "Back"
 msgstr "Retour"
 
-#: books/templates/register.html:17
+#: books/templates/register.html:8
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: books/templates/register.html:19
+#: books/templates/register.html:10
 msgid ""
 "You can now register a book for Fernand Baudin Prize 2013.<br />For that, "
 "fill in the following registration form step by step and as precisely as "
@@ -147,50 +141,37 @@ msgstr ""
 ">Pour cela, remplissez le formulaire suivant de façon la plus complète "
 "possible, étape par étape."
 
-#: books/templates/register.html:21 books/templates/register.html.py:33
+#: books/templates/register.html:12 books/templates/register_submit.html:8
 msgid "The book"
 msgstr "Le livre"
 
-#: books/templates/register.html:24 books/templates/register_login.html:18
+#: books/templates/register.html:14
+msgid "Editing"
+msgstr "Éditer"
+
+#: books/templates/register.html:20
+#: books/templates/register_book_collaborators.html:15
+#: books/templates/register_login.html:18
 #: books/templates/register_signup.html:14
 msgid "Submit"
 msgstr ""
 
-#: books/templates/register.html:27 books/templates/register.html.py:44
-msgid "The collaborators"
-msgstr "Les contributeurs"
-
-#: books/templates/register.html:30
-msgid "Application summary"
-msgstr "Résumé de la candidature"
-
-#: books/templates/register.html:31
-msgid "You can now check the summary of your book submission."
-msgstr "Veuillez vérifier ci-dessous les données de votre candidature."
-
-#: books/templates/register.html:36
-msgid "Subtitle"
-msgstr "Sous-titre"
-
-#: books/templates/register.html:38
-msgid "Legal depot"
-msgstr "Dépôt légal"
-
-#: books/templates/register.html:40
-msgid "Category"
-msgstr "Catégorie"
-
-#: books/templates/register.html:48
-msgid ""
-"Once you have confirmed these data, you shall receive confirmation of your "
-"submission by email."
-msgstr ""
-"Une fois que vous avez confirmé les données, vous recevrez la confirmation "
-"de votre candidature par e-mail."
-
 #: books/templates/register_base.html:37
 msgid "Logout"
 msgstr "Déconnexion"
+
+#: books/templates/register_book_collaborators.html:8
+#: books/templates/register_submit.html:20
+msgid "The collaborators"
+msgstr "Les contributeurs"
+
+#: books/templates/register_book_collaborators.html:9
+msgid ""
+"You must register at least one editor, one graphic designer, one printer, "
+"one binder, even if they are the same persons."
+msgstr ""
+"Vous devez au moins enregistrer un éditeur, un graphiste, un imprimeur et un "
+"relieur, même si ce sont les mêmes personnes."
 
 #: books/templates/register_login.html:7
 msgid "Applications"
@@ -378,6 +359,43 @@ msgstr ""
 msgid "Thank you for your participation!"
 msgstr "Merci pour votre participation!"
 
+#: books/templates/register_submit.html:5
+msgid "Application summary"
+msgstr "Résumé de la candidature"
+
+#: books/templates/register_submit.html:6
+msgid "You can now check the summary of your book submission."
+msgstr "Veuillez vérifier ci-dessous les données de votre candidature."
+
+#: books/templates/register_submit.html:9
+#: books/templates/register_submit.html:21
+msgid "Modify"
+msgstr "Modifier"
+
+#: books/templates/register_submit.html:12
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: books/templates/register_submit.html:14
+msgid "Legal depot"
+msgstr "Dépôt légal"
+
+#: books/templates/register_submit.html:16
+msgid "Category"
+msgstr "Catégorie"
+
+#: books/templates/register_submit.html:27
+msgid ""
+"Once you have confirmed these data, you shall receive confirmation of your "
+"submission by email."
+msgstr ""
+"Une fois que vous avez confirmé les données, vous recevrez la confirmation "
+"de votre candidature par e-mail."
+
+#: books/templates/register_submit.html:29
+msgid "Submit for Fernand Baudin Prize 2013"
+msgstr "Inscrivez votre livre au Prix Fernand Baudin 2013!"
+
 #: fernand/settings.py:40
 msgid "Dutch"
 msgstr "Néerlandais"
@@ -479,8 +497,8 @@ msgid "email address - alternate"
 msgstr "adresse email - autre"
 
 #: people/models.py:58
-msgid "professional context"
-msgstr "contexte professionnel"
+msgid "where do your work"
+msgstr "où travaillez-vous"
 
 #: people/models.py:59
 msgid "job title"
@@ -599,6 +617,9 @@ msgstr "utilisateurs"
 #: people/models.py:155
 msgid "users"
 msgstr "utilisateurs"
+
+#~ msgid "professional context"
+#~ msgstr "contexte professionnel"
 
 #~ msgid ""
 #~ "If it is the first time that you are submitting a book, kindly "
