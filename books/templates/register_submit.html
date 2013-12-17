@@ -6,6 +6,7 @@
 <p>{% trans "You can now check the summary of your book submission." %}</p>
 
 <p class="cell-title">{% trans "The book" %}</p>
+<p><a href="">{% trans "Modify" %}</a></p>
 <table class="summary">
 <tr><td class="cell1">{% trans "Title" %}</td><td class="cell2">{{ book.title }}</td></tr>
 <tr><td class="cell1">{% trans "Subtitle" %}</td><td class="cell2">{{ book.subtitle }}</td></tr>
@@ -17,11 +18,13 @@
 <tr><td class="cell1">{% trans "Comments" %}</td><td class="cell2">{{ book.comments }}</td></tr>
 </table>
 <p class="cell-title">{% trans "The collaborators" %}</p>
+<p><a href="{% url 'books-edit-collaborators' book.slug %}">{% trans "Modify" %}</a></p>
 <table class="summary">
 {% for collaboration in book.collaboration_set.all %}
-<tr><td class="cell1">{{ collaboration.person }}</td><td class="cell2">{{ collaboration.role }}</td></tr>
+<tr><td class="cell-collaborator">{{ collaboration.person }}</td><td class="cell2">{{ collaboration.role }}</td></tr>
 {% endfor %}
 </table>
 <p style="margin-top: 30px;">{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}
 </p>
+<input type="submit" value="{% trans "Submit for Fernand Baudin Prize 2013" %}" />
 {% endblock %}

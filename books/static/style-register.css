@@ -59,6 +59,11 @@ p {
     font-size: 16px;
 }
 
+em {
+    color: red;
+    font-style: normal;
+}
+
 ol {
     margin-left: 0px;
     margin-bottom: 20px;
@@ -177,6 +182,9 @@ button {
 }
 .cell1 {
     width: 200px;
+}
+.cell-collaborator {
+    padding-right: 40px;
 }
 .cell2 {
     font-family: Courier, sans-serif;

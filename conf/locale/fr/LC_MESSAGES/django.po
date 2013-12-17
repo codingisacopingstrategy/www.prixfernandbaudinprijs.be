@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-16 12:45+0100\n"
-"PO-Revision-Date: 2013-12-16 12:46+0100\n"
+"POT-Creation-Date: 2013-12-17 10:40+0100\n"
+"PO-Revision-Date: 2013-12-17 10:56+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -41,7 +41,7 @@ msgid ""
 "- and _"
 msgstr ""
 
-#: books/models.py:23 books/templates/register.html:33
+#: books/models.py:23 books/templates/register.html:35
 msgid "Title"
 msgstr "Titre"
 
@@ -49,7 +49,7 @@ msgstr "Titre"
 msgid "Subtitle (if any)"
 msgstr "Sous-titre (si existant)"
 
-#: books/models.py:25 books/templates/register.html:35
+#: books/models.py:25 books/templates/register.html:37
 msgid "Publication year"
 msgstr "Année de publication"
 
@@ -57,15 +57,15 @@ msgstr "Année de publication"
 msgid "Legal Depot"
 msgstr "Dépot légal"
 
-#: books/models.py:27 books/templates/register.html:37
+#: books/models.py:27 books/templates/register.html:39
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/models.py:29 books/templates/register.html:39
+#: books/models.py:29 books/templates/register.html:41
 msgid "Editorial concept"
 msgstr "Concept éditorial"
 
-#: books/models.py:30 books/templates/register.html:40
+#: books/models.py:30 books/templates/register.html:42
 msgid "Comments"
 msgstr "Remarques"
 
@@ -129,46 +129,58 @@ msgstr "Type d’impression de la couverture"
 msgid "Cover’s finish"
 msgstr "Finition de la couverture"
 
-#: books/templates/register.html:15
+#: books/templates/register.html:15 books/templates/register_signup.html:6
+msgid "Back"
+msgstr "Retour"
+
+#: books/templates/register.html:17
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: books/templates/register.html:17
+#: books/templates/register.html:19
 msgid ""
-"Please, fill in the registration form step by step and as precisely as "
+"You can now register a book for Fernand Baudin Prize 2013.<br />For that, "
+"fill in the following registration form step by step and as precisely as "
 "possible."
 msgstr ""
-"Remplissez le formulaire de façon la plus complète possible, étape par étape."
+"Vous pouvez maintenant enregistrer un livre au Prix Fernand Baudin 2013.<br /"
+">Pour cela, remplissez le formulaire suivant de façon la plus complète "
+"possible, étape par étape."
 
-#: books/templates/register.html:19 books/templates/register.html.py:31
+#: books/templates/register.html:21 books/templates/register.html.py:33
 msgid "The book"
 msgstr "Le livre"
 
-#: books/templates/register.html:25 books/templates/register.html.py:42
+#: books/templates/register.html:24 books/templates/register_login.html:18
+#: books/templates/register_signup.html:14
+msgid "Submit"
+msgstr ""
+
+#: books/templates/register.html:27 books/templates/register.html.py:44
 msgid "The collaborators"
 msgstr "Les contributeurs"
 
-#: books/templates/register.html:28
+#: books/templates/register.html:30
 msgid "Application summary"
 msgstr "Résumé de la candidature"
 
-#: books/templates/register.html:29
+#: books/templates/register.html:31
 msgid "You can now check the summary of your book submission."
 msgstr "Veuillez vérifier ci-dessous les données de votre candidature."
 
-#: books/templates/register.html:34
+#: books/templates/register.html:36
 msgid "Subtitle"
 msgstr "Sous-titre"
 
-#: books/templates/register.html:36
+#: books/templates/register.html:38
 msgid "Legal depot"
 msgstr "Dépôt légal"
 
-#: books/templates/register.html:38
+#: books/templates/register.html:40
 msgid "Category"
 msgstr "Catégorie"
 
-#: books/templates/register.html:46
+#: books/templates/register.html:48
 msgid ""
 "Once you have confirmed these data, you shall receive confirmation of your "
 "submission by email."
@@ -186,15 +198,18 @@ msgstr "Candidatures"
 
 #: books/templates/register_login.html:9
 msgid ""
-"The prize is open to all book categories and any graphic designer, "
-"publisher, printer, artist/conceptor or illustrator working or living in "
-"Brussels or Wallonia can compete with a book published in 2013 to which he/"
-"she has contributed."
+"The prize is open to <em>all book categories</em>: from the art book to the "
+"children’s book, the cooking book and other technical books. Any <em>graphic "
+"designer, publisher, printer, artist/conceptor or illustrator</em> working "
+"or living in Brussels or Wallonia can compete with a book published in 2013 "
+"to which he/she has contributed."
 msgstr ""
-"Le prix est ouvert à toutes les catégories de livres, tout graphiste, "
-"éditeur, imprimeur, artiste concepteur ou illustrateur travaillant ou "
-"résidant dans la Région Bruxelles Capitale ou en Wallonie peut concourir "
-"pour un livre publié en 2013 auquel il a participé."
+"Le prix est ouvert à <em>toutes les catégories de livres</em>: du livre "
+"d’art au livre jeunesse, en passant par le livre de cuisine et autres livres "
+"techniques. <em>Tout graphiste, éditeur, imprimeur, artiste concepteur ou "
+"illustrateur</em> travaillant ou résidant dans la Région Bruxelles Capitale "
+"ou en Wallonie peut concourir pour un livre publié en 2013 auquel il a "
+"participé."
 
 #: books/templates/register_login.html:10
 msgid ""
@@ -202,7 +217,7 @@ msgid ""
 "the 16th of December to the 31st of January."
 msgstr ""
 "L’inscription au concours des livres publiés dans l’année 2013 sera ouverte "
-"du 16 décembre au 31 janvier."
+"jusqu’au 31 janvier."
 
 #: books/templates/register_login.html:13
 #: books/templates/register_login.html:51
@@ -343,10 +358,6 @@ msgstr ""
 msgid "print out this form and send it out with one new copy of the book."
 msgstr "imprimez le formulaire et envoyez-le accompagné d'un livre neuf."
 
-#: books/templates/register_signup.html:6
-msgid "Back"
-msgstr "Retour"
-
 #: books/templates/register_signup.html:8
 msgid "Sign up"
 msgstr "Inscription"
@@ -354,10 +365,18 @@ msgstr "Inscription"
 #: books/templates/register_signup.html:10
 msgid ""
 "If it is the first time that you are submitting a book, kindly communicate "
-"to us your complete contact information."
+"to us your complete contact information.<br />The following elements are "
+"important for us to communicate with you, and to have a better understanding "
+"of the context of each actor participating to the Prize."
 msgstr ""
 "Si c'est la première fois que vous posez une candidature, merci de nous "
-"communiquer vos coordonnées complètes."
+"communiquer vos coordonnées complètes.<br />Les éléments suivants nous "
+"permettront d’établir une communication efficace avec vous et de mieux "
+"connaître le contexte de chaque acteur participant au Prix."
+
+#: books/templates/register_signup.html:17
+msgid "Thank you for your participation!"
+msgstr "Merci pour votre participation!"
 
 #: fernand/settings.py:40
 msgid "Dutch"
@@ -580,6 +599,13 @@ msgstr "utilisateurs"
 #: people/models.py:155
 msgid "users"
 msgstr "utilisateurs"
+
+#~ msgid ""
+#~ "If it is the first time that you are submitting a book, kindly "
+#~ "communicate to us your complete contact information."
+#~ msgstr ""
+#~ "Si c'est la première fois que vous posez une candidature, merci de nous "
+#~ "communiquer vos coordonnées complètes."
 
 #~ msgid "country id"
 #~ msgstr "id du pays"
