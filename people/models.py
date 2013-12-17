@@ -57,7 +57,7 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     alternate_email = models.EmailField(_('email address - alternate'), blank=True)
     structure_name = models.CharField(_('where do your work'), max_length=100, blank=True)
     job_title = models.CharField(_('job title'), max_length=100, blank=True)
-    email_invalid = models.BooleanField(_('email invalid'), default=True)
+    email_invalid = models.BooleanField(_('email invalid'), default=False)
     address = models.CharField(_('address'), max_length=250, blank=True)
     postal_code = models.CharField(_('postal code'), max_length=30, blank=True)
     city = models.CharField(_('city'), max_length=30, blank=True)
@@ -77,7 +77,6 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     sis_number = models.CharField(_('sis number'), max_length=30, blank=True)
     vat = models.CharField(_('vat number'), max_length=30, blank=True)
     rc = models.CharField(_('company registration number'), max_length=30, blank=True)
-    bank_iban = models.CharField(_('iban number'), max_length=50, blank=True)
     
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin '
