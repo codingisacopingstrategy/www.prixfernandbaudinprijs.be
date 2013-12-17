@@ -25,6 +25,17 @@ class FernandUserForm(ModelForm):
         exclude = ['title', 'password', 'last_login', 'is_superuser', 'groups', 'user_permissions', 'email_invalid', 'alternate_email', 'phone_alternate', 'fax', 'gender', 'national_number', 'id_card_number', 'sis_number', 'vat', 'rc', 'bank_iban', 'is_active', 'date_joined', 'is_staff']
         model = FernandUser
 
+def edit(request, slug):
+    book = get_object_or_404(Book, slug=slug)
+    if request.method == 'POST': # If the form has been submitted...
+        form = BookForm(request.POST, instance=book) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            form.save()
+            return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : book.slug }))
+    else:
+        form = BookForm(instance=book) # A form to edit an existing book
+    tpl_params = { 'form' : form, 'book': book }
+    return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
 def register(request):
     if request.method == 'POST': # If the form has been submitted...
@@ -33,7 +44,7 @@ def register(request):
             new_book = form.save()
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
-        form = BookForm() # An unbound form
+        form = BookForm() # An unbound form for a new book
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 

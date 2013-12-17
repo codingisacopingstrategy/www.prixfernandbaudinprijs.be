@@ -6,7 +6,7 @@
 <p>{% trans "You can now check the summary of your book submission." %}</p>
 
 <p class="cell-title">{% trans "The book" %}</p>
-<p><a href="">{% trans "Modify" %}</a></p>
+<p><a href="{% url 'books-edit' book.slug %}">{% trans "Modify" %}</a></p>
 <table class="summary">
 <tr><td class="cell1">{% trans "Title" %}</td><td class="cell2">{{ book.title }}</td></tr>
 <tr><td class="cell1">{% trans "Subtitle" %}</td><td class="cell2">{{ book.subtitle }}</td></tr>

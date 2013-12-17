@@ -4,12 +4,18 @@
 {% block content %}
 <p style="margin-left: -26px"><a href="{% url 'login' %}">{% trans "Back" %}</a></p>
 
+{% if not book %}
 <h1>{% trans "Welcome" %} {{ user.get_full_name }}</h1>
 
 <p>{% trans "You can now register a book for Fernand Baudin Prize 2013.<br />For that, fill in the following registration form step by step and as precisely as possible." %}</p>
 
 <h2>{% trans "The book" %}</h2>
-<form action="{% url 'register' %}" method="post">{% csrf_token %}
+{% else %}
+<h1>{% trans "Editing" %} {{ book.title }}</h1>
+{% endif %}
+
+<form action="{% if book %}{% url 'books-edit' book.slug %}{% else %}{% url 'register' %}{% endif %}" method="post">
+{% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="{% trans "Submit" %}" />
 </form>

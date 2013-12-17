@@ -38,33 +38,33 @@ class Book(models.Model):
         self.pub_date=datetime.datetime.now()
         #As long as this object does NOT have a slug
         if not self.slug:
-           from django.template.defaultfilters import slugify
+            from django.template.defaultfilters import slugify
 
-           #Take the title and replace spaces with hypens, make lowercase
-           potential_slug = slugify(self.title)
-           self.slug = potential_slug
+            #Take the title and replace spaces with hypens, make lowercase
+            potential_slug = slugify(self.title)
+            self.slug = potential_slug
 
-           while True:
-              try:
-                  #try to save the object
-                 super(Book, self).save(*args, **kwargs)
+            while True:
+                try:
+                    #try to save the object
+                    super(Book, self).save(*args, **kwargs)
       
-              #if this slug already exists we get an error
-              except IntegrityError:
-                #match the slug or look for a trailing number
-                 match_obj = re.match(r'^(.*)-(\d+)$', self.slug)
+            #if this slug already exists we get an error
+                except IntegrityError:
+                    #match the slug or look for a trailing number
+                    match_obj = re.match(r'^(.*)-(\d+)$', self.slug)
      
-                 #if we find a match
-                 if match_obj:
-                     #take the found number and increment it by 1
-                    next_int = int(match_obj.group(2)) + 1
-                    self.slug = match_obj.group(1) + "-" + str(next_int)
-                 else:
-                     #There are no matches for -# so create one with -2
-                    self.slug += '-2'
-                    #different error than IntegrityError
-              else:
-                 break
+                    #if we find a match
+                    if match_obj:
+                        #take the found number and increment it by 1
+                        next_int = int(match_obj.group(2)) + 1
+                        self.slug = match_obj.group(1) + "-" + str(next_int)
+                    else:
+                        #There are no matches for -# so create one with -2
+                        self.slug += '-2'
+            #different error than IntegrityError
+                else:
+                    break
     
     def __unicode__(self):  # Python 3: def __str__(self):
             return self.title

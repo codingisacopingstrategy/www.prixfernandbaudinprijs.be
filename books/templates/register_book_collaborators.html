@@ -2,7 +2,7 @@
 {% load i18n utils %}
 
 {% block content %}
-<p style="margin-left: -26px"><a href="">{% trans "Back" %}</a></p>
+<p style="margin-left: -26px"><a href="{% url 'books-edit' book.slug %}">{% trans "Back" %}</a></p>
 
 <h2><em>{{ book.title }}</em></h2>
 <h2>{% trans "The collaborators" %}</h2>
