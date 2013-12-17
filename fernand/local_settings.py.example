@@ -1,0 +1,2 @@
+STATIC_ROOT = '/home/pfbp/webapps/pfbp_registration_static/'
+
