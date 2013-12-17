@@ -18,19 +18,23 @@ class CheckUserExistenceForm(forms.Form):
 class BookForm(ModelForm):
     class Meta:
         model = Book
+        exclude = ['slug', 'people']
 
 class FernandUserForm(ModelForm):
     class Meta:
+        exclude = ['title', 'password', 'last_login', 'is_superuser', 'groups', 'user_permissions', 'email_invalid', 'alternate_email', 'phone_alternate', 'fax', 'gender', 'national_number', 'id_card_number', 'sis_number', 'vat', 'rc', 'bank_iban', 'is_active', 'date_joined', 'is_staff']
         model = FernandUser
 
 
 def register(request):
-    """
     if request.method == 'POST': # If the form has been submitted...
         form = BookForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
-    """
-    form = BookForm()
+            new_book = form.save()
+            tpl_params = { 'book' : new_book, 'submitted': True }
+            return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
+    else:
+        form = BookForm() # An unbound form
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 

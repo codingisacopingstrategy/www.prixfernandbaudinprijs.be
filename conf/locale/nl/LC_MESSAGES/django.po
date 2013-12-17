@@ -1,0 +1,589 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-16 12:45+0100\n"
+"PO-Revision-Date: 2013-12-16 13:21+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.2\n"
+
+#: books/models.py:13 books/models.py:92 flatpages/models.py:5
+msgid "Title (EN)"
+msgstr "Titel (EN)"
+
+#: books/models.py:14 books/models.py:93 flatpages/models.py:6
+msgid "Title (NL)"
+msgstr "Titel (NL)"
+
+#: books/models.py:15 books/models.py:94 flatpages/models.py:7
+msgid "Title (FR)"
+msgstr "Titel (FR)"
+
+#: books/models.py:16 books/models.py:32 books/models.py:86 books/models.py:95
+#: flatpages/models.py:8
+msgid "Slug"
+msgstr ""
+
+#: books/models.py:16 books/models.py:32 books/models.py:86 books/models.py:95
+#: flatpages/models.py:8
+msgid ""
+"Unique identifier to be used in a web address: uses only unaccented letters, "
+"- and _"
+msgstr ""
+
+#: books/models.py:23 books/templates/register.html:33
+msgid "Title"
+msgstr "Titel"
+
+#: books/models.py:24
+msgid "Subtitle (if any)"
+msgstr "Ondertitel"
+
+#: books/models.py:25 books/templates/register.html:35
+msgid "Publication year"
+msgstr "Publicatiejaar"
+
+#: books/models.py:26
+msgid "Legal Depot"
+msgstr "Depotplicht"
+
+#: books/models.py:27 books/templates/register.html:37
+msgid "ISBN"
+msgstr "ISBN"
+
+#: books/models.py:29 books/templates/register.html:39
+msgid "Editorial concept"
+msgstr "Boek concept"
+
+#: books/models.py:30 books/templates/register.html:40
+msgid "Comments"
+msgstr "Commentaren"
+
+#: books/models.py:31
+msgid ""
+"<br />You need to register at least one editor, one graphic designer, one "
+"printer, one binder, even if they are the same persons."
+msgstr ""
+"<br />U moet ten minste een redacteur, een grafisch ontwerper, een printer, "
+"een bindmiddel registreren, zelfs als ze dezelfde personen."
+
+#: books/models.py:73
+msgid "Print run"
+msgstr "Oplage"
+
+#: books/models.py:74
+msgid "Dimensions of the book when it is closed"
+msgstr "Afmetingen van de (gesloten) boek"
+
+#: books/models.py:75
+msgid "Weight of the book"
+msgstr "Gewicht van het boek"
+
+#: books/models.py:76
+msgid "Pages number"
+msgstr "Aantal pagina’s"
+
+#: books/models.py:77
+msgid "Number of sections"
+msgstr "Aantal katern"
+
+#: books/models.py:78
+msgid "Paper(s)"
+msgstr "Papier(en)"
+
+#: books/models.py:79
+msgid "Type of binding"
+msgstr "Bind of brocheer wijze"
+
+#: books/models.py:80
+msgid "Type of printing"
+msgstr "Drukwijzen"
+
+#: books/models.py:81
+msgid "Fonts"
+msgstr "Lettertype"
+
+#: books/models.py:82
+msgid "Cover’s number of pages"
+msgstr "Aantal omslagpagina’s"
+
+#: books/models.py:83
+msgid "Cover’s paper"
+msgstr "Omslag papier"
+
+#: books/models.py:84
+msgid "Cover’s type of printing"
+msgstr "Omslag drukwijzen"
+
+#: books/models.py:85
+msgid "Cover’s finish"
+msgstr "Omslag afwerking"
+
+#: books/templates/register.html:15
+msgid "Welcome"
+msgstr "Welkom"
+
+#: books/templates/register.html:17
+msgid ""
+"Please, fill in the registration form step by step and as precisely as "
+"possible."
+msgstr ""
+"Vul het inschrijvingsformulier zo volledig mogelijk in, stap voor stap;"
+
+#: books/templates/register.html:19 books/templates/register.html.py:31
+msgid "The book"
+msgstr "Het boek"
+
+#: books/templates/register.html:25 books/templates/register.html.py:42
+msgid "The collaborators"
+msgstr "Medewerkers"
+
+#: books/templates/register.html:28
+msgid "Application summary"
+msgstr "Samenvatting van de inschrijving"
+
+#: books/templates/register.html:29
+msgid "You can now check the summary of your book submission."
+msgstr "U ziet hier een samenvatting van uw inschrijving."
+
+#: books/templates/register.html:34
+msgid "Subtitle"
+msgstr "Subtitel"
+
+#: books/templates/register.html:36
+msgid "Legal depot"
+msgstr "Depotplicht"
+
+#: books/templates/register.html:38
+msgid "Category"
+msgstr "Boek categorie"
+
+#: books/templates/register.html:46
+msgid ""
+"Once you have confirmed these data, you shall receive confirmation of your "
+"submission by email."
+msgstr ""
+"Wanneer u alles heeft nagekeken en u deze gegevens bevestigt, ontvangt u via "
+"email een bevestiging van uw inschrijving."
+
+#: books/templates/register_base.html:37
+msgid "Logout"
+msgstr "Uitloggen"
+
+#: books/templates/register_login.html:7
+msgid "Applications"
+msgstr "Inschrijvingen"
+
+#: books/templates/register_login.html:9
+msgid ""
+"The prize is open to all book categories and any graphic designer, "
+"publisher, printer, artist/conceptor or illustrator working or living in "
+"Brussels or Wallonia can compete with a book published in 2013 to which he/"
+"she has contributed."
+msgstr ""
+"De prijs staat open voor alle categorieën van boeken en ieder grafisch "
+"vormgever, uitgever, drukker, kunstenaar/ ontwerper of illustrator "
+"woonachtig of werkzaam in het Brussels Hoofdstedelijk Gewest of Wallonië, "
+"kan meedingen naar de prijs met een boek uitgegeven in 2013 waaraan hij/zij "
+"heeft meegewerkt."
+
+#: books/templates/register_login.html:10
+msgid ""
+"The registration of books published during the year 2013 will be opened from "
+"the 16th of December to the 31st of January."
+msgstr ""
+"De inschrijving van boeken verschenen in de loop van 2013 zal geopend zijn "
+"16 December tot 31 Januari."
+
+#: books/templates/register_login.html:13
+#: books/templates/register_login.html:51
+msgid "REGISTER A BOOK"
+msgstr "Deelnemen"
+
+#: books/templates/register_login.html:14
+msgid ""
+"Please enter below your email address so that we may verify if your contact "
+"is already registered in our database."
+msgstr ""
+"Gelieve uw emailadres hieronder in te voeren zodat wij kunnen controleren of "
+"u reeds deel uitmaakt van onze database."
+
+#: books/templates/register_login.html:22
+msgid "How to apply"
+msgstr "Hoe schrijf ik een boek in?"
+
+#: books/templates/register_login.html:23
+msgid "Conditions for admission"
+msgstr "Toelatingsvoorwaarden"
+
+#: books/templates/register_login.html:24
+msgid ""
+"An eligible book is one which has been published during the previous year, "
+"as well as:"
+msgstr ""
+"Om in aanmerking te komen voor deelname, moet het boek verschenen en in "
+"omloop gebracht zijn in het afgelopen jaar, en ook aan één van de volgende "
+"voorwaarden voldoen:"
+
+#: books/templates/register_login.html:26
+msgid ""
+"a book created by a graphic designer/Artist designer working or living in "
+"Brussels for at least one year or a book to which an illustrator working or "
+"living in Brussels for at least one year has contributed;"
+msgstr ""
+"het boek werd ontworpen door een grafische vormgever en/of kunstenaar-"
+"ontwerper die sedert 1 jaar in Brussel of Wallonië werkt of verblijft of tot "
+"het boek heeft een illustrator bijgedragen die sedert 1 jaar in Brussel of "
+"Wallonië werkt of verblijft ;"
+
+#: books/templates/register_login.html:27
+msgid "a book, the publisher of which has his main office in Brussels;"
+msgstr "de uitgever van het boek heeft een hoofdzetel in Brussel of Wallonië;"
+
+#: books/templates/register_login.html:28
+msgid "a book, the printer of which has his main work-place in Brussels."
+msgstr "de drukker van het boek heeft een hoofdzetel in Brussel of Wallonië."
+
+#: books/templates/register_login.html:30
+msgid ""
+"At least one of the three above-mentioned parties must be situated in the "
+"Brussels-Capital region or in Wallonia."
+msgstr ""
+"Tenminste één van deze drie hierboven vermelde medewerkers moet in één van "
+"beide gewesten gevestigd zijn."
+
+#: books/templates/register_login.html:31
+msgid "Competing in the Fernand Baudin Prize is entirely free of charge."
+msgstr "De deelname aan de Fernand Baudin Prijs is volledig gratis."
+
+#: books/templates/register_login.html:32
+msgid ""
+"Finally, for your submissioin of a book to be accepted by the Fernand Baudin "
+"Prize, you must print out the registration form and send it with one new "
+"copy of the book before 31th January 2014 to the following address:"
+msgstr ""
+"Opdat uw deelname aan de Fernand Baudin Prijs in aanmerking zou worden "
+"genomen, moet u na de inschrijving online het inschrijvingsformulier "
+"afdrukken en het samen met één nieuw exemplaar van het boek opsturen voor 31 "
+"januari 2014 naar het volgende adres:\t•\t"
+
+#: books/templates/register_login.html:34
+msgid ""
+"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
+"Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
+msgstr ""
+"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Betreft: Fernand "
+"Baudin Prijs<br />Louizalaan 500/4<br />1050 Brussel"
+
+#: books/templates/register_login.html:36
+msgid ""
+"The person who submits a book for participation, becomes the contactperson, "
+"and agrees to supply to the organizers, free of charge, three extra copies "
+"if this specific book is awarded a prize."
+msgstr ""
+"Diegene die het boek inschrijft voor deelname, wordt de contactpersoon en "
+"verbindt zich ertoe om drie bijkomende exemplaren van het boek gratis ter "
+"beschikking te stellen aan de organisatoren indien het boek bekroond wordt."
+
+#: books/templates/register_login.html:37
+msgid "Click here to see the official rules of the competition."
+msgstr "U vindt hier het volledige wedstrijdreglement."
+
+#: books/templates/register_login.html:38
+msgid "Procedure for registration:"
+msgstr "Werkwijze"
+
+#: books/templates/register_login.html:40
+msgid ""
+"fill in online the registration form step by step and as precisely as "
+"possible;"
+msgstr ""
+"vul online het inschrijvingsformulier zo volledig mogelijk in, stap voor "
+"stap;"
+
+#: books/templates/register_login.html:41
+msgid ""
+"you may find that some contributors are already registered in our database, "
+"if not, please provide the necessary information;"
+msgstr ""
+"sommige medewerkers zult u reeds terugvinden in onze database, indien niet, "
+"vult u zelf de gevraagde gegevens in de velden in;"
+
+#: books/templates/register_login.html:42
+msgid ""
+"with every step of the registration, there is the possibility to leave "
+"comments, notes and complementary information in the field “comments”;"
+msgstr ""
+"bij iedere stap van de inschrijving kan u opmerkingen en bijkomende "
+"informatie ingeven in het veld \"opmerkingen\";"
+
+#: books/templates/register_login.html:43
+msgid ""
+"up until the final validation of your registration, you can always go back "
+"to previous step(s) to change or complete the provided information;"
+msgstr ""
+"u kan steeds naar voorgaande stap(pen) terugkeren om bepaalde gegevens te "
+"wijzigen en/of aan te vullen en dit tot aan de uiteindelijke validatie van "
+"de inschrijving;"
+
+#: books/templates/register_login.html:44
+msgid ""
+"once your registration is complete, download the registration form in PDF-"
+"format;"
+msgstr ""
+"eens de inschrijving afgesloten is, moet u het inschrijvingsformulier "
+"downloaden in PDF-formaat;"
+
+#: books/templates/register_login.html:45
+msgid "print out this form and send it out with one new copy of the book."
+msgstr ""
+"tenslotte print u dit formulier af en stuurt u dit op samen met één nieuw "
+"exemplaar van het boek."
+
+#: books/templates/register_signup.html:6
+msgid "Back"
+msgstr "Terug"
+
+#: books/templates/register_signup.html:8
+msgid "Sign up"
+msgstr "Registreren"
+
+#: books/templates/register_signup.html:10
+msgid ""
+"If it is the first time that you are submitting a book, kindly communicate "
+"to us your complete contact information."
+msgstr ""
+"Indien het de eerste keer is dat u deelneemt, gelieve uw volledige "
+"contactgegevens in te vullen."
+
+#: fernand/settings.py:40
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: fernand/settings.py:41
+msgid "English"
+msgstr "Engels"
+
+#: fernand/settings.py:42
+msgid "French"
+msgstr "Frans"
+
+#: flatpages/models.py:9
+msgid "Content (EN)"
+msgstr "Inhoud (EN)"
+
+#: flatpages/models.py:10
+msgid "Content (NL)"
+msgstr "Inhoud (NL)"
+
+#: flatpages/models.py:11
+msgid "Content (FR)"
+msgstr "Inhoud (FR)"
+
+#: people/admin.py:29
+msgid "Personal info"
+msgstr "Persoonlijke informatie"
+
+#: people/admin.py:30
+msgid "Permissions"
+msgstr "Vergunning"
+
+#: people/admin.py:32
+msgid "Important dates"
+msgstr "Belangrijke data"
+
+#: people/admin.py:115
+msgid "Password changed successfully."
+msgstr "Wachtwoord succesvol gewijzigd."
+
+#: people/admin.py:125
+#, python-format
+msgid "Change password: %s"
+msgstr "Wachtwoord wijzigen: %s"
+
+#: people/forms.py:14
+msgid "A user with that  email already exists."
+msgstr "Een gebruiker met dat e-mail al bestaat."
+
+#: people/forms.py:15
+msgid "The two password fields didn't match."
+msgstr "De twee wachtwoord velden komen niet overeen."
+
+#: people/forms.py:17 people/forms.py:46 people/forms.py:69
+msgid "Email"
+msgstr "Email"
+
+#: people/forms.py:19 people/forms.py:48 people/forms.py:79
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: people/forms.py:21 people/forms.py:81
+msgid "Password confirmation"
+msgstr "Wachtwoord bevestiging"
+
+#: people/forms.py:23
+msgid "Enter the same password as above, for verification."
+msgstr "Voer hetzelfde wachtwoord als hierboven, ter verificatie."
+
+#: people/forms.py:49
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+
+#: people/forms.py:74
+msgid "No user with that email exists"
+msgstr "Geen gebruiker met dit e-mail bestaat"
+
+#: people/forms.py:89
+msgid "The two passwords did not match"
+msgstr "De twee wachtwoorden komen niet overeen"
+
+#: people/models.py:54
+msgid "first name"
+msgstr "voornaam"
+
+#: people/models.py:55
+msgid "last name"
+msgstr "achternaam"
+
+#: people/models.py:56
+msgid "email address"
+msgstr "email adres"
+
+#: people/models.py:57
+msgid "email address - alternate"
+msgstr "email adres - ander"
+
+#: people/models.py:58
+msgid "professional context"
+msgstr "professionele context"
+
+#: people/models.py:59
+msgid "job title"
+msgstr "functietitel"
+
+#: people/models.py:60
+msgid "email invalid"
+msgstr ""
+
+#: people/models.py:61
+msgid "address"
+msgstr "adres"
+
+#: people/models.py:62
+msgid "postal code"
+msgstr "postcode"
+
+#: people/models.py:63
+msgid "city"
+msgstr "stad"
+
+#: people/models.py:64
+msgid "state or province"
+msgstr "staat of provincie"
+
+#: people/models.py:65
+msgid "country code (ex: BE)"
+msgstr "landnummer (ex: BE)"
+
+#: people/models.py:66
+msgid "phone number"
+msgstr "telefoonnummer"
+
+#: people/models.py:67
+msgid "phone number - mobile"
+msgstr "mobiel nummer"
+
+#: people/models.py:68
+msgid "phone number - alternate"
+msgstr "telefoonnummer - ander"
+
+#: people/models.py:69
+msgid "fax number"
+msgstr "fax nummer"
+
+#: people/models.py:70
+msgid "language EN / FR / NL"
+msgstr "taal EN / FR / NL"
+
+#: people/models.py:71
+msgid "gender"
+msgstr "geslacht"
+
+#: people/models.py:72
+msgid "birthday"
+msgstr "geboortedag"
+
+#: people/models.py:73
+msgid "place of birth"
+msgstr "geboorteplaats"
+
+#: people/models.py:74
+msgid "website"
+msgstr "website"
+
+#: people/models.py:75
+msgid "national number"
+msgstr "nationaal nummer"
+
+#: people/models.py:76
+msgid "id card number"
+msgstr "id kaart nummer"
+
+#: people/models.py:77
+msgid "sis number"
+msgstr "sis nummer"
+
+#: people/models.py:78
+msgid "vat number"
+msgstr "vat antaal"
+
+#: people/models.py:79
+msgid "company registration number"
+msgstr "Ondernemingsnummer"
+
+#: people/models.py:80
+msgid "iban number"
+msgstr "IBAN antaal"
+
+#: people/models.py:82
+msgid "staff status"
+msgstr ""
+
+#: people/models.py:83
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: people/models.py:85
+msgid "active"
+msgstr ""
+
+#: people/models.py:86
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr "Wettelijk depot"
+
+#: people/models.py:88
+msgid "date joined"
+msgstr "datum trad"
+
+#: people/models.py:154
+msgid "user"
+msgstr "gebruiker"
+
+#: people/models.py:155
+msgid "users"
+msgstr "gebruikers"
