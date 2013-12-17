@@ -2,16 +2,6 @@
 {% load i18n utils %}
 
 {% block content %}
-
-  
-
-
-<!-- <h2>{% trans "" %}</h2> -->
-
-
-<!--  <p>{% trans "" %}</p>  -->
-{% if not submitted %}
-
 <p style="margin-left: -26px"><a href="{% url 'login' %}">{% trans "Back" %}</a></p>
 
 <h1>{% trans "Welcome" %} {{ user.get_full_name }}</h1>
@@ -23,31 +13,5 @@
 {{ form.as_p }}
 <input type="submit" value="{% trans "Submit" %}" />
 </form>
-
-<h2>{% trans "The collaborators" %}</h2>
-
-{% else %}
-<h2>{% trans "Application summary" %}</h2> 
-<p>{% trans "You can now check the summary of your book submission." %}</p>
-
-<p class="cell-title">{% trans "The book" %}</p>
-<table class="summary">
-<tr><td class="cell1">{% trans "Title" %}</td><td class="cell2">{{ book.title }}</td></tr>
-<tr><td class="cell1">{% trans "Subtitle" %}</td><td class="cell2">{{ book.subtitle }}</td></tr>
-<tr><td class="cell1">{% trans "Publication year" %}</td><td class="cell2">{{ book.publication_year }}</td></tr>
-<tr><td class="cell1">{% trans "Legal depot" %}</td><td class="cell2">{{ book.legal_depot }}</td></tr>
-<tr><td class="cell1">{% trans "ISBN" %}</td><td class="cell2">{{ book.isbn }}</td></tr>
-<tr><td class="cell1">{% trans "Category" %}</td><td class="cell2">{{ book.category }}</td></tr>
-<tr><td class="cell1">{% trans "Editorial concept" %}</td><td class="cell2">{{ book.concept }}</td></tr>
-<tr><td class="cell1">{% trans "Comments" %}</td><td class="cell2">{{ book.comments }}</td></tr>
-</table>
-<p class="cell-title">{% trans "The collaborators" %}</p>
-<table class="summary">
-<tr><td class="cell1">Collaborators</td></tr>
-</table>
-<p style="margin-top: 30px;">{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}
-</p>
-
-{% endif %}
 
 {% endblock %}

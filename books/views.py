@@ -5,10 +5,10 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login
 
-
-from flatpages.models import FlatPage
 from django import forms
 from django.forms import ModelForm
+from django.forms.models import inlineformset_factory
+
 from books.models import Book
 from people.models import FernandUser
 
@@ -31,12 +31,30 @@ def register(request):
         form = BookForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
             new_book = form.save()
-            tpl_params = { 'book' : new_book, 'submitted': True }
-            return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
+            return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
         form = BookForm() # An unbound form
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
+
+def edit_book_collaborators(request, slug):
+    book = get_object_or_404(Book, slug=slug)
+    BookCollaboratorFormSet = inlineformset_factory(Book, Book.people.through)
+    if request.method == 'POST': # If the form has been submitted...
+        formset = BookCollaboratorFormSet(request.POST, instance=book)
+        if formset.is_valid():
+            f = formset.save()
+            return HttpResponseRedirect(reverse('books-submit', kwargs={ 'slug' : book.slug }))
+    else:
+        formset = BookCollaboratorFormSet(instance=book)
+    tpl_params = { 'formset': formset, 'book' : book }
+    return render_to_response("register_book_collaborators.html", tpl_params, context_instance = RequestContext(request))
+
+def submit(request, slug):
+    book = get_object_or_404(Book, slug=slug)
+    tpl_params = { 'book' : book }
+    return render_to_response("register_submit.html", tpl_params, context_instance = RequestContext(request))
+
 
 def register_login(request):
     if request.method == 'POST': # If the form has been submitted...

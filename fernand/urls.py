@@ -22,7 +22,12 @@ urlpatterns = patterns('',
 urlpatterns += i18n_patterns('',
     # towards nothing (^$): home
     # foldername.filename.functionname
+    
+    # books
     url(r'^register$', 'books.views.register', name='register'),
+    url(r'^(?P<slug>[\w-]+)/collaborators/$', 'books.views.edit_book_collaborators', name='books-edit-collaborators'),
+    url(r'^(?P<slug>[\w-]+)/submit$', 'books.views.submit', name='books-submit'),
+    # people
     url(r'^$', 'books.views.register_login', name='login'),
     url(r'^signup$', 'books.views.register_signup', name='signup'),
     url(r'^logout$', 'django.contrib.auth.views.logout', name='logout'),
