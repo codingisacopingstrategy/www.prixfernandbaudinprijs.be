@@ -65,9 +65,9 @@ class Book(models.Model):
                     #different error than IntegrityError
               else:
                  break
-
-def __unicode__(self):  # Python 3: def __str__(self):
-        return self.title
+    
+    def __unicode__(self):  # Python 3: def __str__(self):
+            return self.title
     
 class Technical_sheet(models.Model):
     printrun = models.IntegerField(_("Print run"), blank=True)
