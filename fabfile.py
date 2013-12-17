@@ -6,9 +6,9 @@ env.hosts = ['pfbp@prixfernandbaudinprijs.be']
 env.path = '/home/pfbp/webapps/pfbp_registration/www.prixfernandbaudinprijs.be/'
 
 def deploy():
-    with cd(env.path + 'bessst.be/'):
+    with cd(env.path):
         run('git pull origin master')
-        run('python manage.py collectstatic --noinput')
+        run('python2.7 manage.py collectstatic --noinput')
         run('/home/pfbp/webapps/pfbp_registration/apache2/bin/restart')
 
 def getdb():
