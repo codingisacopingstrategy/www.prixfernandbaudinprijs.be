@@ -1,4 +1,6 @@
 # Create your views here.
+import json
+
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render_to_response
@@ -7,6 +9,7 @@ from django.contrib.auth import authenticate, login
 
 from django import forms
 from django.forms import ModelForm
+from django.forms import widgets
 from django.forms.models import inlineformset_factory
 
 from books.models import Book, Collaboration
@@ -28,10 +31,9 @@ class FernandUserForm(ModelForm):
 class CollaborationForm(forms.ModelForm):
     class Meta:
         model = Collaboration
-
-    def __init__(self, *args, **kwargs):
-        super(CollaborationForm, self).__init__(*args, **kwargs)
-        #self.fields['my_file_field'].widget = AdminFileWidget() 
+        widgets = {
+            'person': widgets.HiddenInput() 
+           }
 
 class CollaborationRoleForm(forms.ModelForm):
     class Meta:
@@ -61,9 +63,19 @@ def register(request):
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
+
+def users_for_lookahead():
+    for u in FernandUser.objects.all():
+        full_name = u.get_full_name()
+        yield {
+               'value': u.id,
+               'tokens': full_name.split(' '),
+               'name': full_name
+               }
+
 def edit_book_collaborators(request, slug):
     book = get_object_or_404(Book, slug=slug)
-    
+    users_hash = json.dumps(list(users_for_lookahead()), ensure_ascii=False)
     # How much required roles are we still missing?
     required = set([2,1,3,4])
     present = set(c.role.id for c in Collaboration.objects.filter(book=book))
@@ -78,11 +90,12 @@ def edit_book_collaborators(request, slug):
     if request.method == 'POST': # If the form has been submitted...
         formset = BookCollaboratorFormSet(request.POST, instance=book)
         if formset.is_valid():
+            #import pdb; pdb.set_trace()
             f = formset.save()
             return HttpResponseRedirect(reverse('books-submit', kwargs={ 'slug' : book.slug }))
     else:
         formset = BookCollaboratorFormSet(instance=book)
-    tpl_params = { 'formset': formset, 'book' : book }
+    tpl_params = { 'formset': formset, 'book' : book, 'users_hash': users_hash }
     return render_to_response("register_book_collaborators.html", tpl_params, context_instance = RequestContext(request))
 
 def add_book_collaborator(request, slug):

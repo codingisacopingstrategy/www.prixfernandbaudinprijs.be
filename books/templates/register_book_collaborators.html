@@ -10,9 +10,22 @@
 
 <p>{% trans "Can not find your collaborator in the database? Add them here:"%} <a href="{% url 'books-add-collaborators' book.slug %}">{% trans "Create new collaborator" %}</a>.</p>
 
-<form action="{% url 'books-add-collaborators' book.slug %}" method="post">{% csrf_token %}
+<form action="{% url 'books-edit-collaborators' book.slug %}" method="post">{% csrf_token %}
 {% for form in formset %}
-{{ form.as_p }}
+<p>
+    {% for hidden in form.hidden_fields %}
+    {{ hidden }}
+    {% endfor %}
+    {{ form.person.label_tag }}
+    {{ form.person.errors }}
+    <!-- The actual form field is hidden, we use this one to populate it through a 
+        JavaScript typeahead -->
+    <input id="{{ form.person.id_for_label }}-lookup" type="text" class="find_collaborator" value="{{ form.instance.person }}" />
+</p>
+<p>{{ form.role.errors }}
+   {{ form.role.label_tag }} {{ form.role }}</p>
+   
+   
 {% endfor %}
 {{ formset.management_form }}
 <input type="submit" value="{% trans "Submit" %}" />
@@ -21,6 +34,14 @@
 {% endblock %}
 
 {% block extrajs %}
+<style>
+    input.find_collaborator {
+        margin-left: 0;
+    }
+    span.tt-dropdown-menu {
+        background-color: white;
+    }
+</style>
 <script>
     // some jQuery magic to make sure a publisher, a designer, a printer and a book binder are proposed by default
     var required = ["2", "1", "3", "4"]; 
@@ -34,5 +55,21 @@
             }
         });
     }
+    
+    var usersForLookahead = {{ users_hash|safe }};
+    
+    // Keep the hidden input field connected
+    // to the typeahead widget
+    
+    $('input.find_collaborator').typeahead({
+        valueKey: 'name',
+        name: 'possibleCollaborators',
+        local: usersForLookahead
+    }).on('typeahead:selected', function(e, person, datasetName){
+        targetID = $(e.target).attr('id').replace('-lookup', '');
+        targetField = $('#' + targetID);
+        targetField.val(person.value);
+    });
+    
 </script>
 {% endblock %}
