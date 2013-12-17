@@ -9,7 +9,7 @@ from django import forms
 from django.forms import ModelForm
 from django.forms.models import inlineformset_factory
 
-from books.models import Book
+from books.models import Book, Collaboration
 from people.models import FernandUser
 
 class CheckUserExistenceForm(forms.Form):
@@ -24,6 +24,14 @@ class FernandUserForm(ModelForm):
     class Meta:
         exclude = ['title', 'password', 'last_login', 'is_superuser', 'groups', 'user_permissions', 'email_invalid', 'alternate_email', 'phone_alternate', 'fax', 'gender', 'national_number', 'id_card_number', 'sis_number', 'vat', 'rc', 'bank_iban', 'is_active', 'date_joined', 'is_staff']
         model = FernandUser
+
+class CollaborationForm(forms.ModelForm):
+    class Meta:
+        model = Collaboration
+
+    def __init__(self, *args, **kwargs):
+        super(CollaborationForm, self).__init__(*args, **kwargs)
+        #self.fields['my_file_field'].widget = AdminFileWidget() 
 
 def edit(request, slug):
     book = get_object_or_404(Book, slug=slug)
@@ -50,7 +58,18 @@ def register(request):
 
 def edit_book_collaborators(request, slug):
     book = get_object_or_404(Book, slug=slug)
-    BookCollaboratorFormSet = inlineformset_factory(Book, Book.people.through)
+    
+    # How much required roles are we still missing?
+    required = set([2,1,3,4])
+    present = set(c.role.id for c in Collaboration.objects.filter(book=book))
+    missing = required - present
+    
+    # We want a (pre-filled) form for all of them, and one extra empty
+    # to suggest that additional roles are welcome
+    extra = len(missing) + 1
+    
+    BookCollaboratorFormSet = inlineformset_factory(Book, Book.people.through, form=CollaborationForm, extra=extra)
+    
     if request.method == 'POST': # If the form has been submitted...
         formset = BookCollaboratorFormSet(request.POST, instance=book)
         if formset.is_valid():
@@ -60,6 +79,9 @@ def edit_book_collaborators(request, slug):
         formset = BookCollaboratorFormSet(instance=book)
     tpl_params = { 'formset': formset, 'book' : book }
     return render_to_response("register_book_collaborators.html", tpl_params, context_instance = RequestContext(request))
+
+def add_book_collaborator(request):
+    pass
 
 def submit(request, slug):
     book = get_object_or_404(Book, slug=slug)
