@@ -1,0 +1,32 @@
+{% extends "register_base.html" %}
+{% load i18n utils %}
+
+{% block content %}
+
+<p style="margin-left: -26px"><a href="{% url 'login' %}">{% trans "Back" %}</a></p>
+
+<h1>{% trans "Sign up" %} {% trans "Collaborator" %} {% trans "for" %} {{ book.title }}</h1>
+
+<h2>{% trans "Role" %}</h2>
+<form action="{% url 'books-add-collaborators' book.slug %}" method="post">{% csrf_token %}
+
+{{ role_form.as_p }}
+
+<h2>{% trans "Collaborator" %}</h2>
+
+{{ user_form.as_p }}
+
+<input type="submit" value="{% trans "Submit" %}" />
+</form>
+
+
+<!-- <h2>{% trans "" %}</h2> -->
+
+
+<!--  <p>{% trans "" %}</p>  -->
+
+
+{% endblock %}
+
+
+

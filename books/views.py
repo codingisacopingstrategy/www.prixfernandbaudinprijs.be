@@ -33,6 +33,11 @@ class CollaborationForm(forms.ModelForm):
         super(CollaborationForm, self).__init__(*args, **kwargs)
         #self.fields['my_file_field'].widget = AdminFileWidget() 
 
+class CollaborationRoleForm(forms.ModelForm):
+    class Meta:
+        model = Collaboration
+        exclude = ['person', 'book']
+
 def edit(request, slug):
     book = get_object_or_404(Book, slug=slug)
     if request.method == 'POST': # If the form has been submitted...
@@ -80,8 +85,33 @@ def edit_book_collaborators(request, slug):
     tpl_params = { 'formset': formset, 'book' : book }
     return render_to_response("register_book_collaborators.html", tpl_params, context_instance = RequestContext(request))
 
-def add_book_collaborator(request):
-    pass
+def add_book_collaborator(request, slug):
+    book = get_object_or_404(Book, slug=slug)
+    
+    if request.method == 'POST': # If the form has been submitted...
+        user_form = FernandUserForm(request.POST) # A form bound to the POST data
+        role_form = CollaborationRoleForm(request.POST)
+        if user_form.is_valid() and role_form.is_valid(): # All validation rules pass
+            
+            # The new person!
+            person = user_form.save()
+            
+            # The role_form only specified the role of the collaboration,
+            # we associate the other properties by hand.
+            collaboration = role_form.save(commit=False)
+            collaboration.book = book
+            collaboration.person = person
+            
+            # The new collaboration!
+            collaboration.save()
+            
+            return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug': book.slug }))
+    else:
+        user_form = FernandUserForm()
+        role_form = CollaborationRoleForm()
+
+    tpl_params = { 'user_form' : user_form, 'role_form': role_form, 'book': book }
+    return render_to_response("register_book_collaborator_add.html", tpl_params, context_instance = RequestContext(request))
 
 def submit(request, slug):
     book = get_object_or_404(Book, slug=slug)
