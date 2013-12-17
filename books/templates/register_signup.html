@@ -7,13 +7,14 @@
 
 <h1>{% trans "Sign up" %}</h1>
 
-<h4>{% trans "If it is the first time that you are submitting a book, kindly communicate to us your complete contact information." %}</h4>
+<p>{% trans "If it is the first time that you are submitting a book, kindly communicate to us your complete contact information.<br />The following elements are important for us to communicate with you, and to have a better understanding of the context of each actor participating to the Prize." %}</p>
 
 <form action="{% url 'signup' %}" method="post">{% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="{% trans "Submit" %}" />
 </form>
 
+<p style="margin-top: 30px">{% trans "Thank you for your participation!" %}</p>
 
 <!-- <h2>{% trans "" %}</h2> -->
 
