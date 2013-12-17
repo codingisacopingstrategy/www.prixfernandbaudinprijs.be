@@ -85,6 +85,15 @@ def register_login(request):
     return render_to_response("register_login.html", tpl_params, context_instance = RequestContext(request))
 
 def register_signup(request):
-    form = FernandUserForm()
+    if request.method == 'POST': # If the form has been submitted...
+        form = FernandUserForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            user = form.save()
+            authenticated_user = authenticate(user=user)
+            login(request, authenticated_user)
+            return HttpResponseRedirect(reverse('register'))
+    else:
+        form = FernandUserForm()
+
     tpl_params = { 'form' : form }
     return render_to_response("register_signup.html", tpl_params, context_instance = RequestContext(request))
