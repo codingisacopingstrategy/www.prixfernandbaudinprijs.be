@@ -59,7 +59,7 @@ def register(request):
             new_book = form.save()
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
-        form = BookForm() # An unbound form for a new book
+        form = BookForm(initial = { 'publication_year' : 2013 }) # An unbound form for a new book
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
@@ -136,13 +136,14 @@ def register_login(request):
     if request.method == 'POST': # If the form has been submitted...
         form = CheckUserExistenceForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
+            email = form.cleaned_data['email']
             try:
-                user = FernandUser.objects.get(email=form.cleaned_data['email'])
+                user = FernandUser.objects.get(email=email)
                 authenticated_user = authenticate(user=user)
                 login(request, authenticated_user)
                 return HttpResponseRedirect(reverse('register'))
             except FernandUser.DoesNotExist:
-                return HttpResponseRedirect(reverse('signup')) # Redirect after POST
+                return HttpResponseRedirect(reverse('signup') + '?email=' + email) # Redirect after POST
     else:
         form = CheckUserExistenceForm() # An unbound form
     
@@ -158,7 +159,8 @@ def register_signup(request):
             login(request, authenticated_user)
             return HttpResponseRedirect(reverse('register'))
     else:
-        form = FernandUserForm()
-
+        email = request.GET.get('email')
+        form = FernandUserForm(initial={'email': email })
+    
     tpl_params = { 'form' : form }
     return render_to_response("register_signup.html", tpl_params, context_instance = RequestContext(request))
