@@ -28,7 +28,7 @@ urlpatterns += i18n_patterns('',
     url(r'^(?P<slug>[\w-]+)/edit$', 'books.views.edit', name='books-edit'),
     url(r'^(?P<slug>[\w-]+)/collaborators/$', 'books.views.edit_book_collaborators', name='books-edit-collaborators'),
     url(r'^(?P<slug>[\w-]+)/collaborators/add$', 'books.views.add_book_collaborator', name='books-add-collaborators'),
-    url(r'^(?P<slug>[\w-]+)/submit$', 'books.views.submit', name='books-submit'),
+    url(r'^(?P<slug>[\w-]+)/submission$', 'books.views.submit', name='books-submit'),
     # people
     url(r'^$', 'books.views.register_login', name='login'),
     url(r'^signup$', 'books.views.register_signup', name='signup'),

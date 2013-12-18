@@ -2,8 +2,11 @@
 {% load i18n utils %}
 
 {% block content %}
-<h2>{% trans "Application summary" %}</h2> 
+<h2>{% trans "Application summary" %}</h2>
+
+{% if not book.is_submitted %}
 <p>{% trans "You can now check the summary of your book submission." %}</p>
+{% endif %}
 
 <p class="cell-title">{% trans "The book" %}</p>
 <p><a href="{% url 'books-edit' book.slug %}">{% trans "Modify" %}</a></p>
@@ -24,7 +27,13 @@
 <tr><td class="cell-collaborator">{{ collaboration.person }}</td><td class="cell2">{{ collaboration.role }}</td></tr>
 {% endfor %}
 </table>
+
+{% if not book.is_submitted %}
 <p style="margin-top: 30px;">{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}
 </p>
+
+<form action="{% url 'books-submit' book.slug %}" method="post">{% csrf_token %}
 <input type="submit" value="{% trans "Submit for Fernand Baudin Prize 2013" %}" />
+</form>
+{% endif %}
 {% endblock %}

@@ -31,6 +31,9 @@ class Book(models.Model):
     people = models.ManyToManyField(FernandUser, through='Collaboration')
     slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
     
+    is_submitted = models.BooleanField(_("Has been submitted"), default=False)
+    submitted_on = models.DateTimeField(_("Submission date"), blank=True, null=True)
+    
     def save(self, *args, **kwargs):
     # http://www.copyandwaste.com/posts/view/unique-slugs-for-django-objects/
     
@@ -51,6 +54,7 @@ class Book(models.Model):
       
             #if this slug already exists we get an error
                 except IntegrityError:
+                    print self.slug
                     #match the slug or look for a trailing number
                     match_obj = re.match(r'^(.*)-(\d+)$', self.slug)
      
@@ -65,7 +69,7 @@ class Book(models.Model):
             #different error than IntegrityError
                 else:
                     break
-    
+
     def __unicode__(self):  # Python 3: def __str__(self):
             return self.title
     

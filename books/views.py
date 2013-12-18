@@ -4,13 +4,15 @@ import json
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render_to_response
-from django.template import RequestContext
+from django.template import RequestContext, Context, loader
 from django.contrib.auth import authenticate, login
 
 from django import forms
 from django.forms import ModelForm
 from django.forms import widgets
 from django.forms.models import inlineformset_factory
+
+from django.core.mail import send_mail
 
 from books.models import Book, Collaboration
 from people.models import FernandUser
@@ -21,7 +23,7 @@ class CheckUserExistenceForm(forms.Form):
 class BookForm(ModelForm):
     class Meta:
         model = Book
-        exclude = ['slug', 'people']
+        exclude = ['slug', 'people', 'is_submitted', 'submitted_by', 'submitted_on']
 
 class FernandUserForm(ModelForm):
     class Meta:
@@ -54,9 +56,13 @@ def edit(request, slug):
 
 def register(request):
     if request.method == 'POST': # If the form has been submitted...
+        print "got request"
         form = BookForm(request.POST) # A form bound to the POST data
+        print "found a form"
         if form.is_valid(): # All validation rules pass
+            print "form is valid"
             new_book = form.save()
+            print "form saved"
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
         form = BookForm(initial = { 'publication_year' : 2013 }) # An unbound form for a new book
@@ -128,6 +134,14 @@ def add_book_collaborator(request, slug):
 
 def submit(request, slug):
     book = get_object_or_404(Book, slug=slug)
+    if request.method == 'POST':
+        book.is_submitted = True
+        book.save()
+        mail_template = loader.get_template('confirmation_mail.txt')
+        subject = book.title
+        c = Context({"submission_uri": 'http://' + request.get_host() + request.path, 'book' : book })
+        mail_text = mail_template.render(c)
+        send_mail(subject, mail_text, 'info@prixfernandbaudinprijs.be', [request.user.email, 'info@prixfernandbaudinprijs.be'])
     tpl_params = { 'book' : book }
     return render_to_response("register_submit.html", tpl_params, context_instance = RequestContext(request))
 
