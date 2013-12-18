@@ -8,21 +8,23 @@
 <h2>{% trans "The collaborators" %}</h2>
 <p><em>{% trans "You must register at least one editor, one graphic designer, one printer, one binder, even if they are the same persons." %}</em></p>
 
-<p>{% trans "Can not find your collaborator in the database? Add them here:"%} <a href="{% url 'books-add-collaborators' book.slug %}">{% trans "Create new collaborator" %}</a>.</p>
+
 
 <form action="{% url 'books-edit-collaborators' book.slug %}" method="post">{% csrf_token %}
 {% for form in formset %}
-<p>
+
     {% for hidden in form.hidden_fields %}
     {{ hidden }}
     {% endfor %}
     {{ form.person.label_tag }}
     {{ form.person.errors }}
-    <!-- The actual form field is hidden, we use this one to populate it through a 
+
+<p><!-- The actual form field is hidden, we use this one to populate it through a 
         JavaScript typeahead -->
-    <input id="{{ form.person.id_for_label }}-lookup" type="text" class="find_collaborator" value="{{ form.instance.person }}" />
-</p>
-<p>{{ form.role.errors }}
+    <input id="{{ form.person.id_for_label }}-lookup" type="text" class="find_collaborator" value="{{ form.instance.person }}" /> <span id="{{ form.person.id_for_label }}-status"><small>Waiting for selection</small></span><br/>
+<small>{% trans "Start typing the name of your collaborator, and click when you see them appear. Can not find your collaborator in the database? Add them here:"%} <a href="{% url 'books-add-collaborators' book.slug %}">{% trans "Create new collaborator" %}</a>.</small></p>
+<p style="margin-bottom:60px;">
+   {{ form.role.errors }}
    {{ form.role.label_tag }} {{ form.role }}</p>
    
    
@@ -35,9 +37,6 @@
 
 {% block extrajs %}
 <style>
-    input.find_collaborator {
-        margin-left: 0;
-    }
     span.tt-dropdown-menu {
         background-color: white;
     }
@@ -69,6 +68,7 @@
         targetID = $(e.target).attr('id').replace('-lookup', '');
         targetField = $('#' + targetID);
         targetField.val(person.value);
+        $('#' + targetID + '-status small').text("Collaborator selected");
     });
     
 </script>
