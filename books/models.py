@@ -69,6 +69,8 @@ class Book(models.Model):
             #different error than IntegrityError
                 else:
                     break
+        else:
+            super(Book, self).save(*args, **kwargs)
 
     def __unicode__(self):  # Python 3: def __str__(self):
             return self.title

@@ -9,7 +9,7 @@
 {% endif %}
 
 <p class="cell-title">{% trans "The book" %}</p>
-<p><a href="{% url 'books-edit' book.slug %}">{% trans "Modify" %}</a></p>
+{% if not book.is_submitted %}<p><a href="{% url 'books-edit' book.slug %}">{% trans "Modify" %}</a></p>{% endif %}
 <table class="summary">
 <tr><td class="cell1">{% trans "Title" %}</td><td class="cell2">{{ book.title }}</td></tr>
 <tr><td class="cell1">{% trans "Subtitle" %}</td><td class="cell2">{{ book.subtitle }}</td></tr>
@@ -21,17 +21,18 @@
 <tr><td class="cell1">{% trans "Comments" %}</td><td class="cell2">{{ book.comments }}</td></tr>
 </table>
 <p class="cell-title">{% trans "The collaborators" %}</p>
-<p><a href="{% url 'books-edit-collaborators' book.slug %}">{% trans "Modify" %}</a></p>
+{% if not book.is_submitted %}<p><a href="{% url 'books-edit-collaborators' book.slug %}">{% trans "Modify" %}</a></p>{% endif %}
 <table class="summary">
 {% for collaboration in book.collaboration_set.all %}
 <tr><td class="cell-collaborator">{{ collaboration.person }}</td><td class="cell2">{{ collaboration.role }}</td></tr>
 {% endfor %}
 </table>
 
-{% if not book.is_submitted %}
-<p style="margin-top: 30px;">{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}
-</p>
+<p style="margin-top: 30px;">{% if not book.is_submitted %}{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}{% else %}{% trans "Finally, for your submission of a book to be accepted by the Fernand Baudin Prize, you must print out the registration form and send it with one new copy of the book before 31th January 2014 to the following address:" %}</p>
 
+<p>{% trans "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles" %}</p>{% endif %}
+
+{% if not book.is_submitted %}
 <form action="{% url 'books-submit' book.slug %}" method="post">{% csrf_token %}
 <input type="submit" value="{% trans "Submit for Fernand Baudin Prize 2013" %}" />
 </form>
