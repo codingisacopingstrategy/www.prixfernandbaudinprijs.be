@@ -43,6 +43,12 @@ class FernandUserManager(BaseUserManager):
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.title
 
+LANGUAGE_CHOICES = (
+                    ('en', 'EN'),
+                    ('nl', 'NL'),
+                    ('fr', 'FR')
+                    )
+
 class FernandUser(AbstractBaseUser, PermissionsMixin):
     """
     An abstract base class implementing a fully featured User model with
@@ -67,7 +73,7 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     phone_mobile = models.CharField(_('phone number - mobile'), max_length=30, blank=True)
     phone_alternate = models.CharField(_('phone number - alternate'), max_length=30, blank=True)
     fax = models.CharField(_('fax number'), max_length=30, blank=True)
-    language_id = models.CharField(_('language EN / FR / NL'), max_length=2)
+    language_id = models.CharField(_('language EN / FR / NL'), max_length=2, choices=LANGUAGE_CHOICES)
     gender = models.CharField(_('gender'), max_length=30, blank=True)
     birthday = models.CharField(_('birthday'), max_length=30, blank=True)
     place_of_birth = models.CharField(_('place of birth'), max_length=30, blank=True)
