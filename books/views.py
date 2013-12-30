@@ -65,7 +65,7 @@ def register(request):
             print "form saved"
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
-        form = BookForm(initial = { 'publication_year' : 2013 }) # An unbound form for a new book
+        form = BookForm(initial = { 'publication_year' : 2013, 'isbn' : '-' }) # An unbound form for a new book
     tpl_params = { 'form' : form }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
