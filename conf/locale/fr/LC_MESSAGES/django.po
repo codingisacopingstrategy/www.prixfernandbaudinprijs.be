@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-18 17:37+0100\n"
-"PO-Revision-Date: 2013-12-18 17:36+0100\n"
+"POT-Creation-Date: 2014-01-08 09:40+0100\n"
+"PO-Revision-Date: 2014-01-08 09:40+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -276,8 +276,9 @@ msgid ""
 "Brussels for at least one year or a book to which an illustrator working or "
 "living in Brussels for at least one year has contributed;"
 msgstr ""
-"un livre conçu par une/un graphiste ou une/un illustratrice/teur travaillant "
-"ou résidant à Bruxelles ou en Wallonie depuis un an;"
+"un livre conçu par une/un graphiste, artiste conceptrice/teur ou une/un "
+"illustratrice/teur travaillant ou résidant à Bruxelles ou en Wallonie depuis "
+"un an;"
 
 #: books/templates/register_login.html:27
 msgid "a book, the publisher of which has his main office in Brussels;"
@@ -459,23 +460,11 @@ msgstr "Contenu (NL)"
 msgid "Content (FR)"
 msgstr "Contenu (FR)"
 
-#: people/admin.py:29
-msgid "Personal info"
-msgstr "Informations personnelles"
-
-#: people/admin.py:30
-msgid "Permissions"
-msgstr "Permissions"
-
-#: people/admin.py:32
-msgid "Important dates"
-msgstr "Dates importantes"
-
-#: people/admin.py:115
+#: people/admin.py:102
 msgid "Password changed successfully."
 msgstr "Le mot de passe a été modifié avec succès."
 
-#: people/admin.py:125
+#: people/admin.py:112
 #, python-format
 msgid "Change password: %s"
 msgstr "Modifier le mot de passe: %s"
@@ -519,139 +508,148 @@ msgstr "Aucun utilisateur n’a enregistré cet email"
 msgid "The two passwords did not match"
 msgstr "Les deux mots de passe ne correspondent pas."
 
-#: people/models.py:54
+#: people/models.py:60
 msgid "first name"
 msgstr "prénom"
 
-#: people/models.py:55
+#: people/models.py:61
 msgid "last name"
 msgstr "nom"
 
-#: people/models.py:56
+#: people/models.py:62
 msgid "email address"
 msgstr "adresse email"
 
-#: people/models.py:57
+#: people/models.py:63
 msgid "email address - alternate"
 msgstr "adresse email - autre"
 
-#: people/models.py:58
+#: people/models.py:64
 msgid "where do your work"
 msgstr "où travaillez-vous"
 
-#: people/models.py:59
+#: people/models.py:65
 msgid "job title"
 msgstr "titre professionnel"
 
-#: people/models.py:60
+#: people/models.py:66
 msgid "email invalid"
 msgstr "email invalide"
 
-#: people/models.py:61
+#: people/models.py:67
 msgid "address"
 msgstr "adresse"
 
-#: people/models.py:62
+#: people/models.py:68
 msgid "postal code"
 msgstr "code postal"
 
-#: people/models.py:63
+#: people/models.py:69
 msgid "city"
 msgstr "ville"
 
-#: people/models.py:64
+#: people/models.py:70
 msgid "state or province"
 msgstr "état ou province"
 
-#: people/models.py:65
+#: people/models.py:71
 msgid "country code (ex: BE)"
 msgstr "code du pays (ex: BE)"
 
-#: people/models.py:66
+#: people/models.py:72
 msgid "phone number"
 msgstr "Numéro de téléphone"
 
-#: people/models.py:67
+#: people/models.py:73
 msgid "phone number - mobile"
 msgstr "numéro de téléphone - mobile"
 
-#: people/models.py:68
+#: people/models.py:74
 msgid "phone number - alternate"
 msgstr "numéro de téléphone - autre"
 
-#: people/models.py:69
+#: people/models.py:75
 msgid "fax number"
 msgstr "Numéro de fax"
 
-#: people/models.py:70
+#: people/models.py:76
 msgid "language EN / FR / NL"
 msgstr "langage EN / FR / NL"
 
-#: people/models.py:71
+#: people/models.py:77
 msgid "gender"
 msgstr "genre"
 
-#: people/models.py:72
+#: people/models.py:78
 msgid "birthday"
 msgstr "date de naissance"
 
-#: people/models.py:73
+#: people/models.py:79
 msgid "place of birth"
 msgstr "lieu de naissance"
 
-#: people/models.py:74
+#: people/models.py:80
 msgid "website"
 msgstr "site internet"
 
-#: people/models.py:75
+#: people/models.py:81
 msgid "national number"
 msgstr "numéro national"
 
-#: people/models.py:76
+#: people/models.py:82
 msgid "id card number"
 msgstr "Numéro de la carte d’identité"
 
-#: people/models.py:77
+#: people/models.py:83
 msgid "sis number"
 msgstr "Numéro SIS"
 
-#: people/models.py:78
+#: people/models.py:84
 msgid "vat number"
 msgstr "Numéro TVA"
 
-#: people/models.py:79
+#: people/models.py:85
 msgid "company registration number"
 msgstr "numéro d’entreprise"
 
-#: people/models.py:81
+#: people/models.py:87
 msgid "staff status"
 msgstr "statut de l’équipe"
 
-#: people/models.py:82
+#: people/models.py:88
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: people/models.py:84
+#: people/models.py:90
 msgid "active"
 msgstr "actif"
 
-#: people/models.py:85
+#: people/models.py:91
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: people/models.py:87
+#: people/models.py:93
 msgid "date joined"
 msgstr "date d’inscription"
 
-#: people/models.py:153
+#: people/models.py:159
 msgid "user"
 msgstr "utilisateurs"
 
-#: people/models.py:154
+#: people/models.py:160
 msgid "users"
 msgstr "utilisateurs"
+
+#~ msgid "Personal info"
+#~ msgstr "Informations personnelles"
+
+#~ msgid "Permissions"
+#~ msgstr "Permissions"
+
+#~ msgid "Important dates"
+#~ msgstr "Dates importantes"
 
 #~ msgid "iban number"
 #~ msgstr "Numéro IBAN"
