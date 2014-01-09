@@ -207,3 +207,20 @@ ul.errorlist li {
     opacity:1;
     filter:alpha(opacity=100); /* For IE8 and earlier */
 }
+
+@media print {
+.pageblanche {
+    position: relative; 
+    width: 100%; 
+    background-color: white; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 00px; 
+    border: 0px;
+    top: 0px; 
+    padding: 25px 30px;
+}
+#languages {
+    display: none;
+}
+}
