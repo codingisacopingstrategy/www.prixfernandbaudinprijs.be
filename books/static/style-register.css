@@ -223,4 +223,7 @@ ul.errorlist li {
 #languages {
     display: none;
 }
+.screen-only {
+    display: none;
+}
 }
