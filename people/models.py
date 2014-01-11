@@ -84,6 +84,8 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     vat = models.CharField(_('vat number'), max_length=30, blank=True)
     rc = models.CharField(_('company registration number'), max_length=30, blank=True)
     
+    subscribed_to_mailing = models.BooleanField(_('subscribed to mailing'), default=True)
+    
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin '
                                                'site.'))
@@ -218,6 +220,16 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.get_full_name()
 
+class Category(models.Model):
+    title = models.CharField(_("Title (EN)"), max_length=255)
+    title_nl = models.CharField(_("Title (NL)"), max_length=255)
+    title_fr = models.CharField(_("Title (FR)"), max_length=255)
+    slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
+    
+    members = models.ManyToManyField(FernandUser)
+    
+    def __unicode__(self):  # Python 3: def __str__(self):
+        return self.title
 
 class PasswordReset(models.Model):
     user = models.ForeignKey(FernandUser)

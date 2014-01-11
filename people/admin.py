@@ -16,7 +16,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 from people.forms import FernandUserChangeForm
 from people.forms import FernandUserCreationForm
-from people.models import FernandUser
+from people.models import FernandUser, Category
 
 csrf_protect_m = method_decorator(csrf_protect)
 
@@ -178,3 +178,5 @@ class FernandUserCreationForm(forms.ModelForm):
 
 
 admin.site.register(FernandUser, FernandUserAdmin)
+admin.site.register(Category)
+

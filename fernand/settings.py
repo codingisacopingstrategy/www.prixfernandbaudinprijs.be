@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'flatpages',
     'books',
     'people',
+    'south',
 )
 
 AUTH_USER_MODEL = "people.FernandUser"
