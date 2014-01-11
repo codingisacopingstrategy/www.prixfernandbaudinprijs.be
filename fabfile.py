@@ -14,3 +14,7 @@ def deploy():
 def getdb():
     local('/usr/bin/scp pfbp@prixfernandbaudinprijs.be:webapps/pfbp_registration/www.prixfernandbaudinprijs.be/fernand/fernand.db fernand/fernand.db')
 
+def backupdb():
+    local('/bin/mkdir -p ~/fernand_db_backup/')
+    local('/usr/bin/scp pfbp@prixfernandbaudinprijs.be:webapps/pfbp_registration/www.prixfernandbaudinprijs.be/fernand/fernand.db ~/fernand_db_backup/fernand.$(/bin/date -u +"%Y-%m-%dT%H:%M:%SZ").db')
+
