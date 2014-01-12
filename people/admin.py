@@ -20,6 +20,8 @@ from people.models import FernandUser, Category
 
 csrf_protect_m = method_decorator(csrf_protect)
 
+class UserCategoryInline(admin.TabularInline):
+    model = Category.members.through
 
 class FernandUserAdmin(admin.ModelAdmin):
     add_form_template = 'admin/auth/user/add_form.html'
@@ -27,6 +29,10 @@ class FernandUserAdmin(admin.ModelAdmin):
     form = FernandUserChangeForm
     add_form = FernandUserCreationForm
     change_password_form = AdminPasswordChangeForm
+
+    inlines = [
+        UserCategoryInline,
+    ]
 
     list_display = ('email', 'first_name', 'last_name', 'is_staff')
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
@@ -176,13 +182,6 @@ class FernandUserCreationForm(forms.ModelForm):
             user.save()
         return user
 
-class UserCategoryInline(admin.TabularInline):
-    model = Category.members.through
-
-class FernandUserAdmin(admin.ModelAdmin):
-    inlines = [
-        UserCategoryInline,
-    ]
 
 admin.site.register(FernandUser, FernandUserAdmin)
 admin.site.register(Category)
