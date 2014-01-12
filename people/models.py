@@ -226,7 +226,7 @@ class Category(models.Model):
     title_fr = models.CharField(_("Title (FR)"), max_length=255)
     slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
     
-    members = models.ManyToManyField(FernandUser)
+    members = models.ManyToManyField(FernandUser, blank=True)
     
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.title

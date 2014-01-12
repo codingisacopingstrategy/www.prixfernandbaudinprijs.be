@@ -176,6 +176,13 @@ class FernandUserCreationForm(forms.ModelForm):
             user.save()
         return user
 
+class UserCategoryInline(admin.TabularInline):
+    model = Category.members.through
+
+class FernandUserAdmin(admin.ModelAdmin):
+    inlines = [
+        UserCategoryInline,
+    ]
 
 admin.site.register(FernandUser, FernandUserAdmin)
 admin.site.register(Category)
