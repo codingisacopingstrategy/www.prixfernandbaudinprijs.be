@@ -10,12 +10,16 @@ from people.models import FernandUser
 
 @staff_member_required
 def email_export(request):
-    response = HttpResponse(content_type='text/plain')
+    response = HttpResponse(content_type='text/plain; charset=utf-8')
     persons = FernandUser.objects.filter(email_invalid=False, subscribed_to_mailing=True)
     
     for i, p in enumerate(persons):
-        response.write(p.email.encode("utf-8"))
-        response.write('\n')
+        if not p.first_name and not p.last_name:
+            email = p.email
+        else:
+            email = p.get_full_name() + " <" + p.email + ">"
+        response.write(email.encode("utf-8"))
+        response.write(', ')
     
     return response
 
