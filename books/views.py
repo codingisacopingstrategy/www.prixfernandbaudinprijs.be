@@ -146,6 +146,13 @@ def submit(request, slug):
     return render_to_response("register_submit.html", tpl_params, context_instance = RequestContext(request))
 
 
+def all_books(request):
+    books = Book.objects.all()
+    
+    tpl_params = { 'books' : books }
+    return render_to_response("all_books.html", tpl_params, context_instance = RequestContext(request))
+
+
 def register_login(request):
     if request.method == 'POST': # If the form has been submitted...
         form = CheckUserExistenceForm(request.POST) # A form bound to the POST data

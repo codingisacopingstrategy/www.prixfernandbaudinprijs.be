@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from people.models import FernandUser
 # Create your models here.
-    
+
 class Category(models.Model):
     title = models.CharField(_("Title (EN)"), max_length=255)
     title_nl = models.CharField(_("Title (NL)"), max_length=255)
@@ -19,6 +19,17 @@ class Category(models.Model):
         return self.title
 # we put the Category model before the Book model because it is called in Book and thus must be defined before.
 
+"""
+class Status(models.Model):
+    title = models.CharField(_("Title (EN)"), max_length=255)
+    title_nl = models.CharField(_("Title (NL)"), max_length=255)
+    title_fr = models.CharField(_("Title (FR)"), max_length=255)
+    slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
+    
+    def __unicode__(self):  # Python 3: def __str__(self):
+        return self.title
+
+"""
 class Book(models.Model):
     title = models.CharField(_("Title"), max_length=255)
     subtitle = models.CharField(_("Subtitle (if any)"), max_length=255, blank=True)
@@ -30,6 +41,7 @@ class Book(models.Model):
     comments = models.TextField(_("Comments"), blank=True)
     people = models.ManyToManyField(FernandUser, through='Collaboration')
     slug = models.SlugField(_("Slug"), unique=True, help_text=_("Unique identifier to be used in a web address: uses only unaccented letters, - and _"))
+    #status = models.ForeignKey(Status)
     
     is_submitted = models.BooleanField(_("Has been submitted"), default=False)
     submitted_on = models.DateTimeField(_("Submission date"), blank=True, null=True)
