@@ -148,8 +148,49 @@ def submit(request, slug):
 
 def all_books(request):
     books = Book.objects.all()
+    """
+    book = {
+        "designer": "person, person"
+    }
+    """
     
-    tpl_params = { 'books' : books }
+    filtered_books = []
+    
+    def get_collaborators(role_id):
+        if isinstance(role_id, list):
+            # if the argument to the function is a list, get_collaborators([1, 8, 7])
+            # look for all the books collaborators that have one of these roles 
+            query = book.collaboration_set.filter(role_id__in=role_id)
+        else:
+            # if the argument to the function is a number, get_collaborators(5)
+            # look for all the books collaborators that have this role
+            query = book.collaboration_set.filter(role_id=role_id)
+        
+        # in the model of each found collaboration, find the person, ask for their name
+        names = [c.person.get_full_name() for c in query]
+        
+        # turn it from a list into a set of unique values (no doubles)
+        unique_names = set(names)
+        
+        # turn the list into a text by joining each item with a comma and a space, return it
+        return ", ".join(unique_names)
+    
+    for book in books:
+        filtered_book = {}
+        filtered_book['authors']     = get_collaborators(5)
+        filtered_book['publishers']  = get_collaborators(2)
+        filtered_book['designers']   = get_collaborators([1, 8, 7])
+        filtered_book['printers']    = get_collaborators(3)
+        filtered_book['bookbinders'] = get_collaborators(4)
+        
+        filtered_book['id']       = book.id
+        filtered_book['title']    = book.title
+        filtered_book['subtitle'] = book.subtitle
+        filtered_book['category'] = book.category
+        
+        filtered_books.append(filtered_book)
+        
+    tpl_params = { 'books' : filtered_books }
     return render_to_response("all_books.html", tpl_params, context_instance = RequestContext(request))
 
 

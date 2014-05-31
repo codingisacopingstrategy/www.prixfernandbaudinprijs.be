@@ -4,27 +4,14 @@
 {% block content %}
 <h2>{% trans "All books" %}</h2>
 
-{% for book in books %}
 
-<p class="cell-title">{% trans "The book" %}</p>
 <table class="summary">
-<tr><td class="cell1">{% trans "Title" %}</td><td class="cell2">{{ book.title }}</td></tr>
-<tr><td class="cell1">{% trans "Subtitle" %}</td><td class="cell2">{{ book.subtitle }}</td></tr>
-<tr><td class="cell1">{% trans "Publication year" %}</td><td class="cell2">{{ book.publication_year }}</td></tr>
-<tr><td class="cell1">{% trans "Legal depot" %}</td><td class="cell2">{{ book.legal_depot }}</td></tr>
-<tr><td class="cell1">{% trans "ISBN" %}</td><td class="cell2">{{ book.isbn }}</td></tr>
-<tr><td class="cell1">{% trans "Category" %}</td><td class="cell2">{{ book.category }}</td></tr>
-<tr><td class="cell1">{% trans "Editorial concept" %}</td><td class="cell2">{{ book.concept }}</td></tr>
-<tr><td class="cell1">{% trans "Comments" %}</td><td class="cell2">{{ book.comments }}</td></tr>
-</table>
-<p class="cell-title">{% trans "The collaborators" %}</p>
-{% if not book.is_submitted %}<p><a href="{% url 'books-edit-collaborators' book.slug %}">{% trans "Modify" %}</a></p>{% endif %}
-<table class="summary">
-{% for collaboration in book.collaboration_set.all %}
-<tr><td class="cell-collaborator">{{ collaboration.person }}</td><td class="cell2">{{ collaboration.role }}</td></tr>
+    <tr><td>id</td><td>{% trans "Title" %}</td><td>{% trans "Subtitle" %}</td><td>{% trans "Category" %}</td><td>{% trans "Publisher" %}</td><td>{% trans "Graphic designer" %}</td><td>{% trans "Printer" %}</td></tr>
+    {% for book in books %}
+<tr><td>{{ book.id }}</td><td>{{ book.title }}</td><td>{{ book.subtitle }}</td><td>{{ book.category }}</td><td>{{ book.publishers }}</td><td>{{ book.designers }}</td><td>{{ book.printers }}</td>
 {% endfor %}
+</tr><br>
 </table>
 
-{% endfor %}
 
 {% endblock %}
