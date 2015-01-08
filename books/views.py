@@ -1,4 +1,4 @@
-# Create your views here.
+# -*- coding: utf-8 -*-
 import json
 
 from django.http import HttpResponseRedirect
@@ -145,8 +145,33 @@ def submit(request, slug):
     tpl_params = { 'book' : book }
     return render_to_response("register_submit.html", tpl_params, context_instance = RequestContext(request))
 
+def all_people(request):
+    """"
+    This function is not activated for now (deactivated in urls.py)
+    The Prize used it for internal bookkeeping,
+    But in the future it might form the basis for a public page
+    """
+    # écriture “compressée”: la variable “contributors” contient une liste “[]” (ici: list comprehension: fonction qui produit une liste) 
+    # pour produire la liste on regarde chaque objet dans la collection “Collaboration.objects.all()” liée au modèle Collaboration, on l’appelle “c” à chaque fois, on demande de cet objet la propriété “person”
+    # on met ça dans la liste finale 
+    contributors = [c.person for c in Collaboration.objects.all()]
+    
+    #remove doubles (replace the variable contributors by a filtered on, without doubles)
+    contributors = list(set(contributors))
+    
+    # set the name of variable sent to the template, and what is sent to the template (defined just before) 
+    # do it
+    tpl_params = { 'contributors' : contributors }
+    return render_to_response("all_people.html", tpl_params, context_instance = RequestContext(request))
+
+    # then go to the template all–people.html for the details
 
 def all_books(request):
+    """"
+    This function is not activated for now (deactivated in urls.py)
+    The Prize used it for internal bookkeeping,
+    But in the future it might form the basis for a public page
+    """
     books = Book.objects.all()
     """
     book = {

@@ -1,0 +1,17 @@
+
+{% load i18n utils %}
+
+{% block content %}
+
+
+
+<table class="summary">
+    <tr><td>email</td><td>langue</td></tr>
+    {% for contributor in contributors %}
+<tr><td>{{ contributor.email }}</td><td>{{ contributor.language_id }}</td>
+{% endfor %}
+</tr><br>
+</table>
+
+
+{% endblock %}
