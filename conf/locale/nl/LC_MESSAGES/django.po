@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-05 18:40+0200\n"
-"PO-Revision-Date: 2015-04-05 18:46+0100\n"
+"POT-Creation-Date: 2015-04-05 18:58+0200\n"
+"PO-Revision-Date: 2015-04-05 18:59+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
@@ -269,7 +269,7 @@ msgstr ""
 "tot 8 mei 2015."
 
 #: books/templates/register_login.html:13
-#: books/templates/register_login.html:55
+#: books/templates/register_login.html:51
 msgid "REGISTER A BOOK"
 msgstr "Deelnemen"
 
@@ -341,7 +341,15 @@ msgstr ""
 "afdrukken en het samen met één nieuw exemplaar van het boek opsturen voor 8 "
 "mei 2015 naar het volgende adres:"
 
-#: books/templates/register_login.html:40
+#: books/templates/register_login.html:34
+msgid ""
+"POINT CULTURE<br />Fernand Baudin Prize<br />Place de l'Amitié 6<br />1160 "
+"Brussels<br />Belgium"
+msgstr ""
+"POINT CULTURE<br />Fernand Baudin Prijs<br />Place de l’Amitié 6<br />1160 "
+"Brussel<br />België"
+
+#: books/templates/register_login.html:36
 msgid ""
 "The person who submits a book for participation, becomes the contactperson, "
 "and agrees to supply to the organizers, free of charge, three extra copies "
@@ -351,15 +359,15 @@ msgstr ""
 "verbindt zich ertoe om drie bijkomende exemplaren van het boek gratis ter "
 "beschikking te stellen aan de organisatoren indien het boek bekroond wordt."
 
-#: books/templates/register_login.html:41
+#: books/templates/register_login.html:37
 msgid "Click here to see the official rules of the competition."
 msgstr "U vindt hier het volledige wedstrijdreglement."
 
-#: books/templates/register_login.html:42
+#: books/templates/register_login.html:38
 msgid "Procedure for registration:"
 msgstr "Werkwijze"
 
-#: books/templates/register_login.html:44
+#: books/templates/register_login.html:40
 msgid ""
 "fill in online the registration form step by step and as precisely as "
 "possible;"
@@ -367,7 +375,7 @@ msgstr ""
 "vul online het inschrijvingsformulier zo volledig mogelijk in, stap voor "
 "stap;"
 
-#: books/templates/register_login.html:45
+#: books/templates/register_login.html:41
 msgid ""
 "you may find that some contributors are already registered in our database, "
 "if not, please provide the necessary information;"
@@ -375,7 +383,7 @@ msgstr ""
 "sommige medewerkers zult u reeds terugvinden in onze database, indien niet, "
 "vult u zelf de gevraagde gegevens in de velden in;"
 
-#: books/templates/register_login.html:46
+#: books/templates/register_login.html:42
 msgid ""
 "with every step of the registration, there is the possibility to leave "
 "comments, notes and complementary information in the field “comments”;"
@@ -383,7 +391,7 @@ msgstr ""
 "bij iedere stap van de inschrijving kan u opmerkingen en bijkomende "
 "informatie ingeven in het veld \"opmerkingen\";"
 
-#: books/templates/register_login.html:47
+#: books/templates/register_login.html:43
 msgid ""
 "up until the final validation of your registration, you can always go back "
 "to previous step(s) to change or complete the provided information;"
@@ -392,7 +400,7 @@ msgstr ""
 "wijzigen en/of aan te vullen en dit tot aan de uiteindelijke validatie van "
 "de inschrijving;"
 
-#: books/templates/register_login.html:48
+#: books/templates/register_login.html:44
 msgid ""
 "once your registration is complete, download the registration form in PDF-"
 "format;"
@@ -400,7 +408,7 @@ msgstr ""
 "eens de inschrijving afgesloten is, moet u het inschrijvingsformulier "
 "downloaden in PDF-formaat;"
 
-#: books/templates/register_login.html:49
+#: books/templates/register_login.html:45
 msgid "print out this form and send it out with one new copy of the book."
 msgstr ""
 "tenslotte print u dit formulier af en stuurt u dit op samen met één nieuw "

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-05 18:40+0200\n"
-"PO-Revision-Date: 2015-04-05 18:44+0100\n"
+"POT-Creation-Date: 2015-04-05 18:58+0200\n"
+"PO-Revision-Date: 2015-04-05 19:00+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -192,7 +192,7 @@ msgstr "Éditer"
 #: books/templates/register_login.html:18
 #: books/templates/register_signup.html:14
 msgid "Submit"
-msgstr "Soumettre"
+msgstr ""
 
 #: books/templates/register_base.html:37
 msgid "Logout"
@@ -270,7 +270,7 @@ msgstr ""
 "jusqu’au 8 mai 2015."
 
 #: books/templates/register_login.html:13
-#: books/templates/register_login.html:55
+#: books/templates/register_login.html:51
 msgid "REGISTER A BOOK"
 msgstr "Introduire une candidature"
 
@@ -341,7 +341,15 @@ msgstr ""
 "compte, veuillez, retournez le formulaire imprimé accompagné d’un exemplaire "
 "neuf du livre avant le 8 mai 2015 à l’adresse suivante:"
 
-#: books/templates/register_login.html:40
+#: books/templates/register_login.html:34
+msgid ""
+"POINT CULTURE<br />Fernand Baudin Prize<br />Place de l'Amitié 6<br />1160 "
+"Brussels<br />Belgium"
+msgstr ""
+"POINT CULTURE<br />Prix Fernand Baudin<br />Place de l’Amitié 6<br />1160 "
+"Bruxelles<br />Belgique"
+
+#: books/templates/register_login.html:36
 msgid ""
 "The person who submits a book for participation, becomes the contactperson, "
 "and agrees to supply to the organizers, free of charge, three extra copies "
@@ -351,15 +359,15 @@ msgstr ""
 "contact et s'engage à remettre gratuitement aux organisateurs du Prix trois "
 "exemplaires supplémentaires de l’ouvrage si celui-ci est primé."
 
-#: books/templates/register_login.html:41
+#: books/templates/register_login.html:37
 msgid "Click here to see the official rules of the competition."
 msgstr "Vous trouverez le règlement général du concours ici."
 
-#: books/templates/register_login.html:42
+#: books/templates/register_login.html:38
 msgid "Procedure for registration:"
 msgstr "Marche à suivre:"
 
-#: books/templates/register_login.html:44
+#: books/templates/register_login.html:40
 msgid ""
 "fill in online the registration form step by step and as precisely as "
 "possible;"
@@ -367,7 +375,7 @@ msgstr ""
 "remplissez le formulaire en ligne de façon la plus complète possible, étape "
 "par étape;"
 
-#: books/templates/register_login.html:45
+#: books/templates/register_login.html:41
 msgid ""
 "you may find that some contributors are already registered in our database, "
 "if not, please provide the necessary information;"
@@ -375,7 +383,7 @@ msgstr ""
 "retrouvez les contributeurs déjà encodés dans notre base de données ou "
 "insérez des nouveaux contributeurs;"
 
-#: books/templates/register_login.html:46
+#: books/templates/register_login.html:42
 msgid ""
 "with every step of the registration, there is the possibility to leave "
 "comments, notes and complementary information in the field “comments”;"
@@ -383,7 +391,7 @@ msgstr ""
 "à toutes les étapes de l'inscription, insérez notes, commentaires ou "
 "supplément d'information dans le champ \"remarques\" ;"
 
-#: books/templates/register_login.html:47
+#: books/templates/register_login.html:43
 msgid ""
 "up until the final validation of your registration, you can always go back "
 "to previous step(s) to change or complete the provided information;"
@@ -391,14 +399,14 @@ msgstr ""
 "revenez aux étapes précédentes pour les compléter ou les modifier jusqu'à la "
 "validation finale;"
 
-#: books/templates/register_login.html:48
+#: books/templates/register_login.html:44
 msgid ""
 "once your registration is complete, download the registration form in PDF-"
 "format;"
 msgstr ""
 "téléchargez le formulaire en format PDF une fois l'inscription clôturée;"
 
-#: books/templates/register_login.html:49
+#: books/templates/register_login.html:45
 msgid "print out this form and send it out with one new copy of the book."
 msgstr "imprimez le formulaire et envoyez-le accompagné d'un livre neuf."
 
