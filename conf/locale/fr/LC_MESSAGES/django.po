@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-08 09:40+0100\n"
-"PO-Revision-Date: 2014-01-08 09:40+0100\n"
+"POT-Creation-Date: 2015-04-05 18:40+0200\n"
+"PO-Revision-Date: 2015-04-05 18:44+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -17,117 +17,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.2\n"
 
-#: books/models.py:13 books/models.py:98 flatpages/models.py:5
+#: books/models.py:13 books/models.py:110 flatpages/models.py:5
+#: people/models.py:224
 msgid "Title (EN)"
 msgstr "Titre (EN)"
 
-#: books/models.py:14 books/models.py:99 flatpages/models.py:6
+#: books/models.py:14 books/models.py:111 flatpages/models.py:6
+#: people/models.py:225
 msgid "Title (NL)"
 msgstr "Titre (NL)"
 
-#: books/models.py:15 books/models.py:100 flatpages/models.py:7
+#: books/models.py:15 books/models.py:112 flatpages/models.py:7
+#: people/models.py:226
 msgid "Title (FR)"
 msgstr "Titre (FR)"
 
-#: books/models.py:16 books/models.py:32 books/models.py:92
-#: books/models.py:101 flatpages/models.py:8
+#: books/models.py:16 books/models.py:43 books/models.py:104
+#: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid "Slug"
 msgstr ""
 
-#: books/models.py:16 books/models.py:32 books/models.py:92
-#: books/models.py:101 flatpages/models.py:8
+#: books/models.py:16 books/models.py:43 books/models.py:104
+#: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid ""
 "Unique identifier to be used in a web address: uses only unaccented letters, "
 "- and _"
 msgstr ""
 
-#: books/models.py:23 books/templates/register_submit.html:14
+#: books/models.py:34 books/templates/all_books.html:9
+#: books/templates/register_submit.html:14
 msgid "Title"
 msgstr "Titre"
 
-#: books/models.py:24
+#: books/models.py:35
 msgid "Subtitle (if any)"
 msgstr "Sous-titre (si existant)"
 
-#: books/models.py:25 books/templates/register_submit.html:16
+#: books/models.py:36 books/templates/register_submit.html:16
 msgid "Publication year"
 msgstr "Année de publication"
 
-#: books/models.py:26
+#: books/models.py:37
 msgid "Legal Depot"
 msgstr "Dépot légal"
 
-#: books/models.py:27 books/templates/register_submit.html:18
+#: books/models.py:38 books/templates/register_submit.html:18
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/models.py:29 books/templates/register_submit.html:20
+#: books/models.py:40 books/templates/register_submit.html:20
 msgid "Editorial concept"
 msgstr "Concept éditorial"
 
-#: books/models.py:30 books/templates/register_submit.html:21
+#: books/models.py:41 books/templates/register_submit.html:21
 msgid "Comments"
 msgstr "Remarques"
 
-#: books/models.py:34
+#: books/models.py:46
 msgid "Has been submitted"
-msgstr ""
+msgstr "A été enregistré"
 
-#: books/models.py:35
+#: books/models.py:47
 msgid "Submission date"
-msgstr ""
+msgstr "Date de candidature"
 
-#: books/models.py:79
+#: books/models.py:91
 msgid "Print run"
 msgstr "Tirage"
 
-#: books/models.py:80
+#: books/models.py:92
 msgid "Dimensions of the book when it is closed"
 msgstr "Dimensions du livre fermé"
 
-#: books/models.py:81
+#: books/models.py:93
 msgid "Weight of the book"
 msgstr "Poids du livre"
 
-#: books/models.py:82
+#: books/models.py:94
 msgid "Pages number"
 msgstr "Nombre de pages"
 
-#: books/models.py:83
+#: books/models.py:95
 msgid "Number of sections"
 msgstr "Nombre de cahiers"
 
-#: books/models.py:84
+#: books/models.py:96
 msgid "Paper(s)"
 msgstr "Papier(s)"
 
-#: books/models.py:85
+#: books/models.py:97
 msgid "Type of binding"
 msgstr "Type de reliure ou de brochage"
 
-#: books/models.py:86
+#: books/models.py:98
 msgid "Type of printing"
 msgstr "Type d’impression"
 
-#: books/models.py:87
+#: books/models.py:99
 msgid "Fonts"
 msgstr "Police(s) de caratère"
 
-#: books/models.py:88
+#: books/models.py:100
 msgid "Cover’s number of pages"
 msgstr "Nombre de pages de la couverture"
 
-#: books/models.py:89
+#: books/models.py:101
 msgid "Cover’s paper"
 msgstr "Papier de la couverture"
 
-#: books/models.py:90
+#: books/models.py:102
 msgid "Cover’s type of printing"
 msgstr "Type d’impression de la couverture"
 
-#: books/models.py:91
+#: books/models.py:103
 msgid "Cover’s finish"
 msgstr "Finition de la couverture"
+
+#: books/templates/all_books.html:5
+msgid "All books"
+msgstr ""
+
+#: books/templates/all_books.html:9 books/templates/register_submit.html:15
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: books/templates/all_books.html:9 books/templates/register_submit.html:19
+msgid "Category"
+msgstr "Catégorie"
+
+#: books/templates/all_books.html:9
+msgid "Publisher"
+msgstr "Éditeur"
+
+#: books/templates/all_books.html:9
+msgid "Graphic designer"
+msgstr "Graphiste"
+
+#: books/templates/all_books.html:9
+msgid "Printer"
+msgstr "Imprimeur"
 
 #: books/templates/register.html:5
 #: books/templates/register_book_collaborator_add.html:6
@@ -142,11 +170,11 @@ msgstr "Bienvenue"
 
 #: books/templates/register.html:10
 msgid ""
-"You can now register a book for Fernand Baudin Prize 2013.<br />For that, "
+"You can now register a book for Fernand Baudin Prize 2014.<br />For that, "
 "fill in the following registration form step by step and as precisely as "
 "possible."
 msgstr ""
-"Vous pouvez maintenant enregistrer un livre au Prix Fernand Baudin 2013.<br /"
+"Vous pouvez maintenant enregistrer un livre au Prix Fernand Baudin 2014.<br /"
 ">Pour cela, remplissez le formulaire suivant de façon la plus complète "
 "possible, étape par étape."
 
@@ -164,7 +192,7 @@ msgstr "Éditer"
 #: books/templates/register_login.html:18
 #: books/templates/register_signup.html:14
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: books/templates/register_base.html:37
 msgid "Logout"
@@ -223,26 +251,26 @@ msgid ""
 "The prize is open to <em>all book categories</em>: from the art book to the "
 "children’s book, the cooking book and other technical books. Any <em>graphic "
 "designer, publisher, printer, artist/conceptor or illustrator</em> working "
-"or living in Brussels or Wallonia can compete with a book published in 2013 "
+"or living in Brussels or Wallonia can compete with a book published in 2014 "
 "to which he/she has contributed."
 msgstr ""
 "Le prix est ouvert à <em>toutes les catégories de livres</em>: du livre "
 "d’art au livre jeunesse, en passant par le livre de cuisine et autres livres "
 "techniques. <em>Tout graphiste, éditeur, imprimeur, artiste concepteur ou "
 "illustrateur</em> travaillant ou résidant dans la Région Bruxelles Capitale "
-"ou en Wallonie peut concourir pour un livre publié en 2013 auquel il a "
+"ou en Wallonie peut concourir pour un livre publié en 2014 auquel il a "
 "participé."
 
 #: books/templates/register_login.html:10
 msgid ""
-"The registration of books published during the year 2013 will be opened from "
-"the 16th of December to the 31st of January."
+"The registration of books published during the year 2014 will be opened "
+"until the 8th of May 2015."
 msgstr ""
-"L’inscription au concours des livres publiés dans l’année 2013 sera ouverte "
-"jusqu’au 31 janvier."
+"L’inscription au concours des livres publiés dans l’année 2014 sera ouverte "
+"jusqu’au 8 mai 2015."
 
 #: books/templates/register_login.html:13
-#: books/templates/register_login.html:51
+#: books/templates/register_login.html:55
 msgid "REGISTER A BOOK"
 msgstr "Introduire une candidature"
 
@@ -307,22 +335,13 @@ msgstr "La participation au Prix Fernand Baudin est entièrement gratuite."
 msgid ""
 "Finally, for your submission of a book to be accepted by the Fernand Baudin "
 "Prize, you must print out the registration form and send it with one new "
-"copy of the book before 31th January 2014 to the following address:"
+"copy of the book until the 8th of May 2015 to the following address:"
 msgstr ""
-"Pour que la candidature d'un livre au Prix Fernand Baudin soit prise en "
-"compte, veuillez, retournez le formulaire imprimé accompagné d'un exemplaire "
-"neuf du livre avant le 31 janvier 2014 à l'adresse suivante:"
+"Pour que la candidature d’un livre au Prix Fernand Baudin soit prise en "
+"compte, veuillez, retournez le formulaire imprimé accompagné d’un exemplaire "
+"neuf du livre avant le 8 mai 2015 à l’adresse suivante:"
 
-#: books/templates/register_login.html:34
-#: books/templates/register_submit.html:33
-msgid ""
-"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
-"Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
-msgstr ""
-"BRUXELLES INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerne: Prix "
-"Fernand Baudin 2013<br />Avenue Louise 500/4 <br />1050 Bruxelles"
-
-#: books/templates/register_login.html:36
+#: books/templates/register_login.html:40
 msgid ""
 "The person who submits a book for participation, becomes the contactperson, "
 "and agrees to supply to the organizers, free of charge, three extra copies "
@@ -332,15 +351,15 @@ msgstr ""
 "contact et s'engage à remettre gratuitement aux organisateurs du Prix trois "
 "exemplaires supplémentaires de l’ouvrage si celui-ci est primé."
 
-#: books/templates/register_login.html:37
+#: books/templates/register_login.html:41
 msgid "Click here to see the official rules of the competition."
 msgstr "Vous trouverez le règlement général du concours ici."
 
-#: books/templates/register_login.html:38
+#: books/templates/register_login.html:42
 msgid "Procedure for registration:"
 msgstr "Marche à suivre:"
 
-#: books/templates/register_login.html:40
+#: books/templates/register_login.html:44
 msgid ""
 "fill in online the registration form step by step and as precisely as "
 "possible;"
@@ -348,7 +367,7 @@ msgstr ""
 "remplissez le formulaire en ligne de façon la plus complète possible, étape "
 "par étape;"
 
-#: books/templates/register_login.html:41
+#: books/templates/register_login.html:45
 msgid ""
 "you may find that some contributors are already registered in our database, "
 "if not, please provide the necessary information;"
@@ -356,7 +375,7 @@ msgstr ""
 "retrouvez les contributeurs déjà encodés dans notre base de données ou "
 "insérez des nouveaux contributeurs;"
 
-#: books/templates/register_login.html:42
+#: books/templates/register_login.html:46
 msgid ""
 "with every step of the registration, there is the possibility to leave "
 "comments, notes and complementary information in the field “comments”;"
@@ -364,7 +383,7 @@ msgstr ""
 "à toutes les étapes de l'inscription, insérez notes, commentaires ou "
 "supplément d'information dans le champ \"remarques\" ;"
 
-#: books/templates/register_login.html:43
+#: books/templates/register_login.html:47
 msgid ""
 "up until the final validation of your registration, you can always go back "
 "to previous step(s) to change or complete the provided information;"
@@ -372,14 +391,14 @@ msgstr ""
 "revenez aux étapes précédentes pour les compléter ou les modifier jusqu'à la "
 "validation finale;"
 
-#: books/templates/register_login.html:44
+#: books/templates/register_login.html:48
 msgid ""
 "once your registration is complete, download the registration form in PDF-"
 "format;"
 msgstr ""
 "téléchargez le formulaire en format PDF une fois l'inscription clôturée;"
 
-#: books/templates/register_login.html:45
+#: books/templates/register_login.html:49
 msgid "print out this form and send it out with one new copy of the book."
 msgstr "imprimez le formulaire et envoyez-le accompagné d'un livre neuf."
 
@@ -412,17 +431,9 @@ msgstr "Veuillez vérifier ci-dessous les données de votre candidature."
 msgid "Modify"
 msgstr "Modifier"
 
-#: books/templates/register_submit.html:15
-msgid "Subtitle"
-msgstr "Sous-titre"
-
 #: books/templates/register_submit.html:17
 msgid "Legal depot"
 msgstr "Dépôt légal"
-
-#: books/templates/register_submit.html:19
-msgid "Category"
-msgstr "Catégorie"
 
 #: books/templates/register_submit.html:31
 msgid ""
@@ -432,9 +443,9 @@ msgstr ""
 "Une fois que vous avez confirmé les données, vous recevrez la confirmation "
 "de votre candidature par e-mail."
 
-#: books/templates/register_submit.html:37
-msgid "Submit for Fernand Baudin Prize 2013"
-msgstr "Inscrivez votre livre au Prix Fernand Baudin 2013!"
+#: books/templates/register_submit.html:41
+msgid "Submit for Fernand Baudin Prize 2014"
+msgstr "Inscrivez votre livre au Prix Fernand Baudin 2014!"
 
 #: fernand/settings.py:40
 msgid "Dutch"
@@ -460,11 +471,11 @@ msgstr "Contenu (NL)"
 msgid "Content (FR)"
 msgstr "Contenu (FR)"
 
-#: people/admin.py:102
+#: people/admin.py:111
 msgid "Password changed successfully."
 msgstr "Le mot de passe a été modifié avec succès."
 
-#: people/admin.py:112
+#: people/admin.py:121
 #, python-format
 msgid "Change password: %s"
 msgstr "Modifier le mot de passe: %s"
@@ -613,34 +624,45 @@ msgid "company registration number"
 msgstr "numéro d’entreprise"
 
 #: people/models.py:87
+msgid "subscribed to mailing"
+msgstr "Inscrit à la mailinglist"
+
+#: people/models.py:89
 msgid "staff status"
 msgstr "statut de l’équipe"
 
-#: people/models.py:88
+#: people/models.py:90
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: people/models.py:90
+#: people/models.py:92
 msgid "active"
 msgstr "actif"
 
-#: people/models.py:91
+#: people/models.py:93
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: people/models.py:93
+#: people/models.py:95
 msgid "date joined"
 msgstr "date d’inscription"
 
-#: people/models.py:159
+#: people/models.py:161
 msgid "user"
 msgstr "utilisateurs"
 
-#: people/models.py:160
+#: people/models.py:162
 msgid "users"
 msgstr "utilisateurs"
+
+#~ msgid ""
+#~ "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
+#~ "Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
+#~ msgstr ""
+#~ "BRUXELLES INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerne: Prix "
+#~ "Fernand Baudin 2013<br />Avenue Louise 500/4 <br />1050 Bruxelles"
 
 #~ msgid "Personal info"
 #~ msgstr "Informations personnelles"

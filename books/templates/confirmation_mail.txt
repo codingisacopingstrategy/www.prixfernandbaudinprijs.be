@@ -5,13 +5,14 @@ Le Prix Fernand Baudin vous remercie pour votre candidature.
 Veuillez cliquer sur le lien suivant afin de télécharger sa version imprimable.
 {{ submission_uri }}
 
-Merci de retourner ce dernier imprimé accompagné d'un exemplaire neuf du livre avant le 31 janvier 2014 à l'adresse suivante:
+Merci de retourner ce dernier imprimé accompagné d'un exemplaire neuf du livre avant le 8 mai 2015 à l'adresse suivante:
 
-Bruxelles Invest & Export¬
-Madeleine Cantaert¬
-Concerne Prix Fernand Baudin Prijs 2013¬
-Avenue Louise 500/4¬
-1050 Bruxelles
+POINT CULTURE
+Prix Fernand Baudin
+Place de l'Amitié 6
+1160 Bruxelles
+Belgique
+
 
 
 À bientôt,
@@ -26,13 +27,13 @@ Uw deelname aan de Fernand Baudin Prijs
 De Fernand Baudin Prijs dankt u voor uw deelname. U moet de onderstaande link te klikken en uw deelnameformulier downloaden en printen. 
 {{ submission_uri }}
 
-Stuur dit formulier vergezeld van een nieuw boekexemplaar voor 31 januari 2014 terug naar onderstaand adres:
+Stuur dit formulier vergezeld van een nieuw boekexemplaar voor 8 mei 2015 terug naar onderstaand adres:
 
-Brussel Invest & Export¬
-Madeleine Cantaert¬
-Betreft Fernand Baudin Prijs 2013¬
-LouizaLaan 500/4¬
-1050 Brussel
+POINT CULTURE
+Fernand Baudin Prijs
+Place de l'Amitié 6
+1160 Brussel
+België
 
 
 Tot binnenkort,
@@ -48,13 +49,12 @@ The Fernand Baudin Prize thanks you for your book submission.
 Please click on the following link to download its printable version.
 {{ submission_uri }}
 
-Please return this form, accompanied by a new copy of the book, for the 31th of January 2014 to the following address:
+Please return this form, accompanied by a new copy of the book, before the 8th of May 2015 to the following address:
 
-Brussels Invest & Export¬
-Madeleine Cantaert¬
-About Fernand Baudin Prize 2013¬
-Avenue LouizaLaan 500/4¬
-1050 Brussels¬
+POINT CULTURE
+Fernand Baudin Prize
+Place de l'Amitié 6
+1160 Brussels
 Belgium
 
 
@@ -66,5 +66,4 @@ Fernand Baudin Prize non-profit organisation
 
 
 Contact:
-Loraine Furter
-loraine@prixfernandbaudinprijs.be
+info@prixfernandbaudinprijs.be

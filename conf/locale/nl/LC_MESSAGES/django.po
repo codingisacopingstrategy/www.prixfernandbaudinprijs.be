@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-18 17:37+0100\n"
-"PO-Revision-Date: 2013-12-18 17:37+0100\n"
+"POT-Creation-Date: 2015-04-05 18:40+0200\n"
+"PO-Revision-Date: 2015-04-05 18:46+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
@@ -17,117 +17,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.2\n"
 
-#: books/models.py:13 books/models.py:98 flatpages/models.py:5
+#: books/models.py:13 books/models.py:110 flatpages/models.py:5
+#: people/models.py:224
 msgid "Title (EN)"
 msgstr "Titel (EN)"
 
-#: books/models.py:14 books/models.py:99 flatpages/models.py:6
+#: books/models.py:14 books/models.py:111 flatpages/models.py:6
+#: people/models.py:225
 msgid "Title (NL)"
 msgstr "Titel (NL)"
 
-#: books/models.py:15 books/models.py:100 flatpages/models.py:7
+#: books/models.py:15 books/models.py:112 flatpages/models.py:7
+#: people/models.py:226
 msgid "Title (FR)"
 msgstr "Titel (FR)"
 
-#: books/models.py:16 books/models.py:32 books/models.py:92
-#: books/models.py:101 flatpages/models.py:8
+#: books/models.py:16 books/models.py:43 books/models.py:104
+#: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid "Slug"
 msgstr ""
 
-#: books/models.py:16 books/models.py:32 books/models.py:92
-#: books/models.py:101 flatpages/models.py:8
+#: books/models.py:16 books/models.py:43 books/models.py:104
+#: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid ""
 "Unique identifier to be used in a web address: uses only unaccented letters, "
 "- and _"
 msgstr ""
 
-#: books/models.py:23 books/templates/register_submit.html:14
+#: books/models.py:34 books/templates/all_books.html:9
+#: books/templates/register_submit.html:14
 msgid "Title"
 msgstr "Titel"
 
-#: books/models.py:24
+#: books/models.py:35
 msgid "Subtitle (if any)"
 msgstr "Ondertitel"
 
-#: books/models.py:25 books/templates/register_submit.html:16
+#: books/models.py:36 books/templates/register_submit.html:16
 msgid "Publication year"
 msgstr "Publicatiejaar"
 
-#: books/models.py:26
+#: books/models.py:37
 msgid "Legal Depot"
 msgstr "Depotplicht"
 
-#: books/models.py:27 books/templates/register_submit.html:18
+#: books/models.py:38 books/templates/register_submit.html:18
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/models.py:29 books/templates/register_submit.html:20
+#: books/models.py:40 books/templates/register_submit.html:20
 msgid "Editorial concept"
 msgstr "Boek concept"
 
-#: books/models.py:30 books/templates/register_submit.html:21
+#: books/models.py:41 books/templates/register_submit.html:21
 msgid "Comments"
 msgstr "Commentaren"
 
-#: books/models.py:34
+#: books/models.py:46
 msgid "Has been submitted"
 msgstr ""
 
-#: books/models.py:35
+#: books/models.py:47
 msgid "Submission date"
 msgstr ""
 
-#: books/models.py:79
+#: books/models.py:91
 msgid "Print run"
 msgstr "Oplage"
 
-#: books/models.py:80
+#: books/models.py:92
 msgid "Dimensions of the book when it is closed"
 msgstr "Afmetingen van de (gesloten) boek"
 
-#: books/models.py:81
+#: books/models.py:93
 msgid "Weight of the book"
 msgstr "Gewicht van het boek"
 
-#: books/models.py:82
+#: books/models.py:94
 msgid "Pages number"
 msgstr "Aantal pagina’s"
 
-#: books/models.py:83
+#: books/models.py:95
 msgid "Number of sections"
 msgstr "Aantal katern"
 
-#: books/models.py:84
+#: books/models.py:96
 msgid "Paper(s)"
 msgstr "Papier(en)"
 
-#: books/models.py:85
+#: books/models.py:97
 msgid "Type of binding"
 msgstr "Bind of brocheer wijze"
 
-#: books/models.py:86
+#: books/models.py:98
 msgid "Type of printing"
 msgstr "Drukwijzen"
 
-#: books/models.py:87
+#: books/models.py:99
 msgid "Fonts"
 msgstr "Lettertype"
 
-#: books/models.py:88
+#: books/models.py:100
 msgid "Cover’s number of pages"
 msgstr "Aantal omslagpagina’s"
 
-#: books/models.py:89
+#: books/models.py:101
 msgid "Cover’s paper"
 msgstr "Omslag papier"
 
-#: books/models.py:90
+#: books/models.py:102
 msgid "Cover’s type of printing"
 msgstr "Omslag drukwijzen"
 
-#: books/models.py:91
+#: books/models.py:103
 msgid "Cover’s finish"
 msgstr "Omslag afwerking"
+
+#: books/templates/all_books.html:5
+msgid "All books"
+msgstr ""
+
+#: books/templates/all_books.html:9 books/templates/register_submit.html:15
+msgid "Subtitle"
+msgstr "Subtitel"
+
+#: books/templates/all_books.html:9 books/templates/register_submit.html:19
+msgid "Category"
+msgstr "Boek categorie"
+
+#: books/templates/all_books.html:9
+msgid "Publisher"
+msgstr ""
+
+#: books/templates/all_books.html:9
+msgid "Graphic designer"
+msgstr ""
+
+#: books/templates/all_books.html:9
+msgid "Printer"
+msgstr "Drukker"
 
 #: books/templates/register.html:5
 #: books/templates/register_book_collaborator_add.html:6
@@ -142,11 +170,11 @@ msgstr "Welkom"
 
 #: books/templates/register.html:10
 msgid ""
-"You can now register a book for Fernand Baudin Prize 2013.<br />For that, "
+"You can now register a book for Fernand Baudin Prize 2014.<br />For that, "
 "fill in the following registration form step by step and as precisely as "
 "possible."
 msgstr ""
-"U kunt nu een boek inschrijven voor Fernand Baudin Prijs 2013.<br />Op dat, "
+"U kunt nu een boek inschrijven voor Fernand Baudin Prijs 2014.<br />Op dat, "
 "vul de volgende inschrijvingsformulier zo volledig mogelijk in, stap voor "
 "stap."
 
@@ -222,7 +250,7 @@ msgid ""
 "The prize is open to <em>all book categories</em>: from the art book to the "
 "children’s book, the cooking book and other technical books. Any <em>graphic "
 "designer, publisher, printer, artist/conceptor or illustrator</em> working "
-"or living in Brussels or Wallonia can compete with a book published in 2013 "
+"or living in Brussels or Wallonia can compete with a book published in 2014 "
 "to which he/she has contributed."
 msgstr ""
 "De prijs staat open voor <em>alle categorieën van boeken</em>: van het "
@@ -230,18 +258,18 @@ msgstr ""
 "boeken. <em>Ieder grafisch vormgever, uitgever, drukker, kunstenaar/ "
 "ontwerper of illustrator</em> woonachtig of werkzaam in het Brussels "
 "Hoofdstedelijk Gewest of Wallonië, kan meedingen naar de prijs met een boek "
-"uitgegeven in 2013 waaraan hij/zij heeft meegewerkt."
+"uitgegeven in 2014 waaraan hij/zij heeft meegewerkt."
 
 #: books/templates/register_login.html:10
 msgid ""
-"The registration of books published during the year 2013 will be opened from "
-"the 16th of December to the 31st of January."
+"The registration of books published during the year 2014 will be opened "
+"until the 8th of May 2015."
 msgstr ""
-"De inschrijving van boeken verschenen in de loop van 2013 zal geopend zijn "
-"tot 31 Januari."
+"De inschrijving van boeken verschenen in de loop van 2014 zal geopend zijn "
+"tot 8 mei 2015."
 
 #: books/templates/register_login.html:13
-#: books/templates/register_login.html:51
+#: books/templates/register_login.html:55
 msgid "REGISTER A BOOK"
 msgstr "Deelnemen"
 
@@ -306,23 +334,14 @@ msgstr "De deelname aan de Fernand Baudin Prijs is volledig gratis."
 msgid ""
 "Finally, for your submission of a book to be accepted by the Fernand Baudin "
 "Prize, you must print out the registration form and send it with one new "
-"copy of the book before 31th January 2014 to the following address:"
+"copy of the book until the 8th of May 2015 to the following address:"
 msgstr ""
 "Opdat uw deelname aan de Fernand Baudin Prijs in aanmerking zou worden "
 "genomen, moet u na de inschrijving online het inschrijvingsformulier "
-"afdrukken en het samen met één nieuw exemplaar van het boek opsturen voor 31 "
-"januari 2014 naar het volgende adres:\t•\t"
+"afdrukken en het samen met één nieuw exemplaar van het boek opsturen voor 8 "
+"mei 2015 naar het volgende adres:"
 
-#: books/templates/register_login.html:34
-#: books/templates/register_submit.html:33
-msgid ""
-"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
-"Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
-msgstr ""
-"BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Betreft: Fernand "
-"Baudin Prijs<br />Louizalaan 500/4<br />1050 Brussel"
-
-#: books/templates/register_login.html:36
+#: books/templates/register_login.html:40
 msgid ""
 "The person who submits a book for participation, becomes the contactperson, "
 "and agrees to supply to the organizers, free of charge, three extra copies "
@@ -332,15 +351,15 @@ msgstr ""
 "verbindt zich ertoe om drie bijkomende exemplaren van het boek gratis ter "
 "beschikking te stellen aan de organisatoren indien het boek bekroond wordt."
 
-#: books/templates/register_login.html:37
+#: books/templates/register_login.html:41
 msgid "Click here to see the official rules of the competition."
 msgstr "U vindt hier het volledige wedstrijdreglement."
 
-#: books/templates/register_login.html:38
+#: books/templates/register_login.html:42
 msgid "Procedure for registration:"
 msgstr "Werkwijze"
 
-#: books/templates/register_login.html:40
+#: books/templates/register_login.html:44
 msgid ""
 "fill in online the registration form step by step and as precisely as "
 "possible;"
@@ -348,7 +367,7 @@ msgstr ""
 "vul online het inschrijvingsformulier zo volledig mogelijk in, stap voor "
 "stap;"
 
-#: books/templates/register_login.html:41
+#: books/templates/register_login.html:45
 msgid ""
 "you may find that some contributors are already registered in our database, "
 "if not, please provide the necessary information;"
@@ -356,7 +375,7 @@ msgstr ""
 "sommige medewerkers zult u reeds terugvinden in onze database, indien niet, "
 "vult u zelf de gevraagde gegevens in de velden in;"
 
-#: books/templates/register_login.html:42
+#: books/templates/register_login.html:46
 msgid ""
 "with every step of the registration, there is the possibility to leave "
 "comments, notes and complementary information in the field “comments”;"
@@ -364,7 +383,7 @@ msgstr ""
 "bij iedere stap van de inschrijving kan u opmerkingen en bijkomende "
 "informatie ingeven in het veld \"opmerkingen\";"
 
-#: books/templates/register_login.html:43
+#: books/templates/register_login.html:47
 msgid ""
 "up until the final validation of your registration, you can always go back "
 "to previous step(s) to change or complete the provided information;"
@@ -373,7 +392,7 @@ msgstr ""
 "wijzigen en/of aan te vullen en dit tot aan de uiteindelijke validatie van "
 "de inschrijving;"
 
-#: books/templates/register_login.html:44
+#: books/templates/register_login.html:48
 msgid ""
 "once your registration is complete, download the registration form in PDF-"
 "format;"
@@ -381,7 +400,7 @@ msgstr ""
 "eens de inschrijving afgesloten is, moet u het inschrijvingsformulier "
 "downloaden in PDF-formaat;"
 
-#: books/templates/register_login.html:45
+#: books/templates/register_login.html:49
 msgid "print out this form and send it out with one new copy of the book."
 msgstr ""
 "tenslotte print u dit formulier af en stuurt u dit op samen met één nieuw "
@@ -416,17 +435,9 @@ msgstr "U ziet hier een samenvatting van uw inschrijving."
 msgid "Modify"
 msgstr "Wijzigen"
 
-#: books/templates/register_submit.html:15
-msgid "Subtitle"
-msgstr "Subtitel"
-
 #: books/templates/register_submit.html:17
 msgid "Legal depot"
 msgstr "Depotplicht"
-
-#: books/templates/register_submit.html:19
-msgid "Category"
-msgstr "Boek categorie"
 
 #: books/templates/register_submit.html:31
 msgid ""
@@ -436,9 +447,9 @@ msgstr ""
 "Wanneer u alles heeft nagekeken en u deze gegevens bevestigt, ontvangt u via "
 "email een bevestiging van uw inschrijving."
 
-#: books/templates/register_submit.html:37
-msgid "Submit for Fernand Baudin Prize 2013"
-msgstr "Schrijf uw boek in voor Fernand Baudin Prijs 2013"
+#: books/templates/register_submit.html:41
+msgid "Submit for Fernand Baudin Prize 2014"
+msgstr "Schrijf uw boek in voor Fernand Baudin Prijs 2014"
 
 #: fernand/settings.py:40
 msgid "Dutch"
@@ -464,23 +475,11 @@ msgstr "Inhoud (NL)"
 msgid "Content (FR)"
 msgstr "Inhoud (FR)"
 
-#: people/admin.py:29
-msgid "Personal info"
-msgstr "Persoonlijke informatie"
-
-#: people/admin.py:30
-msgid "Permissions"
-msgstr "Vergunning"
-
-#: people/admin.py:32
-msgid "Important dates"
-msgstr "Belangrijke data"
-
-#: people/admin.py:115
+#: people/admin.py:111
 msgid "Password changed successfully."
 msgstr "Wachtwoord succesvol gewijzigd."
 
-#: people/admin.py:125
+#: people/admin.py:121
 #, python-format
 msgid "Change password: %s"
 msgstr "Wachtwoord wijzigen: %s"
@@ -524,139 +523,159 @@ msgstr "Geen gebruiker met dit e-mail bestaat"
 msgid "The two passwords did not match"
 msgstr "De twee wachtwoorden komen niet overeen"
 
-#: people/models.py:54
+#: people/models.py:60
 msgid "first name"
 msgstr "voornaam"
 
-#: people/models.py:55
+#: people/models.py:61
 msgid "last name"
 msgstr "achternaam"
 
-#: people/models.py:56
+#: people/models.py:62
 msgid "email address"
 msgstr "email adres"
 
-#: people/models.py:57
+#: people/models.py:63
 msgid "email address - alternate"
 msgstr "email adres - ander"
 
-#: people/models.py:58
+#: people/models.py:64
 msgid "where do your work"
 msgstr "waar werkt u"
 
-#: people/models.py:59
+#: people/models.py:65
 msgid "job title"
 msgstr "functietitel"
 
-#: people/models.py:60
+#: people/models.py:66
 msgid "email invalid"
 msgstr ""
 
-#: people/models.py:61
+#: people/models.py:67
 msgid "address"
 msgstr "adres"
 
-#: people/models.py:62
+#: people/models.py:68
 msgid "postal code"
 msgstr "postcode"
 
-#: people/models.py:63
+#: people/models.py:69
 msgid "city"
 msgstr "stad"
 
-#: people/models.py:64
+#: people/models.py:70
 msgid "state or province"
 msgstr "staat of provincie"
 
-#: people/models.py:65
+#: people/models.py:71
 msgid "country code (ex: BE)"
 msgstr "landnummer (ex: BE)"
 
-#: people/models.py:66
+#: people/models.py:72
 msgid "phone number"
 msgstr "telefoonnummer"
 
-#: people/models.py:67
+#: people/models.py:73
 msgid "phone number - mobile"
 msgstr "mobiel nummer"
 
-#: people/models.py:68
+#: people/models.py:74
 msgid "phone number - alternate"
 msgstr "telefoonnummer - ander"
 
-#: people/models.py:69
+#: people/models.py:75
 msgid "fax number"
 msgstr "fax nummer"
 
-#: people/models.py:70
+#: people/models.py:76
 msgid "language EN / FR / NL"
 msgstr "taal EN / FR / NL"
 
-#: people/models.py:71
+#: people/models.py:77
 msgid "gender"
 msgstr "geslacht"
 
-#: people/models.py:72
+#: people/models.py:78
 msgid "birthday"
 msgstr "geboortedag"
 
-#: people/models.py:73
+#: people/models.py:79
 msgid "place of birth"
 msgstr "geboorteplaats"
 
-#: people/models.py:74
+#: people/models.py:80
 msgid "website"
 msgstr "website"
 
-#: people/models.py:75
+#: people/models.py:81
 msgid "national number"
 msgstr "nationaal nummer"
 
-#: people/models.py:76
+#: people/models.py:82
 msgid "id card number"
 msgstr "id kaart nummer"
 
-#: people/models.py:77
+#: people/models.py:83
 msgid "sis number"
 msgstr "sis nummer"
 
-#: people/models.py:78
+#: people/models.py:84
 msgid "vat number"
 msgstr "vat antaal"
 
-#: people/models.py:79
+#: people/models.py:85
 msgid "company registration number"
 msgstr "Ondernemingsnummer"
 
-#: people/models.py:81
+#: people/models.py:87
+msgid "subscribed to mailing"
+msgstr ""
+
+#: people/models.py:89
 msgid "staff status"
 msgstr ""
 
-#: people/models.py:82
+#: people/models.py:90
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: people/models.py:84
+#: people/models.py:92
 msgid "active"
 msgstr ""
 
-#: people/models.py:85
+#: people/models.py:93
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr "Wettelijk depot"
 
-#: people/models.py:87
+#: people/models.py:95
 msgid "date joined"
 msgstr "datum trad"
 
-#: people/models.py:153
+#: people/models.py:161
 msgid "user"
 msgstr "gebruiker"
 
-#: people/models.py:154
+#: people/models.py:162
 msgid "users"
 msgstr "gebruikers"
+
+#~ msgid ""
+#~ "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "
+#~ "Fernand Baudin Prize<br />Avenue Louise 500/4<br />1050 Bruxelles"
+#~ msgstr ""
+#~ "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Betreft: "
+#~ "Fernand Baudin Prijs<br />Louizalaan 500/4<br />1050 Brussel"
+
+#~ msgid "Personal info"
+#~ msgstr "Persoonlijke informatie"
+
+#~ msgid "Permissions"
+#~ msgstr "Vergunning"
+
+#~ msgid "Important dates"
+#~ msgstr "Belangrijke data"
 
 #~ msgid "iban number"
 #~ msgstr "IBAN antaal"
