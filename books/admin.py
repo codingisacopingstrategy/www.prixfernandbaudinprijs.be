@@ -14,6 +14,7 @@ class CollaborationInline(admin.TabularInline):
 class BookAdmin(admin.ModelAdmin):
     inlines = (CollaborationInline,)
     prepopulated_fields = {"slug": ("title",)}
+    list_display = ('title', 'publication_year')
     search_fields = ('title', 'people__last_name', 'people__first_name')
 
 class CategoryAdmin(admin.ModelAdmin):
