@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-12 19:19+0200\n"
-"PO-Revision-Date: 2015-04-12 19:23+0100\n"
+"PO-Revision-Date: 2015-04-12 22:45+0100\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "Titel (FR)"
 #: books/models.py:16 books/models.py:43 books/models.py:104
 #: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid "Slug"
-msgstr ""
+msgstr "Web-identifier"
 
 #: books/models.py:16 books/models.py:43 books/models.py:104
 #: books/models.py:113 flatpages/models.py:8 people/models.py:227
@@ -43,6 +43,8 @@ msgid ""
 "Unique identifier to be used in a web address: uses only unaccented letters, "
 "- and _"
 msgstr ""
+"Unieke id die moet worden gebruikt in een webadres: gebruikt uitsluitend "
+"letters zonder accent,- en _"
 
 #: books/models.py:34 books/templates/all_books.html:9
 #: books/templates/register_submit.html:14
@@ -75,11 +77,11 @@ msgstr "Commentaren"
 
 #: books/models.py:46
 msgid "Has been submitted"
-msgstr ""
+msgstr "Is ingediend"
 
 #: books/models.py:47
 msgid "Submission date"
-msgstr ""
+msgstr "Datum ingediend"
 
 #: books/models.py:91
 msgid "Print run"
@@ -135,7 +137,7 @@ msgstr "Omslag afwerking"
 
 #: books/templates/all_books.html:5
 msgid "All books"
-msgstr ""
+msgstr "Alle boeken"
 
 #: books/templates/all_books.html:9 books/templates/register_submit.html:15
 msgid "Subtitle"
@@ -147,11 +149,11 @@ msgstr "Boek categorie"
 
 #: books/templates/all_books.html:9
 msgid "Publisher"
-msgstr ""
+msgstr "Uitgever"
 
 #: books/templates/all_books.html:9
 msgid "Graphic designer"
-msgstr ""
+msgstr "Grafisch vormgever"
 
 #: books/templates/all_books.html:9
 msgid "Printer"
@@ -192,7 +194,7 @@ msgstr "Bewerken"
 #: books/templates/register_login.html:18
 #: books/templates/register_signup.html:14
 msgid "Submit"
-msgstr ""
+msgstr "Verzenden"
 
 #: books/templates/register_base.html:37
 msgid "Logout"
@@ -210,7 +212,7 @@ msgstr "Medewerker"
 
 #: books/templates/register_book_collaborator_add.html:8
 msgid "for"
-msgstr "pour"
+msgstr "voor"
 
 #: books/templates/register_book_collaborator_add.html:10
 msgid "Role"
@@ -522,6 +524,9 @@ msgid ""
 "password, but you can change the password using <a href=\"password/\">this "
 "form</a>."
 msgstr ""
+"De paswoorden zelf worden niet opgeslagen, dus kunnen niet geraadpleegd "
+"worden, maar het wachtwoord kan gewijzigd worden met <a href=\"password/"
+"\">dit formulier</a>."
 
 #: people/forms.py:74
 msgid "No user with that email exists"
@@ -557,7 +562,7 @@ msgstr "functietitel"
 
 #: people/models.py:66
 msgid "email invalid"
-msgstr ""
+msgstr "e-mail adres niet correct"
 
 #: people/models.py:67
 msgid "address"
@@ -637,29 +642,31 @@ msgstr "Ondernemingsnummer"
 
 #: people/models.py:87
 msgid "subscribed to mailing"
-msgstr ""
+msgstr "op de mailinglijst geabonneerd"
 
 #: people/models.py:89
 msgid "staff status"
-msgstr ""
+msgstr "medewerker website"
 
 #: people/models.py:90
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Bepaalt of de gebruiker in kan loggen op de admin"
 
 #: people/models.py:92
 msgid "active"
-msgstr ""
+msgstr "actief"
 
 #: people/models.py:93
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr "Wettelijk depot"
+msgstr ""
+"Geeft aan of de gebruiker als actief beschouwd moet worden. Gebruik deze "
+"optie ipv accounts te verwijderen."
 
 #: people/models.py:95
 msgid "date joined"
-msgstr "datum trad"
+msgstr "datum lid geworden"
 
 #: people/models.py:161
 msgid "user"

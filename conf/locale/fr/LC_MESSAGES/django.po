@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-12 19:19+0200\n"
-"PO-Revision-Date: 2015-04-12 19:22+0100\n"
+"PO-Revision-Date: 2015-04-12 23:06+0100\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "Titre (FR)"
 #: books/models.py:16 books/models.py:43 books/models.py:104
 #: books/models.py:113 flatpages/models.py:8 people/models.py:227
 msgid "Slug"
-msgstr ""
+msgstr "Identifiant web"
 
 #: books/models.py:16 books/models.py:43 books/models.py:104
 #: books/models.py:113 flatpages/models.py:8 people/models.py:227
@@ -43,6 +43,8 @@ msgid ""
 "Unique identifier to be used in a web address: uses only unaccented letters, "
 "- and _"
 msgstr ""
+"Identifiant unique, utilisable dans une adresse web. N’utilise que des "
+"lettres sans accents, - et _."
 
 #: books/models.py:34 books/templates/all_books.html:9
 #: books/templates/register_submit.html:14
@@ -135,7 +137,7 @@ msgstr "Finition de la couverture"
 
 #: books/templates/all_books.html:5
 msgid "All books"
-msgstr ""
+msgstr "Tous les livres"
 
 #: books/templates/all_books.html:9 books/templates/register_submit.html:15
 msgid "Subtitle"
@@ -192,7 +194,7 @@ msgstr "Éditer"
 #: books/templates/register_login.html:18
 #: books/templates/register_signup.html:14
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: books/templates/register_base.html:37
 msgid "Logout"
@@ -518,6 +520,9 @@ msgid ""
 "password, but you can change the password using <a href=\"password/\">this "
 "form</a>."
 msgstr ""
+"Les mots de passe ne sont pas enregistrés en clair, ce qui ne permet pas "
+"d'afficher le mot de passe de cet utilisateur, mais il est possible de le "
+"changer en utilisant <a href=\"password/\">ce formulaire</a>."
 
 #: people/forms.py:74
 msgid "No user with that email exists"
@@ -641,7 +646,7 @@ msgstr "statut de l’équipe"
 
 #: people/models.py:90
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Précise si l'utilisateur peut se connecter à ce site d'administration."
 
 #: people/models.py:92
 msgid "active"
@@ -652,6 +657,8 @@ msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Précise si l'utilisateur doit être considéré comme actif. Décochez ceci "
+"plutôt que de supprimer le compte."
 
 #: people/models.py:95
 msgid "date joined"
