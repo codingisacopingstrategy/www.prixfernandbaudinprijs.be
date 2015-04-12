@@ -98,7 +98,7 @@ def edit_book_collaborators(request, slug):
     1: Graphic Designer *
     2: Publisher *
     3: Printer *
-    4: Bookbinder *
+    4: Bookbinder
     5: Author
     6: Photographer
     7: Illustrator
@@ -117,7 +117,7 @@ def edit_book_collaborators(request, slug):
     users_hash = json.dumps(list(users_for_lookahead()), ensure_ascii=False)
     
     # How much required roles are we still missing?
-    required = set([2,1,3,4])
+    required = set([1,2,3])
     present = set(c.role.id for c in Collaboration.objects.filter(book=book))
     missing = required - present
     
