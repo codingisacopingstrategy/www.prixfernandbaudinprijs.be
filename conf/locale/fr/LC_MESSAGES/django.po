@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-12 19:19+0200\n"
-"PO-Revision-Date: 2015-04-12 23:06+0100\n"
+"POT-Creation-Date: 2015-04-12 23:39+0200\n"
+"PO-Revision-Date: 2015-04-12 23:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.5\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 
 #: books/models.py:13 books/models.py:110 flatpages/models.py:5
 #: people/models.py:224
@@ -549,8 +549,8 @@ msgid "email address - alternate"
 msgstr "adresse email - autre"
 
 #: people/models.py:64
-msgid "where do your work"
-msgstr "où travaillez-vous"
+msgid "company name"
+msgstr "nom de l’entreprise"
 
 #: people/models.py:65
 msgid "job title"
@@ -671,6 +671,10 @@ msgstr "utilisateurs"
 #: people/models.py:162
 msgid "users"
 msgstr "utilisateurs"
+
+#, fuzzy
+#~ msgid "where do you work"
+#~ msgstr "où travaillez-vous"
 
 #~ msgid ""
 #~ "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerning: "

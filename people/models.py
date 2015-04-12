@@ -61,7 +61,7 @@ class FernandUser(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'), unique=True)
     alternate_email = models.EmailField(_('email address - alternate'), blank=True)
-    structure_name = models.CharField(_('where do your work'), max_length=100, blank=True)
+    structure_name = models.CharField(_('company name'), max_length=100, blank=True)
     job_title = models.CharField(_('job title'), max_length=100, blank=True)
     email_invalid = models.BooleanField(_('email invalid'), default=False)
     address = models.CharField(_('address'), max_length=250, blank=True)
