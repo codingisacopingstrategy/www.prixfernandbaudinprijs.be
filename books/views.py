@@ -43,6 +43,9 @@ class CollaborationRoleForm(forms.ModelForm):
         exclude = ['person', 'book']
 
 def edit(request, slug):
+    """
+    Edit details for a registered book
+    """
     book = get_object_or_404(Book, slug=slug)
     if request.method == 'POST': # If the form has been submitted...
         form = BookForm(request.POST, instance=book) # A form bound to the POST data
@@ -55,6 +58,9 @@ def edit(request, slug):
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
 def register(request):
+    """
+    The form to register a book
+    """
     if request.method == 'POST': # If the form has been submitted...
         print "got request"
         form = BookForm(request.POST) # A form bound to the POST data
@@ -71,17 +77,45 @@ def register(request):
 
 
 def users_for_lookahead():
+    """
+    Of the user model, expose only the functions necessary for the functioning of the typeahead JS.
+    
+    TODO: this should be an AJAX function communicating with the type-ahead function.
+    Now it just outputs a hash with all the users and embeds it in the page.
+    """
     for u in FernandUser.objects.all():
         full_name = u.get_full_name()
         yield {
                'value': u.id,
-               'tokens': full_name.split(' '),
+               'tokens': full_name.split(' '), # This is so the user can start typing both the first and the last name
                'name': full_name
                }
 
 def edit_book_collaborators(request, slug):
+    """
+    Edit any number of collaborators to a registered book
+    
+    1: Graphic Designer *
+    2: Publisher *
+    3: Printer *
+    4: Bookbinder *
+    5: Author
+    6: Photographer
+    7: Illustrator
+    8: Artist conceptor
+    
+    * required category
+    
+    Works with a type-ahead to fetch existing users from the database.
+    If the collaborator is not yet encoded, show a link to the
+    ``add_book_collaborator`` view.
+    """
+    
+    # The book
     book = get_object_or_404(Book, slug=slug)
+    
     users_hash = json.dumps(list(users_for_lookahead()), ensure_ascii=False)
+    
     # How much required roles are we still missing?
     required = set([2,1,3,4])
     present = set(c.role.id for c in Collaboration.objects.filter(book=book))
@@ -105,6 +139,9 @@ def edit_book_collaborators(request, slug):
     return render_to_response("register_book_collaborators.html", tpl_params, context_instance = RequestContext(request))
 
 def add_book_collaborator(request, slug):
+    """
+    Form to add a new collaborator for a book. Is encoded as a user object.
+    """
     book = get_object_or_404(Book, slug=slug)
     
     if request.method == 'POST': # If the form has been submitted...
@@ -133,6 +170,9 @@ def add_book_collaborator(request, slug):
     return render_to_response("register_book_collaborator_add.html", tpl_params, context_instance = RequestContext(request))
 
 def submit(request, slug):
+    """
+    Confirm book details and either edit or submit
+    """
     book = get_object_or_404(Book, slug=slug)
     if request.method == 'POST':
         book.is_submitted = True
