@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 12:31+0200\n"
-"PO-Revision-Date: 2015-04-13 08:41+0100\n"
+"POT-Creation-Date: 2015-04-13 12:53+0200\n"
+"PO-Revision-Date: 2015-04-13 12:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -231,6 +231,10 @@ msgid ""
 msgstr ""
 "Vous devez au moins enregistrer un éditeur, un graphiste et un imprimeur, "
 "même si ce sont les mêmes personnes."
+
+#: books/templates/register_book_collaborators.html:24
+msgid "Waiting for selection"
+msgstr "En attendant la sélection"
 
 #: books/templates/register_book_collaborators.html:25
 msgid ""

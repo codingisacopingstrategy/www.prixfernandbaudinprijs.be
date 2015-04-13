@@ -21,7 +21,7 @@
 
 <p><!-- The actual form field is hidden, we use this one to populate it through a
         JavaScript typeahead -->
-    <input id="{{ form.person.id_for_label }}-lookup" type="text" class="find_collaborator" value="{{ form.instance.person }}" /> <span id="{{ form.person.id_for_label }}-status"><small>Waiting for selection</small></span><br/>
+    <input id="{{ form.person.id_for_label }}-lookup" type="text" class="find_collaborator" value="{{ form.instance.person }}" /> <span id="{{ form.person.id_for_label }}-status"><small>{% trans "Waiting for selection" %}</small></span><br/>
 <small>{% trans "Start typing the name of your collaborator, and click when you see them appear. Can not find your collaborator in the database? Add them here:"%} <a href="{% url 'books-add-collaborators' book.slug %}">{% trans "Create new collaborator" %}</a>.</small></p>
 <p style="margin-bottom:60px;">
    {{ form.role.errors }}

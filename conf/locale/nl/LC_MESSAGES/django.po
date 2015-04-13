@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 12:31+0200\n"
-"PO-Revision-Date: 2015-04-13 08:45+0100\n"
+"POT-Creation-Date: 2015-04-13 12:53+0200\n"
+"PO-Revision-Date: 2015-04-13 12:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -231,6 +231,10 @@ msgid ""
 msgstr ""
 "U moet ten minste een redacteur, een grafisch ontwerper en een drukkers "
 "opgeven, zelfs als dit dezelfde personen zijn."
+
+#: books/templates/register_book_collaborators.html:24
+msgid "Waiting for selection"
+msgstr "Wacht op selectie"
 
 #: books/templates/register_book_collaborators.html:25
 msgid ""
