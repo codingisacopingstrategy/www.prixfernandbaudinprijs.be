@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-12 23:39+0200\n"
-"PO-Revision-Date: 2015-04-12 23:40+0100\n"
+"POT-Creation-Date: 2015-04-13 08:40+0200\n"
+"PO-Revision-Date: 2015-04-13 08:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -281,7 +281,7 @@ msgid ""
 "Please enter below your email address so that we may verify if your contact "
 "is already registered in our database."
 msgstr ""
-"Merci d'entrer ci-dessous votre adresse email pour que nous puissions "
+"Merci d’entrer ci-dessous votre adresse email pour que nous puissions "
 "vérifier si vous faites déjà partie de notre base de données."
 
 #: books/templates/register_login.html:22
@@ -290,7 +290,7 @@ msgstr "Comment inscrire un livre?"
 
 #: books/templates/register_login.html:23
 msgid "Conditions for admission"
-msgstr "Conditions d'admission"
+msgstr "Conditions d’admission"
 
 #: books/templates/register_login.html:24
 msgid ""
@@ -344,6 +344,7 @@ msgstr ""
 "neuf du livre avant le 8 mai 2015 à l’adresse suivante:"
 
 #: books/templates/register_login.html:34
+#, fuzzy
 msgid ""
 "POINT CULTURE<br />Fernand Baudin Prize<br />Place de l'Amitié 6<br />1160 "
 "Brussels<br />Belgium"
@@ -358,7 +359,7 @@ msgid ""
 "if this specific book is awarded a prize."
 msgstr ""
 "En s’inscrivant, le dépositaire de la candidature devient la personne de "
-"contact et s'engage à remettre gratuitement aux organisateurs du Prix trois "
+"contact et s’engage à remettre gratuitement aux organisateurs du Prix trois "
 "exemplaires supplémentaires de l’ouvrage si celui-ci est primé."
 
 #: books/templates/register_login.html:37
@@ -390,15 +391,15 @@ msgid ""
 "with every step of the registration, there is the possibility to leave "
 "comments, notes and complementary information in the field “comments”;"
 msgstr ""
-"à toutes les étapes de l'inscription, insérez notes, commentaires ou "
-"supplément d'information dans le champ \"remarques\" ;"
+"à toutes les étapes de l’inscription, insérez notes, commentaires ou "
+"supplément d’information dans le champ \"remarques\" ;"
 
 #: books/templates/register_login.html:43
 msgid ""
 "up until the final validation of your registration, you can always go back "
 "to previous step(s) to change or complete the provided information;"
 msgstr ""
-"revenez aux étapes précédentes pour les compléter ou les modifier jusqu'à la "
+"revenez aux étapes précédentes pour les compléter ou les modifier jusqu’à la "
 "validation finale;"
 
 #: books/templates/register_login.html:44
@@ -406,11 +407,11 @@ msgid ""
 "once your registration is complete, download the registration form in PDF-"
 "format;"
 msgstr ""
-"téléchargez le formulaire en format PDF une fois l'inscription clôturée;"
+"téléchargez le formulaire en format PDF une fois l’inscription clôturée;"
 
 #: books/templates/register_login.html:45
 msgid "print out this form and send it out with one new copy of the book."
-msgstr "imprimez le formulaire et envoyez-le accompagné d'un livre neuf."
+msgstr "imprimez le formulaire et envoyez-le accompagné d’un livre neuf."
 
 #: books/templates/register_signup.html:10
 msgid ""
@@ -419,7 +420,7 @@ msgid ""
 "important for us to communicate with you, and to have a better understanding "
 "of the context of each actor participating to the Prize."
 msgstr ""
-"Si c'est la première fois que vous posez une candidature, merci de nous "
+"Si c’est la première fois que vous posez une candidature, merci de nous "
 "communiquer vos coordonnées complètes.<br />Les éléments suivants nous "
 "permettront d’établir une communication efficace avec vous et de mieux "
 "connaître le contexte de chaque acteur participant au Prix."
@@ -490,45 +491,45 @@ msgstr "Le mot de passe a été modifié avec succès."
 msgid "Change password: %s"
 msgstr "Modifier le mot de passe: %s"
 
-#: people/forms.py:14
+#: people/forms.py:16
 msgid "A user with that  email already exists."
 msgstr "Un utilisateur a déjà enregistré cet email."
 
-#: people/forms.py:15
-msgid "The two password fields didn't match."
+#: people/forms.py:17
+msgid "The two password fields didn’t match."
 msgstr "Les deux champs de mot de passe ne correspondent pas."
 
-#: people/forms.py:17 people/forms.py:46 people/forms.py:69
+#: people/forms.py:19 people/forms.py:48 people/forms.py:71
 msgid "Email"
 msgstr "Email"
 
-#: people/forms.py:19 people/forms.py:48 people/forms.py:79
+#: people/forms.py:21 people/forms.py:50 people/forms.py:81
 msgid "Password"
 msgstr "Mot de passe"
 
-#: people/forms.py:21 people/forms.py:81
+#: people/forms.py:23 people/forms.py:83
 msgid "Password confirmation"
 msgstr "Confirmation du mot de passe"
 
-#: people/forms.py:23
+#: people/forms.py:25
 msgid "Enter the same password as above, for verification."
 msgstr "Entrer le même mot de passe pour vérification"
 
-#: people/forms.py:49
+#: people/forms.py:51
 msgid ""
-"Raw passwords are not stored, so there is no way to see this user's "
+"Raw passwords are not stored, so there is no way to see this user’s "
 "password, but you can change the password using <a href=\"password/\">this "
 "form</a>."
 msgstr ""
 "Les mots de passe ne sont pas enregistrés en clair, ce qui ne permet pas "
-"d'afficher le mot de passe de cet utilisateur, mais il est possible de le "
+"d’afficher le mot de passe de cet utilisateur, mais il est possible de le "
 "changer en utilisant <a href=\"password/\">ce formulaire</a>."
 
-#: people/forms.py:74
+#: people/forms.py:76
 msgid "No user with that email exists"
 msgstr "Aucun utilisateur n’a enregistré cet email"
 
-#: people/forms.py:89
+#: people/forms.py:91
 msgid "The two passwords did not match"
 msgstr "Les deux mots de passe ne correspondent pas."
 
@@ -646,7 +647,7 @@ msgstr "statut de l’équipe"
 
 #: people/models.py:90
 msgid "Designates whether the user can log into this admin site."
-msgstr "Précise si l'utilisateur peut se connecter à ce site d'administration."
+msgstr "Précise si l’utilisateur peut se connecter à ce site d’administration."
 
 #: people/models.py:92
 msgid "active"
@@ -657,7 +658,7 @@ msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
-"Précise si l'utilisateur doit être considéré comme actif. Décochez ceci "
+"Précise si l’utilisateur doit être considéré comme actif. Décochez ceci "
 "plutôt que de supprimer le compte."
 
 #: people/models.py:95
@@ -702,7 +703,7 @@ msgstr "utilisateurs"
 #~ "If it is the first time that you are submitting a book, kindly "
 #~ "communicate to us your complete contact information."
 #~ msgstr ""
-#~ "Si c'est la première fois que vous posez une candidature, merci de nous "
+#~ "Si c’est la première fois que vous posez une candidature, merci de nous "
 #~ "communiquer vos coordonnées complètes."
 
 #~ msgid "country id"

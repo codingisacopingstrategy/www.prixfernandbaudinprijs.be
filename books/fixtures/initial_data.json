@@ -50,7 +50,7 @@
         "fields": {
             "slug": "art-book-and-exhibition-catalogue",
             "title_nl": "Kunstboeken en tentoonstellingscatalogi",
-            "title_fr": "Livre d'art et catalogue d'exposition",
+            "title_fr": "Livre d\u2019art et catalogue d\u2019exposition",
             "title": "Art book and exhibition catalogue"
         }
     }, {
@@ -59,7 +59,7 @@
         "fields": {
             "slug": "artists-book",
             "title_nl": "Kunstenaarsboek",
-            "title_fr": "Livre d'artiste",
+            "title_fr": "Livre d\u2019artiste",
             "title": "Artist\u2019s book"
         }
     }, {

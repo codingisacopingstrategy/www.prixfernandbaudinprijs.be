@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-12 23:39+0200\n"
-"PO-Revision-Date: 2015-04-12 23:40+0100\n"
+"POT-Creation-Date: 2015-04-13 08:40+0200\n"
+"PO-Revision-Date: 2015-04-13 08:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -494,33 +494,35 @@ msgstr "Wachtwoord succesvol gewijzigd."
 msgid "Change password: %s"
 msgstr "Wachtwoord wijzigen: %s"
 
-#: people/forms.py:14
+#: people/forms.py:16
 msgid "A user with that  email already exists."
 msgstr "Een gebruiker met dat e-mail al bestaat."
 
-#: people/forms.py:15
-msgid "The two password fields didn't match."
+#: people/forms.py:17
+#, fuzzy
+msgid "The two password fields didn’t match."
 msgstr "De twee wachtwoord velden komen niet overeen."
 
-#: people/forms.py:17 people/forms.py:46 people/forms.py:69
+#: people/forms.py:19 people/forms.py:48 people/forms.py:71
 msgid "Email"
 msgstr "Email"
 
-#: people/forms.py:19 people/forms.py:48 people/forms.py:79
+#: people/forms.py:21 people/forms.py:50 people/forms.py:81
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: people/forms.py:21 people/forms.py:81
+#: people/forms.py:23 people/forms.py:83
 msgid "Password confirmation"
 msgstr "Wachtwoord bevestiging"
 
-#: people/forms.py:23
+#: people/forms.py:25
 msgid "Enter the same password as above, for verification."
 msgstr "Voer hetzelfde wachtwoord als hierboven, ter verificatie."
 
-#: people/forms.py:49
+#: people/forms.py:51
+#, fuzzy
 msgid ""
-"Raw passwords are not stored, so there is no way to see this user's "
+"Raw passwords are not stored, so there is no way to see this user’s "
 "password, but you can change the password using <a href=\"password/\">this "
 "form</a>."
 msgstr ""
@@ -528,11 +530,11 @@ msgstr ""
 "worden, maar het wachtwoord kan gewijzigd worden met <a href=\"password/"
 "\">dit formulier</a>."
 
-#: people/forms.py:74
+#: people/forms.py:76
 msgid "No user with that email exists"
 msgstr "Geen gebruiker met dit e-mail bestaat"
 
-#: people/forms.py:89
+#: people/forms.py:91
 msgid "The two passwords did not match"
 msgstr "De twee wachtwoorden komen niet overeen"
 

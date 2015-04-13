@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 from django import forms
 from django.utils.translation import ugettext_lazy as _
@@ -12,7 +14,7 @@ class FernandUserCreationForm(forms.ModelForm):
     """
     error_messages = {
         'duplicate_email': _("A user with that  email already exists."),
-        'password_mismatch': _("The two password fields didn't match."),
+        'password_mismatch': _("The two password fields didn’t match."),
     }
     email = forms.EmailField(label=_("Email"))
 
@@ -47,7 +49,7 @@ class FernandUserChangeForm(forms.ModelForm):
 
     password = ReadOnlyPasswordHashField(label=_("Password"),
                                          help_text=_("Raw passwords are not stored, so there is no way to see "
-                                                     "this user's password, but you can change the password "
+                                                     "this user’s password, but you can change the password "
                                                      "using <a href=\"password/\">this form</a>."))
 
     class Meta:
