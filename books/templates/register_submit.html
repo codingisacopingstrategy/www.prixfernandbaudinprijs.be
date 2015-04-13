@@ -30,11 +30,7 @@
 
 <p style="margin-top: 30px;">{% if not book.is_submitted %}{% trans "Once you have confirmed these data, you shall receive confirmation of your submission by email." %}{% else %}{% trans "Finally, for your submission of a book to be accepted by the Fernand Baudin Prize, you must print out the registration form and send it with one new copy of the book until the 8th of May 2015 to the following address:" %}</p>
 
-<p>{% trans "POINT CULTURE<br />
-Prix Fernand Baudin<br />
-Place de l'Amitié 6<br />
-1160 Brussels<br />
-Belgium" %}</p>{% endif %}
+<p>{% trans "POINT CULTURE<br />Fernand Baudin Prize<br />Place de l'Amitié 6<br />1160 Brussels<br />Belgium" %}</p>{% endif %}
 
 {% if not book.is_submitted %}
 <form action="{% url 'books-submit' book.slug %}" method="post">{% csrf_token %}
