@@ -36,7 +36,7 @@ class Book(models.Model):
     publication_year = models.IntegerField(_("Publication year"))
     legal_depot = models.CharField(_("Legal Depot"), max_length=255, blank=True)
     isbn = models.CharField(_("ISBN"), max_length=20)
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, verbose_name = _('Category'))
     concept = models.TextField(_("Editorial concept"))
     comments = models.TextField(_("Comments"), blank=True)
     people = models.ManyToManyField(FernandUser, through='Collaboration')

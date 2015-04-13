@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 08:40+0200\n"
+"POT-Creation-Date: 2015-04-13 12:31+0200\n"
 "PO-Revision-Date: 2015-04-13 08:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -66,6 +66,11 @@ msgstr "Depotplicht"
 #: books/models.py:38 books/templates/register_submit.html:18
 msgid "ISBN"
 msgstr "ISBN"
+
+#: books/models.py:39 books/templates/all_books.html:9
+#: books/templates/register_submit.html:19
+msgid "Category"
+msgstr "Boek categorie"
 
 #: books/models.py:40 books/templates/register_submit.html:20
 msgid "Editorial concept"
@@ -142,10 +147,6 @@ msgstr "Alle boeken"
 #: books/templates/all_books.html:9 books/templates/register_submit.html:15
 msgid "Subtitle"
 msgstr "Subtitel"
-
-#: books/templates/all_books.html:9 books/templates/register_submit.html:19
-msgid "Category"
-msgstr "Boek categorie"
 
 #: books/templates/all_books.html:9
 msgid "Publisher"

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import json
 
 from django.http import HttpResponseRedirect
@@ -14,7 +15,7 @@ from django.forms.models import inlineformset_factory
 
 from django.core.mail import send_mail
 
-from books.models import Book, Collaboration
+from books.models import Book, Collaboration, Category
 from people.models import FernandUser
 
 class CheckUserExistenceForm(forms.Form):
@@ -56,7 +57,11 @@ def edit(request, slug):
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : book.slug }))
     else:
         form = BookForm(instance=book) # A form to edit an existing book
-    tpl_params = { 'form' : form, 'book': book }
+    tpl_params = { 
+                  'form' : form,
+                  'book' : book,
+                  'categories' : Category.objects.all()
+                 }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
 def register(request):
@@ -74,7 +79,10 @@ def register(request):
             return HttpResponseRedirect(reverse('books-edit-collaborators', kwargs={ 'slug' : new_book.slug }))
     else:
         form = BookForm(initial = { 'publication_year' : 2014, 'isbn' : '-' }) # An unbound form for a new book
-    tpl_params = { 'form' : form }
+    tpl_params = {
+                  'form' : form,
+                  'categories' : Category.objects.all()
+                  }
     return render_to_response("register.html", tpl_params, context_instance = RequestContext(request))
 
 

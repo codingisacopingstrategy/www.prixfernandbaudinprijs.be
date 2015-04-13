@@ -19,5 +19,17 @@
 {{ form.as_p }}
 <input type="submit" value="{% trans "Submit" %}" />
 </form>
+{% endblock %}
 
+{# The widget for selecting a category through a primary key shows the __unicode__ of the model. We want to localize that.
+    For now we do it with javascript, but this would better be done by overriding the values in the back-end. #}
+
+{% block extrajs %}
+<script>
+    var selected = $("select#id_category option[selected]").attr("value");
+    $("select#id_category").replaceWith($('<select id="id_category" name="category"><option value="">---------</option>{% for category in categories %}<option value="{{ category.pk }}">{% get_trans category title LANGUAGE_CODE %}</option>{% endfor %}</select>'));
+    if (selected) {
+        $("select#id_category option[value=" + selected + "]").attr("selected", "true");
+    };
+</script>
 {% endblock %}
