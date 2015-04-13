@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 12:53+0200\n"
-"PO-Revision-Date: 2015-04-13 12:55+0100\n"
+"POT-Creation-Date: 2015-04-13 12:57+0200\n"
+"PO-Revision-Date: 2015-04-13 12:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -140,6 +140,18 @@ msgstr "Type d’impression de la couverture"
 msgid "Cover’s finish"
 msgstr "Finition de la couverture"
 
+#: books/models.py:119
+msgid "Book"
+msgstr "Livre"
+
+#: books/models.py:120
+msgid "Person"
+msgstr "Personne"
+
+#: books/models.py:121 books/templates/register_book_collaborator_add.html:10
+msgid "Role"
+msgstr "Rôle"
+
 #: books/templates/all_books.html:5
 msgid "All books"
 msgstr "Tous les livres"
@@ -214,10 +226,6 @@ msgstr "Contributeur"
 #: books/templates/register_book_collaborator_add.html:8
 msgid "for"
 msgstr "pour"
-
-#: books/templates/register_book_collaborator_add.html:10
-msgid "Role"
-msgstr "Rôle"
 
 #: books/templates/register_book_collaborators.html:8
 #: books/templates/register_submit.html:23
@@ -688,9 +696,6 @@ msgstr "utilisateurs"
 #~ msgstr ""
 #~ "BRUXELLES INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Concerne: Prix "
 #~ "Fernand Baudin 2013<br />Avenue Louise 500/4 <br />1050 Bruxelles"
-
-#~ msgid "Personal info"
-#~ msgstr "Informations personnelles"
 
 #~ msgid "Permissions"
 #~ msgstr "Permissions"

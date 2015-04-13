@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 12:53+0200\n"
-"PO-Revision-Date: 2015-04-13 12:54+0100\n"
+"POT-Creation-Date: 2015-04-13 12:57+0200\n"
+"PO-Revision-Date: 2015-04-13 13:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -140,6 +140,18 @@ msgstr "Omslag drukwijzen"
 msgid "Cover’s finish"
 msgstr "Omslag afwerking"
 
+#: books/models.py:119
+msgid "Book"
+msgstr "Boek"
+
+#: books/models.py:120
+msgid "Person"
+msgstr "Persoon"
+
+#: books/models.py:121 books/templates/register_book_collaborator_add.html:10
+msgid "Role"
+msgstr "Rol"
+
 #: books/templates/all_books.html:5
 msgid "All books"
 msgstr "Alle boeken"
@@ -214,10 +226,6 @@ msgstr "Medewerker"
 #: books/templates/register_book_collaborator_add.html:8
 msgid "for"
 msgstr "voor"
-
-#: books/templates/register_book_collaborator_add.html:10
-msgid "Role"
-msgstr "rol"
 
 #: books/templates/register_book_collaborators.html:8
 #: books/templates/register_submit.html:23
@@ -693,9 +701,6 @@ msgstr "gebruikers"
 #~ msgstr ""
 #~ "BRUSSELS INVEST &amp; EXPORT<br />Madeleine Cantaert<br />Betreft: "
 #~ "Fernand Baudin Prijs<br />Louizalaan 500/4<br />1050 Brussel"
-
-#~ msgid "Personal info"
-#~ msgstr "Persoonlijke informatie"
 
 #~ msgid "Permissions"
 #~ msgstr "Vergunning"

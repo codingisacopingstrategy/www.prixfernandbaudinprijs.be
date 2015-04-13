@@ -116,9 +116,9 @@ class Role(models.Model):
         return self.title
 
 class Collaboration(models.Model):
-    book = models.ForeignKey(Book)
-    person = models.ForeignKey(FernandUser)
-    role = models.ForeignKey(Role)
+    book = models.ForeignKey(Book, verbose_name = _('Book'))
+    person = models.ForeignKey(FernandUser, verbose_name = _('Person'))
+    role = models.ForeignKey(Role, verbose_name = _('Role'))
     
     def __unicode__(self):  # Python 3: def __str__(self):
         return u"%s is %s for %s" % (self.person, self.role, self.book)
