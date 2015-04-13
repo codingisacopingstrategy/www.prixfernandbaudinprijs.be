@@ -21,8 +21,8 @@
 </form>
 {% endblock %}
 
-{# The widget for selecting a category through a primary key shows the __unicode__ of the model. We want to localize that.
-    For now we do it with javascript, but this would better be done by overriding the values in the back-end. #}
+{# The widget for selecting a category through a primary key shows the __unicode__ of the model. We want to use the title_fr, title_nl, etc.
+    For now we do it with javascript, but this would better be done by overriding the form widget in the back-end. #}
 
 {% block extrajs %}
 <script>

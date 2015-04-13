@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-13 12:57+0200\n"
-"PO-Revision-Date: 2015-04-13 12:59+0100\n"
+"POT-Creation-Date: 2015-04-13 13:06+0200\n"
+"PO-Revision-Date: 2015-04-13 13:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -357,6 +357,7 @@ msgstr ""
 "neuf du livre avant le 8 mai 2015 à l’adresse suivante:"
 
 #: books/templates/register_login.html:34
+#: books/templates/register_submit.html:33
 #, fuzzy
 msgid ""
 "POINT CULTURE<br />Fernand Baudin Prize<br />Place de l'Amitié 6<br />1160 "
@@ -467,7 +468,7 @@ msgstr ""
 "Une fois que vous avez confirmé les données, vous recevrez la confirmation "
 "de votre candidature par e-mail."
 
-#: books/templates/register_submit.html:41
+#: books/templates/register_submit.html:37
 msgid "Submit for Fernand Baudin Prize 2014"
 msgstr "Inscrivez votre livre au Prix Fernand Baudin 2014!"
 
