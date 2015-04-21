@@ -19,6 +19,7 @@ from people.forms import FernandUserCreationForm
 from people.models import FernandUser, Category
 
 csrf_protect_m = method_decorator(csrf_protect)
+sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
 
 class UserCategoryInline(admin.TabularInline):
     model = Category.members.through
@@ -65,10 +66,7 @@ class FernandUserAdmin(admin.ModelAdmin):
                          self.admin_site.admin_view(self.user_change_password))
                         ) + super(FernandUserAdmin, self).get_urls()
 
-    @sensitive_post_parameters()
-    
-    @method_decorator(sensitive_post_parameters())
-    
+    @sensitive_post_parameters_m
     @csrf_protect_m
     @transaction.commit_on_success
     def add_view(self, request, form_url='', extra_context=None):
