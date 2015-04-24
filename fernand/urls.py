@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import RedirectView
 
 from django.conf.urls.i18n import i18n_patterns
 
@@ -17,6 +18,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     (r'^i18n/', include('django.conf.urls.i18n')),
+    
+    
+    (r'^nl$', RedirectView.as_view(url='/nl/')),
 )
 
 urlpatterns += i18n_patterns('',
